@@ -4,7 +4,7 @@
 <img src="../extras/data.gif" alt="me" width="60%">
 </div>
 
-La "Introducción a la Empresa e Iniciativa Emprendedora" es una asignatura común en muchos programas educativos, especialmente en áreas relacionadas con la administración de empresas, economía y negocios. Esta materia tiene como objetivo principal proporcionar a los estudiantes una comprensión básica del mundo empresarial y desarrollar habilidades para identificar y aprovechar oportunidades de emprendimiento. A continuación, te presento un resumen de los temas principales que suelen abordarse en este tipo de asignaturas:
+La asignatura de "Empresa e Iniciativa Emprendedora" es una asignatura común en muchos programas educativos, especialmente en áreas relacionadas con la administración de empresas, economía y negocios. Esta materia tiene como objetivo principal proporcionar a los estudiantes una comprensión básica del mundo empresarial y desarrollar habilidades para identificar y aprovechar oportunidades de emprendimiento. A continuación, te presento un resumen de los temas principales que suelen abordarse en este tipo de asignaturas:
 
 ## **Concepto de Empresa**
    - **Definición de Empresa**: Se analiza qué es una empresa, sus características principales y su papel en la economía.

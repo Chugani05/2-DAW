@@ -4,7 +4,7 @@
 <img src="../extras/data.gif" alt="me" width="60%">
 </div>
 
-La asignatura "Introducción a Interfaces Web" se centra en los principios y prácticas necesarios para diseñar y desarrollar interfaces de usuario (UI) efectivas y atractivas para aplicaciones web. Este curso es fundamental para aquellos interesados en la creación de experiencias de usuario (UX) intuitivas, centrándose en cómo los usuarios interactúan con un sitio web o una aplicación. A continuación, se describen los principales temas que suelen abordarse en esta materia:
+La asignatura de " Diseño de Interfaces Web" se centra en los principios y prácticas necesarios para diseñar y desarrollar interfaces de usuario (UI) efectivas y atractivas para aplicaciones web. Este curso es fundamental para aquellos interesados en la creación de experiencias de usuario (UX) intuitivas, centrándose en cómo los usuarios interactúan con un sitio web o una aplicación. A continuación, se describen los principales temas que suelen abordarse en esta materia:
 
 ## **Fundamentos de las Interfaces Web**
    - **¿Qué es una Interfaz Web?**: Definición y propósito de las interfaces web, que son los puntos de interacción entre los usuarios y las aplicaciones web.
@@ -55,5 +55,4 @@ La asignatura "Introducción a Interfaces Web" se centra en los principios y pr�
    - **Documentación del Proceso**: Creación de un informe que documente el proceso de diseño, las decisiones tomadas y las pruebas realizadas.
 
 ## Conclusión
-
-La asignatura de "Introducción a Interfaces Web" equipa a los estudiantes con las habilidades necesarias para diseñar y desarrollar interfaces web que sean visualmente atractivas, intuitivas, y accesibles. Al finalizar el curso, los estudiantes estarán capacitados para crear experiencias de usuario coherentes y efectivas, tanto en proyectos personales como profesionales, aplicando las mejores prácticas de la industria.
+La asignatura de "Diseño de Interfaces Web" equipa a los estudiantes con las habilidades necesarias para diseñar y desarrollar interfaces web que sean visualmente atractivas, intuitivas, y accesibles. Al finalizar el curso, los estudiantes estarán capacitados para crear experiencias de usuario coherentes y efectivas, tanto en proyectos personales como profesionales, aplicando las mejores prácticas de la industria.

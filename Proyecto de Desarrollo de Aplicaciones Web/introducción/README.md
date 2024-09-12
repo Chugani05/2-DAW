@@ -57,5 +57,4 @@ La asignatura "Proyecto de Desarrollo de Aplicaciones Web" se centra en la aplic
    - **Proyección Profesional**: Discusión sobre cómo la experiencia adquirida en este proyecto puede aplicarse en el ámbito profesional, y cómo ha preparado a los estudiantes para enfrentar desafíos reales en la industria del desarrollo web.
 
 ## Conclusión
-
 El "Proyecto de Desarrollo de Aplicaciones Web" representa una oportunidad para que los estudiantes demuestren su capacidad para llevar a cabo un proyecto de software completo, integrando todo el conocimiento adquirido durante su formación. Al finalizar este proyecto, los estudiantes no solo habrán creado una aplicación web funcional, sino que también habrán ganado valiosas experiencias en trabajo en equipo, gestión de proyectos, y desarrollo profesional. Esta experiencia será crucial para su futura carrera en el desarrollo web o en otros campos relacionados con la tecnología.

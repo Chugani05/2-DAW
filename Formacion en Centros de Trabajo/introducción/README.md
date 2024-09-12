@@ -4,7 +4,7 @@
 <img src="../extras/data.gif" alt="me" width="60%">
 </div>
 
-La asignatura "Introducción a la Formación en Centros de Trabajo (FCT)" se enfoca en preparar a los estudiantes para su periodo de prácticas profesionales en empresas o instituciones como parte de su formación académica. Este componente práctico es esencial en muchos programas de formación profesional, ya que brinda a los estudiantes la oportunidad de aplicar los conocimientos teóricos adquiridos en un entorno laboral real, desarrollar habilidades prácticas, y familiarizarse con las dinámicas del mundo del trabajo. A continuación, se describe un resumen de los temas clave que suelen abordarse en esta asignatura:
+La asignatura de "Formación en Centros de Trabajo (FCT)" se enfoca en preparar a los estudiantes para su periodo de prácticas profesionales en empresas o instituciones como parte de su formación académica. Este componente práctico es esencial en muchos programas de formación profesional, ya que brinda a los estudiantes la oportunidad de aplicar los conocimientos teóricos adquiridos en un entorno laboral real, desarrollar habilidades prácticas, y familiarizarse con las dinámicas del mundo del trabajo. A continuación, se describe un resumen de los temas clave que suelen abordarse en esta asignatura:
 
 ## **Objetivos y Propósito de la Formación en Centros de Trabajo**
    - **¿Qué es la Formación en Centros de Trabajo?**: Definición y explicación de la FCT como una etapa crucial del aprendizaje donde los estudiantes aplican sus conocimientos en un entorno laboral real.
@@ -50,5 +50,4 @@ La asignatura "Introducción a la Formación en Centros de Trabajo (FCT)" se enf
    - **Red de Contactos (Networking)**: Importancia de construir y mantener una red de contactos profesionales durante y después de la FCT.
 
 ## Conclusión
-
-La asignatura de "Introducción a la Formación en Centros de Trabajo" prepara a los estudiantes para enfrentar de manera exitosa la transición del entorno académico al mundo laboral. A través de la FCT, los estudiantes no solo adquieren experiencia práctica en su campo de estudio, sino que también desarrollan competencias clave que les ayudarán en su futura carrera profesional. Al finalizar este curso, los estudiantes estarán mejor preparados para aprovechar al máximo su experiencia en la FCT y para enfrentarse al mercado laboral con mayor confianza y habilidades.
+La asignatura de "Formación en Centros de Trabajo" prepara a los estudiantes para enfrentar de manera exitosa la transición del entorno académico al mundo laboral. A través de la FCT, los estudiantes no solo adquieren experiencia práctica en su campo de estudio, sino que también desarrollan competencias clave que les ayudarán en su futura carrera profesional. Al finalizar este curso, los estudiantes estarán mejor preparados para aprovechar al máximo su experiencia en la FCT y para enfrentarse al mercado laboral con mayor confianza y habilidades.

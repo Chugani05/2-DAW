@@ -4,7 +4,7 @@
 <img src="../extras/data.gif" alt="me" width="60%">
 </div>
 
-La asignatura "Introducción al Desarrollo Web en Entorno Servidor" está diseñada para enseñar a los estudiantes cómo desarrollar aplicaciones web que funcionen en el lado del servidor, es decir, el backend. Mientras que el desarrollo en entorno cliente se enfoca en lo que ocurre en el navegador del usuario, el desarrollo en entorno servidor se encarga de la lógica, el almacenamiento de datos, la seguridad, y la comunicación con bases de datos y otros servicios. A continuación, se describen los temas principales que suelen abordarse en este curso:
+La asignatura "Desarrollo Web en Entorno Servidor" está diseñada para enseñar a los estudiantes cómo desarrollar aplicaciones web que funcionen en el lado del servidor, es decir, el backend. Mientras que el desarrollo en entorno cliente se enfoca en lo que ocurre en el navegador del usuario, el desarrollo en entorno servidor se encarga de la lógica, el almacenamiento de datos, la seguridad, y la comunicación con bases de datos y otros servicios. A continuación, se describen los temas principales que suelen abordarse en este curso:
 
 ## **Fundamentos del Desarrollo Web en Entorno Servidor**
    - **Arquitectura Cliente-Servidor**: Explicación del modelo cliente-servidor, donde el servidor procesa las solicitudes enviadas por el cliente (navegador) y devuelve respuestas, generalmente en forma de HTML, JSON o XML.

@@ -4,10 +4,10 @@
 <img src="../extras/data.gif" alt="me" width="60%">
 </div>
 
-La asignatura "Introducción al Desarrollo Web en Entorno Cliente" se centra en los principios fundamentales y técnicas necesarias para crear aplicaciones y sitios web que funcionen correctamente en el navegador del usuario. Esta materia es crucial para quienes están interesados en aprender a desarrollar interfaces de usuario interactivas y dinámicas, utilizando lenguajes de programación y tecnologías específicas del lado del cliente.
+La asignatura "Desarrollo Web en Entorno Cliente" se centra en los principios fundamentales y técnicas necesarias para crear aplicaciones y sitios web que funcionen correctamente en el navegador del usuario. Esta materia es crucial para quienes están interesados en aprender a desarrollar interfaces de usuario interactivas y dinámicas, utilizando lenguajes de programación y tecnologías específicas del lado del cliente.
 
 ## **Fundamentos del Desarrollo Web**
-   - **Conceptos Básicos de la Web**: Introducción al funcionamiento básico de la web, incluyendo cómo los navegadores interpretan el código para mostrar páginas web.
+   - **Conceptos Básicos de la Web**: Funcionamiento básico de la web, incluyendo cómo los navegadores interpretan el código para mostrar páginas web.
    - **Estructura de una Página Web**: Cómo se organizan los elementos dentro de una página web, siguiendo una estructura lógica basada en HTML (HyperText Markup Language).
 
 ## **Lenguajes y Tecnologías del Lado del Cliente**
