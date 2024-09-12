@@ -5,10 +5,10 @@
 </div>
 
 ## Contenido
-- [__Introducción__](./introducción/README.md)
-- [__Unidad 01 - Documentación y control de versiones__](./unidad%2001/README.md)
-- [__Unidad 2 -__](./unidad%2002/README.md)
-- [__Unidad 3 -__](./unidad%2003/README.md)
-- [__Unidad 4 -__](./unidad%2004/README.md)
-- [__Unidad 5 -__](./unidad%2005/README.md)
-- [__Unidad 6 -__](./unidad%2006/README.md)
+- [Introducción](./introducción/README.md)
+- [Unidad 01 - Documentación y control de versiones](./unidad%2001/README.md)
+- [Unidad 2 -](./unidad%2002/README.md)
+- [Unidad 3 -](./unidad%2003/README.md)
+- [Unidad 4 -](./unidad%2004/README.md)
+- [Unidad 5 -](./unidad%2005/README.md)
+- [Unidad 6 -](./unidad%2006/README.md)

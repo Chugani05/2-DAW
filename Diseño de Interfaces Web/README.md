@@ -5,5 +5,5 @@
 </div>
 
 ## Contenido
-- [__Introducción__](./introducción/README.md)
-- [__Unidad 01 -__](./unidad%2001/README.md)
+- [Introducción](./introducción/README.md)
+- [Unidad 01 -](./unidad%2001/README.md)

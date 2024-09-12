@@ -5,4 +5,4 @@
 </div>
 
 ## Contenido
-- [__Introducción__](./introducción/README.md)
+- [Introducción](./introducción/README.md)
