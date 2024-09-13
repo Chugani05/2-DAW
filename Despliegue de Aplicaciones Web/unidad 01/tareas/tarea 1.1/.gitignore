@@ -1,0 +1,3 @@
+# Al añadir los siguientes archivos al fichero, git los ignora.
+privada.txt
+privada/
