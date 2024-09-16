@@ -1,0 +1,58 @@
+body {
+    margin: 10px;
+    background-image: url('./imgs/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    width: 800px;
+    margin: 0 auto;
+}
+
+.rod {
+    background-color: #000;
+    color: #fff;
+    font-size: 10px;
+    height: 40px;
+    width: 700px;
+    box-sizing: border-box;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+#my_canvas {
+    background: #000;
+    border: #000 1px solid;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.button {
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    background-color: #000;
+    cursor: pointer;
+    border-radius: 8px;
+    border: 2px solid blue;
+}
+
+.button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.center {
+    margin: 0;
+    position: absolute;
+    top: 87%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
