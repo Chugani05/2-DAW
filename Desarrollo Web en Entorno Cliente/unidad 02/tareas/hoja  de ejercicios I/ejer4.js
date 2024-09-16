@@ -1,4 +1,4 @@
-/*4. En el siguiente bucle while tenemos que tener cuidado porque hay operaciones que pueden dar error (no puede haber raíces cuadradas de números negativos, ni divisiones por cero). 
+/*En el siguiente bucle while tenemos que tener cuidado porque hay operaciones que pueden dar error (no puede haber raíces cuadradas de números negativos, ni divisiones por cero). 
     let result = 1, arg1, arg2, res1, res2; 
     while (result > 0) {  
         arg1 = Math.random() - 0.5;  

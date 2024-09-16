@@ -1,4 +1,4 @@
-/*9. Como hemos visto, javascript, como muchos otros lenguajes, utilizan el “UNIX EPOCH” que cuenta el tiempo a partir de la medianoche del 1 de enero de 1970. 
+/*Como hemos visto, javascript, como muchos otros lenguajes, utilizan el “UNIX EPOCH” que cuenta el tiempo a partir de la medianoche del 1 de enero de 1970. 
 Sin embargo, hay otros tipos de fecha que tienen otro origen del tiempo. 
 Por ejemplo, la fecha juliana empieza a contabilizar el tiempo desde las 12:00 (mediodía) del 1 de enero de 4713 a.C., e indica el número de días (y fracciones) que han transcurrido desde ese momento. 
 La fecha juliana se suele utilizar para calcular el tiempo que ha transcurrido desde eventos que sucedieron en la antigüedad y es aún ampliamente usada para fenómenos astronómicos e históricos lejanos. 

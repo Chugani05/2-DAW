@@ -1,4 +1,4 @@
-/*10. Cuando hablamos de ángulos, normalmente utilizamos los grados sexagesimales (se suelen representar como “deg”, una circunferencia completa son 360º deg). 
+/*Cuando hablamos de ángulos, normalmente utilizamos los grados sexagesimales (se suelen representar como “deg”, una circunferencia completa son 360º deg). 
 Sin embargo, en trigonometría es más común utilizar los radianes (“rad”, una circunferencia completa son 2π rad). De esta forma, 360º equivalen a 2π. 
 Las funciones trigonométricas de javascript, como la mayoría de otros lenguajes, trabajan en radianes, sin embargo en muchas ocasiones nosotros vamos a querer trabajar en grados. Por ello, se pide: 
 a) Implementar una función llamada deg2rad(x) que transforme de grados a radianes, y su inversa rad2deg(x) 

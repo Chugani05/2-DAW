@@ -1,4 +1,4 @@
-/*1. Implementar el control de 3 variables (a, b, c) para que se muestre un mensaje de error cuando se produzca alguna de las siguientes situaciones: 
+/*Implementar el control de 3 variables (a, b, c) para que se muestre un mensaje de error cuando se produzca alguna de las siguientes situaciones: 
 a) Al menos una de las 3 variables es negativa 
 b) Las tres variables son iguales a 0 
 c) Las suma de las 3 variables es mayor que 10 Y las tres variables son diferentes*/
