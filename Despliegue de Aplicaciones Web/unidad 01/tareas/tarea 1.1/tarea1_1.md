@@ -22,7 +22,7 @@ mkdir tarea 1.1
 
 3. Creación de README:
 ```
-touch tarea_1.md
+touch tarea1_1.md
 ```
 
 4. Commit inicial:
