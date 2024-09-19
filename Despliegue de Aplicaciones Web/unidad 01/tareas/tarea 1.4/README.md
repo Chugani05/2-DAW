@@ -67,21 +67,27 @@ sudo /opt/lampp/manager-linux-x64.run
 </div>
 
 ## Creación de nuevo usuario
-### Volvemos al aprtado de `User accounts` y creamos un usuario nuevo. En `user name` ponemos en nombre del usuario, 
+### Volvemos al aprtado de `User accounts` y creamos un usuario nuevo. En la parte del `login information`, en `user name` ponemos en nombre del usuario, en `host name` cambiamos a `local` y ponemos `localhost`de nombre del host, y añadimos la contraseña del usuario. En la parte de `Datebase for user account` hacemos tick en `create a database with same name and grant all privileges`.
 <div align=center>
     <img src="./imgs/img12.png" alt="12"/>
 </div>
+
+### Hacemos tick en la parte de `Data`y `Structure`.
 <div align=center>
     <img src="./imgs/img13.png" alt="13"/>
 </div>
+
+### Llegados a este punto, ya tenemos el usuario creado. Lo último que nos queda por hacer es cambiar una cosa en el fichero de configuración.
 <div align=center>
     <img src="./imgs/img14.png" alt="14"/>
 </div>
+
+### Dentro del fichero buscamos `$cfg['Server'][$i]['auth-type'] = 'configure';` y dentro de las ultimas comillas cambiamos y ponemos `http`.
 <div align=center>
     <img src="./imgs/img11.png" alt="15"/>
 </div>
 
 ### Desde ahora, cada vez que queramos entrar a `localhost` nos preguntara que usuario es con el que queremos entrar.
 <div align=center>
-    <img src="./imgs/img15.png" alt="15"/>
+    <img src="./imgs/img15.png" alt="16"/>
 </div>
