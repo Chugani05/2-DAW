@@ -2,7 +2,7 @@
 
 ## Contenidos
 - [Comandos utilizados](#comandos-utilizados)
-- [Creación de organización](#crear-una-organizacion)
+- [Creación de organización](#crear-una-organización)
 
 ### Comandos utilizados
 Los unicos comandos que he utilizado hasta ahora han sido los siguientes:
