@@ -1,7 +1,7 @@
 # Formación en Centros de Trabajo
 
 <div align=center>
-<img src="../extras/hacker.gif" alt="me" width="60%">
+<img src="../extras/cyberpunk2.gif" alt="me" width="60%">
 </div>
 
 ## Contenido

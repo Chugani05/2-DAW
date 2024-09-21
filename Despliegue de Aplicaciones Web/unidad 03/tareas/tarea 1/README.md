@@ -1,4 +1,7 @@
 # Confuguración de Xaamp
+<div align=center>
+<img src="../../../../extras/vinilo.gif" alt="me" width="100%">
+</div>
 
 ## Contenido
 - [Inicialización de Xampp](#inicialización-de-xampp)
