@@ -1,4 +1,4 @@
-/*Diseñar una función que acepta un argumento x y que muestre los siguientes mensajes: 
+/* Diseñar una función que acepta un argumento x y que muestre los siguientes mensajes: 
 a) ‘Este es muy fácil… ¡prueba otro!’, si x es 0 
 b) ‘El número es par’, si x es 2, 4 ó 6 
 c) ‘El número es impar’, si x es 1, 3 ó 5 

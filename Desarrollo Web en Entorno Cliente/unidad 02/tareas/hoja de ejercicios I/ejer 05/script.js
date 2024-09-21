@@ -1,4 +1,4 @@
-/*Muestra la fecha y hora actuales en formato: “DD/MM/YYYY hh:mm:ss TimeZone”*/
+/* Muestra la fecha y hora actuales en formato: “DD/MM/YYYY hh:mm:ss TimeZone” */
 
 function showDateTime() {
     const now = new Date();
