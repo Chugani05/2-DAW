@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7</title>
+    <script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+    <h1>Calculadora de Tiempo Desde Fecha</h1>
+
+    <p>Ingresa una fecha (formato yyyy-mm-dd):</p>
+    <input type="date" id="dateInput">
+
+    <p>Selecciona la unidad de tiempo:</p>
+    <select id="formatInput">
+        <option value="d">Días</option>
+        <option value="h">Horas</option>
+        <option value="m">Minutos</option>
+        <option value="s">Segundos</option>
+    </select>
+
+    <button onclick="displayResult()">Calcular Tiempo</button>
+
+    <h2>Resultado:</h2>
+    <p><span id="result"></span></p>
+</body>
+</html>

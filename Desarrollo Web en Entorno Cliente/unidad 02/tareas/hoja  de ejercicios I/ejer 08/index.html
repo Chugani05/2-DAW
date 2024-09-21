@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8</title>
+    <script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+    <h1>Conversión de Horas Decimales a HH:MM:SS y Viceversa</h1>
+    
+    <h2>De Decimal a HH:MM:SS</h2>
+    <p>Ingresa una hora en formato decimal (ej: 8.25):</p>
+    <input type="number" step="0.01" id="decimalTime" placeholder="Ejemplo: 8.25">
+    <button onclick="convertDecToHMS()">Convertir a HH:MM:SS</button>
+    <p>Resultado: <span id="hmsResult"></span></p>
+
+    <h2>De HH:MM:SS a Decimal</h2>
+    <p>Ingresa las horas, minutos y segundos:</p>
+    <input type="number" id="hours" placeholder="Horas" min="0"> :
+    <input type="number" id="minutes" placeholder="Minutos" min="0" max="59"> :
+    <input type="number" id="seconds" placeholder="Segundos" min="0" max="59">
+    <button onclick="convertHMSToDec()">Convertir a Decimal</button>
+    <p>Resultado: <span id="decResult"></span></p>
+</body>
+</html>
