@@ -1,5 +1,10 @@
 # Instalación de Xampp
 
+## Contenido
+- [Instalación](#instalación)
+- [Comprobación](#comprobación)
+
+## Instalación
 ### Se descarga la version de Xampp correspondiente para nuestro dispositivo, en mi caso Linux.
 <div align=center>
     <img src="./imgs/img1.png" alt="1"/>
@@ -37,4 +42,24 @@ sudo /opt/lampp/manager-linux-x64.run
 ### En conclusión, Xampp está funcionando bien, por eso se inicializand eforma rapida.
 <div align=center>
     <img src="./imgs/img6.png" alt="7"/>
+</div>
+
+## Comprobación
+### Nos vamos al directorio `/opt/lampp/htdocs/test`, pero ante sde ello creamos la carpeta 'test' con `mkdir test`.
+
+### Con el comando `nano test.php` accedemos al editor de texto de nano y pegamos el siguiente código para mostrar un _Hola Mundo_.
+```php
+<html>
+    <head>
+        <title>Test PHP</title>
+    </head>
+    <body>
+        <?php echo '<p>Hola mundo</p>'; ?>
+    </body>
+</html>
+```
+
+### Tras iniciar los servidores desde el panel de control de Xampp, accedemos al sitio web desde `localhost/test/test.php`.
+<div align=center>
+    <img src="./imgs/img8.png" alt="8"/>
 </div>
