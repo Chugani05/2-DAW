@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+    <script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+    <h1>Función de Suma y Promedio</h1>
+    <p>Ingrese los argumentos (separados por comas):</p>
+    <input type="text" id="arguments" placeholder="Ejemplo: 5, 'A', 6, 4, 'C'">
+    <button onclick="processInput()">Calcular</button>
+    
+    <div id="output"></div>
+
+    <script>
+        function processInput() {
+            let input = document.getElementById('arguments').value;
+            let args = input.split(',').map(item => {
+                let trimmed = item.trim();
+                return isNaN(trimmed) ? trimmed : Number(trimmed);
+            });
+            sum_and_avg(...args);
+        }
+    </script>
+</body>
+</html>

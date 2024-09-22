@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6</title>
+    <script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+    <h1>Procesar una línea CSV</h1>
+    <p>Introduce el texto CSV y el delimitador:</p>
+
+    <label for="csvInput">Texto CSV:</label>
+    <input type="text" id="csvInput" placeholder="coche|rojo|10 años|diesel|5 puertas">
+
+    <label for="delimiterInput">Delimitador (por defecto: ,):</label>
+    <input type="text" id="delimiterInput" placeholder=",">
+
+    <button onclick="csvSplit()">Procesar CSV</button>
+
+    <h2>Resultado:</h2>
+    <div id="resultado"></div>
+</body>
+</html>
