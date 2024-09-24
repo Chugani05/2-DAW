@@ -1,0 +1,1 @@
+# Método de Paso de Variables de formularios. GET y Post
