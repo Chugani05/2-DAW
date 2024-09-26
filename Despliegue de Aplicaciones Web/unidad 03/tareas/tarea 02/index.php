@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="get_post.php" method="get">
+    <form action="get_post.php" method="post">
         Nombre : <input type="text" name="usuario">
         <br>
         <input type ="Submit" name="Enviar" value="Enviar">
