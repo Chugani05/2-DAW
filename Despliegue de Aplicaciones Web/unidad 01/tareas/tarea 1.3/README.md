@@ -40,7 +40,7 @@ git push
 
 6. Borrar del disco duro todo el código del proyecto del banco:
 ```bash
-rm -rf /ruta/al/proyecto/banco
+rm -rf /home/chugani/Desktop/blanco
 ```
 
 7. Clona el proyecto del banco de GitHub a local:
@@ -57,6 +57,6 @@ Cambiamos la extención del archivo `index.html` a `index.js` y hacemos el commi
 
 ```bash
 git add .
-git commit -m "modificación del código"
+git commit -m "modificando codigo"
 git push
 ```
