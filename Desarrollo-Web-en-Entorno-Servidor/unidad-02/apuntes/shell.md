@@ -1,4 +1,4 @@
-# Creación de modelos de Django
+# Shell en Django
 
 <div align=center>
 <img src="../../../extras/vinilo.gif" alt="me" width="100%">
@@ -6,10 +6,10 @@
 
 ###
 <div align=center>
-    <img src="../imgs/img20.png" alt="1"/>
+    <img src="../imgs/img30.png" alt="1"/>
 </div>
 
 ###
 <div align=center>
-    <img src="../imgs/img21.png" alt="2"/>
+    <img src="../imgs/img31.png" alt=""/>
 </div>
