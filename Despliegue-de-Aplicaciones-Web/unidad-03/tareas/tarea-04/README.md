@@ -6,6 +6,7 @@
 ## Contenido
 - [Creación de la conexión.](#creación-de-la-conexión)
 - [Creación de la base de datos.](#creación-de-la-base-de-datos)
+- [Creación de la tabla.](#creación-de-la-tabla)
 
 ## Creación de la conexión.
 ### Creamos la conexión a la base de datos, en este caso a una base de datos que llamaremos `prueba`.
@@ -30,6 +31,7 @@
     <img src="./imgs/img02.png" alt="2"/>
 </div>
 
+## Creación de la tabla.
 ### En la base de datos `prueba` creamos una tabla llamada `users`.
 <div align=center>
     <img src="./imgs/img03.png" alt="3"/>
