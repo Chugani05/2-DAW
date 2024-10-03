@@ -6,7 +6,6 @@
 ## Contenido
 - [Creación de la conexión.](#creación-de-la-conexión)
 - [Creación de la base de datos.](#creación-de-la-base-de-datos)
-- [Inserción de datos en la base de datos.](#inserción-de-datos-en-la-base-de-datos)
 
 ## Creación de la conexión.
 ### Creamos la conexión a la base de datos, en este caso a una base de datos que llamaremos `prueba`.
@@ -51,31 +50,3 @@
     <img src="./imgs/img06.png" alt="6"/>
 </div>
 
-## Inserción de datos en la base de datos.
-### Cambiamos y añadimos contenido al documento de conexión.
-```php
-<?php
-
-    echo "<pre>";
-
-    $conn = mysqli_connect( 'localhost', 'nombreUsuario', 'contraseñaUsuario', 'prueba');
-
-    // sentencia sql para incertar datos en la base de datos
-    $insert = "insert into users( name, email) values( 'rashi', 'rcn02468@gmail.com')";
-
-    // ejecuta una consulta en la base de datos
-    $return = mysqli_query ( $conn, $insert);
-
-    // muestra el valor de la sentencia por pantalla
-    print_r( ( $return));
-
-    // cerramos la conecion al servidor
-    mysqli_close( $conn)
-
-?>
-```
-
-### Comprobamos que los datos hayan sido insertado en `phpMyAdmin`.
-<div align=center>
-    <img src="./imgs/img07.png" alt="7"/>
-</div>
