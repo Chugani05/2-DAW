@@ -1,0 +1,11 @@
+{% extends "blog/base.html" %}
+
+{% block title %}Nanobits | {{ post.title }}{% endblock title %} 
+
+{% block body %}
+<h1>{{ post.title }}</h1>
+<div class="post-date">{{ post.created_at }}</div>
+<p>{{ post.content }}</p>
+
+<a href="{% url 'blog:home' %}">Back to home</a>
+{% endblock body %}

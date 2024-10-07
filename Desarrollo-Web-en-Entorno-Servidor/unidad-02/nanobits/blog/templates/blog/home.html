@@ -1,0 +1,22 @@
+{% extends "blog/base.html" %}
+
+{% block title %}Nanobits | Home{% endblock title %}
+
+{% block body %}
+  <h1>Nanobits: the ultimate tech blog!!</h1>
+  <p>Check out our great post below...</p>
+  <p>Total posts: <strong>{{ num_posts }}</strong> post{{ num_posts | pluralize }}</p>
+
+  {% comment %} manera de insertar codigo python directamente {% endcomment %}
+    {% for post in posts %}
+      <h2>{{ post.title }}</h2>
+      <div class="post-date">{{ post.created_at }}</div>
+      <p>{{ post.content | truncatewords:20}} <a href="{% url 'blog:post_detail' post.slug %}">[ Read more ]</a></p>
+    {% endfor %}
+
+    {% comment %} <ul>
+      {% for post in posts %}
+        <li>{{ post }}</li>
+      {% endfor %}
+    </ul> {% endcomment %}
+  {% endblock body %}
