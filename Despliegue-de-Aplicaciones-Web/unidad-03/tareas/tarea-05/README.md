@@ -11,6 +11,7 @@
 
 ## Inserción de registros en la base de datos.
 Cambiamos y añadimos contenido al documento de conexión.
+
 ```php
 <?php
 
@@ -34,12 +35,14 @@ Cambiamos y añadimos contenido al documento de conexión.
 ```
 
 Comprobamos que los datos hayan sido insertado en `phpMyAdmin`.
+
 <div align=center>
     <img src="./imgs/img01.png" alt="1"/>
 </div>
 
 ## Leer registros de la base de datos.
 Leemos los datos con `mysqli_query` en un archivo que llamamos `leer.php`.
+
 ```php
 <?php
 echo "<pre>";
@@ -58,6 +61,7 @@ print_r($result);
 </div>
 
 Esta es la segunda forma leer datos, mediante `mysqli_fetch_all`.
+
 ```php
 <?php
 echo "<pre>";
@@ -77,6 +81,7 @@ print_r($rows);
 
 
 Esta es la tercera forma de leer datos, muy similar a la segunda pero con un bucle `do`.
+
 ```php
 <?php
 $conn = mysqli_connect('localhost', 'nombreUsuario', 'contraseñaUsuario', 'prueba');
@@ -100,6 +105,7 @@ print_r($data);
 
 ## Actualizar la base de datos.
 Actualizamos los datos mediante un archivo `update.php` con el siguiente código.
+
 ```php
 <?php
 
@@ -121,6 +127,7 @@ mysqli_close($conn);
 
 ## Borrar la base de datos.
 Borramos los datos mediante un archivo `update.php` con el siguiente código.
+
 ```php
 <?php
 

@@ -23,6 +23,16 @@ Creamos la base de datos, en este caso llamada `tarea06` y la tabla `users`.
 
 ## Estructura y funcionamiento
 ### index.php
+Esta interfaz basada en PHP permite a los usuarios realizar operaciones SQL (insertar, actualizar, eliminar) en una base de datos:
+
+- **Selección de operación SQL**: Los usuarios eligen la operación (insertar, actualizar, eliminar) mediante un menú desplegable.
+- **Formularios**:
+  - **Formulario de inserción**: Agrega un nuevo nombre y correo electrónico.
+  - **Formulario de actualización**: Actualiza un registro basado en su ID.
+  - **Formulario de eliminación**: Elimina un registro basado en su ID.
+- **Tabla de resultados**: Muestra el resultado (como la lista de registros) tras realizar la operación.
+
+Los formularios son procesados por `sql_post.php`, donde se maneja la lógica SQL para cada operación. JavaScript muestra/oculta dinámicamente el formulario correspondiente según la selección del usuario.
 
 ```php
 <!DOCTYPE html>
@@ -82,6 +92,16 @@ Creamos la base de datos, en este caso llamada `tarea06` y la tabla `users`.
 ```
 
 ### sql_get.php
+Este script PHP:
+
+1. **Conexión a la base de datos**: Se conecta a una base de datos MySQL llamada `tarea06` usando las credenciales de usuario.
+2. **Consulta SQL**: Ejecuta la consulta `"SELECT * FROM users"` para obtener todos los registros de la tabla `users`.
+3. **Obtención de resultados**: Recupera todos los resultados como un arreglo asociativo.
+4. **Devolver los datos**: Convierte los resultados en formato JSON y los imprime.
+5. **Cierra la conexión**: Finaliza la conexión a la base de datos.
+
+Este script está diseñado para devolver todos los registros de la tabla `users` en formato JSON.
+
 ```php
 <?php
 
@@ -98,6 +118,20 @@ mysqli_close($conn);
 ```
 
 ### sql_post.php
+Este script PHP realiza diferentes operaciones SQL (insertar, actualizar o eliminar) basadas en la entrada del usuario:
+
+1. **Conexión a la base de datos**: Se conecta a la base de datos `tarea06` usando las credenciales proporcionadas.
+2. **Detección de tipo de operación**: Identifica el tipo de operación (`insert`, `update`, `delete`) a partir de los datos enviados en el formulario (`$_POST`).
+3. **Construcción de la consulta SQL**:
+   - **Insertar**: Agrega un nuevo registro con nombre y correo electrónico en la tabla `users`.
+   - **Actualizar**: Actualiza el nombre y/o correo electrónico de un registro existente basado en el `id`.
+   - **Eliminar**: Elimina un registro de la tabla basado en el `id`.
+4. **Ejecución de la consulta**: Ejecuta la consulta SQL correspondiente en la base de datos.
+5. **Redirección**: Después de ejecutar la consulta, espera 3 segundos y redirige a `index.php`.
+6. **Cierre de la conexión**: Cierra la conexión a la base de datos. 
+
+El script muestra el mensaje "Updating data..." mientras se procesa la operación y luego redirige al usuario.
+
 ```php
 <?php
 
@@ -134,6 +168,21 @@ echo "Updating data...";
 ```
 
 ### script.js
+Este script JavaScript realiza las siguientes funciones:
+
+1. **Consulta y renderización de la tabla**:
+   - Usa `fetchData()` para obtener datos de un archivo PHP (`sql_get.php`) mediante `fetch`, que devuelve un JSON con los registros.
+   - Con los datos obtenidos, llama a `createRow()` para agregar filas en la tabla HTML (`#result-table`), mostrando el ID, nombre, correo y fecha de creación de cada usuario.
+
+2. **Cambio de operación SQL**:
+   - Detecta el cambio en el selector de tipo de consulta (`sql-query-type`) y llama a `changeForm()` para mostrar el formulario correspondiente (insertar, actualizar o eliminar) y ocultar los otros.
+
+3. **Mostrar el formulario adecuado**:
+   - Basado en el tipo de operación seleccionada:
+     - **Insertar**: Muestra el formulario de inserción y oculta los otros.
+     - **Actualizar**: Muestra el formulario de actualización y oculta los otros.
+     - **Eliminar**: Muestra el formulario de eliminación y oculta los otros.
+
 ```js
 // Inicialización y consulta de la tabla
 const selectResult = await fetchData();
@@ -208,6 +257,26 @@ function setDeleteForm() {
 ```
 
 ### style.css
+Este archivo CSS define el estilo para una página web con formularios y tablas:
+
+1. **Estilos globales**: Resetea el margen del cuerpo, establece una fuente base, color de fondo y texto, y un diseño de línea clara.
+   
+2. **Diseño principal**: 
+   - El contenedor principal (`main`) ocupa toda la altura de la pantalla, alinea el contenido al centro, y tiene un espaciado entre elementos.
+   
+3. **Contenedor del formulario**:
+   - Aplica un borde, esquinas redondeadas, sombras y espaciado interno.
+   - Los inputs y selects tienen ancho completo, bordes suaves y relleno.
+   - El botón de enviar tiene un fondo verde, texto blanco y efecto hover.
+
+4. **Tabla de resultados**:
+   - Define un diseño colapsado, con celdas separadas por bordes suaves y espaciado interno.
+   - Los encabezados tienen un fondo gris claro y texto en negrita.
+
+5. **Visibilidad de formularios**: Los formularios de actualización, eliminación e inserción están ocultos por defecto.
+
+6. **Diseño responsivo**: En pantallas pequeñas (menos de 768px), los elementos cambian a una disposición vertical, y los anchos de los contenedores se ajustan al 90%.
+
 ```css
 /* Global Reset and Base Styles */
 body {
