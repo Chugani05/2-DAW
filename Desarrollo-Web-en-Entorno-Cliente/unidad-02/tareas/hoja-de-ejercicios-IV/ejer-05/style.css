@@ -5,6 +5,7 @@ body {
     text-align: center;
     padding: 50px;
 }
+
 button {
     padding: 10px 20px;
     margin: 20px;
@@ -13,10 +14,12 @@ button {
     border: none;
     border-radius: 5px;
 }
+
 #darkSide {
     background-color: black;
     color: white;
 }
+
 #lightSide {
     background-color: white;
     color: black;

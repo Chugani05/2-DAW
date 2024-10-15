@@ -1,0 +1,16 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 50px;
+}
+
+#lightsaber {
+    width: 200px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+#lightsaber:hover {
+    transform: scale(1.1); /* Efecto de agrandar al pasar el ratón */
+}
