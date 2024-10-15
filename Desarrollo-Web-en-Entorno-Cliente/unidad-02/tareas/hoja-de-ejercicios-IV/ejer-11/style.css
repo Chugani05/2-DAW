@@ -1,0 +1,20 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 50px;
+    background-color: #f0f0f0;
+}
+
+#superman {
+    width: 250px;
+    position: relative;
+    top: 300px; /* Superman empieza en la parte inferior */
+    transition: top 1s ease; /* Animación de vuelo suave */
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 18px;
+    margin-top: 1px;
+    cursor: pointer;
+}
