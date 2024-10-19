@@ -1,0 +1,24 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 50px;
+    background-color: #f0f0f0;
+}
+
+.img {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+#batman {
+    display: none; /* La imagen está oculta inicialmente */
+    width: 200px;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+}
