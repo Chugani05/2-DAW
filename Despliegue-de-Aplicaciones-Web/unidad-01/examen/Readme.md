@@ -45,199 +45,84 @@ __Copia un repositorio albergado a otra cuenta (para contribuir)__ <br> Copia co
 Es el puntero de los commits que se han creado <br> __Es un puntero al commit que está restaurado en el directorio de trabajo__ <br> Es la ruta del repositorio local <br> Es la cabezera del repositorio
 
 12. Atajo que proporciona git, si quieres saltarte el área de preparación.
-Pregunta 12 Seleccione una:
 
-git commit
-
-__git commit -a__
-
-git commit -m
-
-git rm --cached readme.txt
+git commit <br> __git commit -a__ <br> git commit -m <br> git rm --cached readme.txt
 
 13. Git fue inicialmente diseñado y desarrollado por _____________________.
 
-Kevin Mitnick
-
-__Linus Torvalds__
-
-Richard Stallman
-
-Stephen Wozniak
+Kevin Mitnick <br> __Linus Torvalds__ <br> Richard Stallman <br> Stephen Wozniak
 
 14. ¿Qué comando es necesario para crear un repositorio?
-Pregunta 14 Seleccione una:
 
-git add
-
-git status
-
-__git init__
-
-git config
+git add <br> git status <br> __git init__ <br> git config
 
 15. Lista todas las ramas (branches) disponibles localmente.
 
-__git branch__
-
-git branch -r
-
-git log
-
-git status
+__git branch__ <br> git branch -r <br> git log <br> git status
 
 16. ¿ Para qué sirve el comando git log --online?
-Pregunta 16 Seleccione una:
 
-__Muestra la historia de commit de una rama__
-
-Muestra los convencional commits que has realizado
-
-Muestra los logs en una línea en la terminal
-
-Muestra el último commit hecho
+__Muestra la historia de commit de una rama__ <br> Muestra los convencional commits que has realizado <br> Muestra los logs en una línea en la terminal <br> Muestra el último commit hecho
 
 17. Las tres secciones principales de un proyecto de Git son: Directorio de trabajo (working directory), Area de preparación (staging area) y el Repositorio (repository).
 
-__Verdadero__
-Falso
+__Verdadero__ <br> Falso
 
 18. En el caso de ya tener una copia de un proyecto usando git clone, podemos actualizar a la última versión con:
 
-git add
-
-__git pull__
-
-git branch
-
-git log
+git add <br> __git pull__ <br> git branch <br> git log
 
 19. ¿Con qué comando se cambia de rama en git ?
-Pregunta 19 Seleccione una:
 
-git branch move nombreDelaRama
-
-__git checkout nombreDelaRama__
-
-git branch nombreDelaRama
-
-git branch active nombreDelaRama
+git branch move nombreDelaRama <br> __git checkout nombreDelaRama__ <br> git branch nombreDelaRama <br> git branch active nombreDelaRama
 
 20. En el ____________ se almacena información información acerca de lo que va a ir en tu próxima revisión (commit).
 
-Directorio de trabajo
-
-Directorio Git
-
-__Área de preparación__
-
-Repositorio
+Directorio de trabajo <br> Directorio Git <br> __Área de preparación__ <br> Repositorio
 
 21. Un sistema de control de versiones permite:
 
-__Recuperar versiones anteriores del proyecto__
-b.
-__Ver históricos de cambios y comentarios__
-
-Únicamente el trabajo de un desarrollador en un momento determinado sobre un proyecto
-
-__Que varios clientes puedan sacar copias del proyecto al mismo tiempo__
+__Recuperar versiones anteriores del proyecto__ <br> __Ver históricos de cambios y comentarios__ <br> Únicamente el trabajo de un desarrollador en un momento determinado sobre un proyecto <br> __Que varios clientes puedan sacar copias del proyecto al mismo tiempo__
 
 22. ¿ Para qué sirve el comando git diff ?
-Pregunta 22 Seleccione una:
 
-Muestra el último cambio de los ficheros de trabajo
-
-Muestra los cambios en todos los ficheros no modificados del directorio de trabajo
-
-__Muestra las diferencias entre el directorio de trabajo y la zona de intercambio temporal__
-
-Muestra los cambios en todos los ficheros borrados del directorio de trabajo
+Muestra el último cambio de los ficheros de trabajo <br> Muestra los cambios en todos los ficheros no modificados del directorio de trabajo <br> __Muestra las diferencias entre el directorio de trabajo y la zona de intercambio temporal__ <br> Muestra los cambios en todos los ficheros borrados del directorio de trabajo
 
 23. Git es un software de control de versiones centralizado.
 
-Verdadero
-__Falso__
+Verdadero <br> __Falso__
 
 24. Si deseas obtener una copia de un repositorio Git existente en GitHub, el comando que necesitas es :
-Pregunta 24 Seleccione una:
 
-__git clone__
-
-git commit
-
-git add
-
-git log
+__git clone__ <br> git commit <br> git add <br> git log
 
 25. ¿Cómo se sube el contenido de tu rama principal del repositorio local al repositorio remoto ?
-Pregunta 25 Seleccione una:
 
-git commit -m "Subir archivos"
-
-git pull origin master
-
-__git push origin master__
-
-git log origin master
+git commit -m "Subir archivos" <br> git pull origin master <br> __git push origin master__ <br> git log origin master
 
 26. ¿Cuál de los siguientes comandos crea una nueva rama local llamada "develop", y cambia a ella directamente?
-Pregunta 26 Seleccione una:
 
-git add develop
-
-git checkout -- develop
-
-git checkout develop
-
-__git checkout -b develop__
+git add develop <br> git checkout -- develop <br> git checkout develop <br> __git checkout -b develop__
 
 27. En sistemas de control de versiones un __________ es el lugar en donde se almacenan las revisiones.
 
-conflicto
-parche
-__repositorio__
-cambio
+conflicto <br> parche <br> __repositorio__ <br> cambio
 
 28. La herramienta de control de versiones no soluciona el ____________, sólo informa de su existencia.
 
-__conflicto__
-parche
-cambio
-repositorio
+__conflicto__ <br> parche <br> cambio <br> repositorio
 
 29. ¿ Que es GitHub ?
-Pregunta 29 Seleccione una:
 
-Es un programa para diseñar proyectos
-
-Un repositorio remoto para subir contenido
-
-__Es un sistema de gestión de proyectos y control de versiones de código__
-
-Es una plataforma para desarrollar código
+Es un programa para diseñar proyectos <br> Un repositorio remoto para subir contenido <br> __Es un sistema de gestión de proyectos y control de versiones de código__ <br> Es una plataforma para desarrollar código
 
 30. ¿Cuales son las instrucciones principales que permiten la identificación de un usuario para poder realizar un commit?
 
-
-git config --global user.whoame
-
-__git config --global user.email "example@example.com"__
-
-__git config --global user.name "Fulanito"__
-
-git config --global user.mail "example@example.com"
+git config --global user.whoame <br> __git config --global user.email "example@example.com"__ <br> __git config --global user.name "Fulanito"__ <br> git config --global user.mail "example@example.com"
 
 31. Para añadir contenido al área de preparación (staging area), utilizo el siguiente comando:
-Pregunta 31 Seleccione una:
 
-git diff
-
-git commit
-
-git push
-
-__git add__
+git diff <br> git commit <br> git push <br> __git add__
 
 32. ¿ Qué hace el comando git show ?
 
