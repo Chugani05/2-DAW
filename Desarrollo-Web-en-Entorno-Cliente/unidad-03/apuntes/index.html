@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <p>Este es mi script de JQuery</p>
+
+    <div class="test">
+        <h1>Yellow!!</h1>
+        <button>Pulsa aquí</button>
+    </div>
+
+    <div id="item">
+        <h2>No entiendo q estoy haciendo</h2>
+    </div>
+
+    
+    <script>
+        $(document).ready(function(){
+            // oculta todos los elementos <p>.
+            $("p").hide()
+            $("button").click(function(){
+                // oculta todos los elementos de la clase test.
+                $(".test").hide()
+            });
+            console.log($("#item"))
+        });
+    </script>
+</body>
+</html>
