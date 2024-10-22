@@ -1,4 +1,4 @@
-# Forma jurídica
+# Quizizz - Forma jurídica
 
 1. ¿Qué es una Sociedad Anónima?
 
