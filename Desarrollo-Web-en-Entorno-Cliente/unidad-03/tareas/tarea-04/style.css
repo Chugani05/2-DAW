@@ -1,0 +1,122 @@
+/* General Styles */
+body {
+    background-color: #1b1b1b;
+    color: #eaeaea;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    color: #ffcc00;
+    text-align: center;
+    text-shadow: 2px 2px 5px #000;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-top: 20px;
+}
+
+h2 {
+    font-size: 1.8em;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+/* Paragraph Styles */
+p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    padding: 10px 20px;
+    text-align: justify;
+    background-color: #222;
+    border-radius: 8px;
+    margin: 20px auto;
+    width: 80%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Image Styling */
+img {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    border: 3px solid #ffcc00;
+    border-radius: 8px;
+}
+
+/* List Styling */
+ul {
+    list-style-type: none;
+    padding: 0;
+    width: 80%;
+    margin: 20px auto;
+    background-color: #222;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+ul li {
+    padding: 10px;
+    font-size: 1.2em;
+    color: #eaeaea;
+    border-bottom: 1px solid #444;
+}
+
+ul li:last-child {
+    border-bottom: none;
+}
+
+ul li:hover {
+    background-color: #333;
+    color: #ffcc00;
+}
+
+/* Batcomputer Divs */
+div[id^="batcomputer"], #batmobile-status, #batmobile-alert, #batman4, #batman5, #batman6, #report, #bat-report, #security-report {
+    background-color: #333;
+    color: #eaeaea;
+    padding: 15px;
+    margin: 10px auto;
+    width: 80%;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+/* Link Styling */
+a {
+    background-color: #333;
+    color: #ffcc00;
+    padding: 15px;
+    margin: 10px auto;
+    width: 20%;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Buttons (Optional for interactivity if you decide to add them) */
+button {
+    background-color: #ffcc00;
+    color: #1b1b1b;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #ffdd22;
+}
+

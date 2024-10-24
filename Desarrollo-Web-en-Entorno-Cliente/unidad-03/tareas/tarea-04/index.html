@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="Rashi Chugani">
         <title>Ejercicios de jQuery - Selectores avanzados - Batman</title>
+        <link rel="stylesheet" href="style.css">
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     </head>
     <body>
@@ -131,63 +132,83 @@
         <script>
 			$(document).ready(function(){
 				// Ejercicio 1
+                $("#batsignal").attr("src", "./img/new-batsignal.jpg");
 				
 				
 				// Ejercicio 2
+                $("#batcomputer2").text("Escaneo completado. No hay amenazas detectadas.");
 				
 
 				// Ejercicio 3
+                $("#batmobile-status").text("Estado: En marcha, hacia Gotham.");
 				
 
 				// Ejercicio 4
+                $("#batman4").text("Batman está en modo sigiloso.");
 				
 
 				// Ejercicio 5
+                $("#batman5").removeClass("sigiloso");
 				
 
 				// Ejercicio 6
+                $("#batman6").text("Batman está en modo detective.");
 				
 
 				// Ejercicio 7
+                $("#villains").append("<li>Hiedra Venenosa</li>");
 				
 				
 				// Ejercicio 8
+                $("#allies8").prepend("<li>Catwoman</li>");
 				
 
 				// Ejercicio 9
+                $("#batcomputer9").before("<p>Aviso: Mantenimiento del sistema en curso.</p>");
 				
 
 				// Ejercicio 10
+                $("#batcomputer10").after("<p>¡Alerta! Amenaza detectada cerca de Arkham.</p>");
 				
 	
 				// Ejercicio 11
+                $("#captured-villains").empty();
 				
 	
 				// Ejercicio 12
+                $("#gadgets12 li:contains('Batimóvil')").remove();
 				
 
 				// Ejercicio 13
+                $("#batcave-link").attr("href", "new_url.html");
 				
 
 				// Ejercicio 14
+                $("#report").text("Reporte: Actividad criminal en aumento.");
 				
 
 				// Ejercicio 15
+                $("#batmobile-alert").text("Alerta: Batería baja.");
 				
 
 				// Ejercicio 16
+                $("#bat-report").prepend("<p>Advertencia: Nivel de seguridad en riesgo.</p>");
 				
 
 				// Ejercicio 17
+                $("#security-report").toggleClass("seguro");
 				
 				
 				// Ejercicio 18
+                $("#allies18").before("<p>Aviso: Nuevos aliados disponibles.</p>");
 				
 
 				// Ejercicio 19
+                $("#gadgets19").after("<p>Nota: Inventario actualizado.</p>");
 				
 	
 				// Ejercicio 20
+                $("#allies20 li:contains('Alfred')").remove();
 				
 			});
 		</script>

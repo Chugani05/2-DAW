@@ -111,27 +111,74 @@
 
         <script>
         // Ejercicio 1: Evento .click()
+        $('#entrar').click(function() {
+            $('#mensaje').show();
+            $('#atras').show();
+        });
+
+        $('#atras').click(function() {
+            $('#mensaje').hide();
+            $('#atras').hide();
+        });
 
 
         // Ejercicio 2: Evento .dblclick()
+        $('#agua').dblclick(function() {
+            $(this).after('<p>¡Has visto el reflejo del espíritu!</p>');
+        });
 
 
         // Ejercicio 3: Evento .hover()
+        $('#sombras').hover(
+            function() {
+                $(this).css('color', '#555'); // Cambiar a un tono más oscuro
+            },
+            function() {
+                $(this).css('color', '#f4f4f4'); // Regresar al color original
+            }
+        );
 
 
         // Ejercicio 4: Eventos .focus() y .blur()
+        $('#ojo').focus(function() {
+            $('#ojo-img').attr('src', './img/ojo-abierto.jpg'); // Cambiar a ojo abierto
+        }).blur(function() {
+            $('#ojo-img').attr('src', './img/ojo-cerrado.jpg'); // Cambiar a ojo cerrado
+        });
 
 
         // Ejercicio 5: Evento .change()
+        $('#paisaje').change(function() {
+            const paisajeSeleccionado = $(this).val();
+            const nuevaImagen = paisajeSeleccionado === 'dia' ? './img/paisaje-dia.JPG' : './img/paisaje-noche.JPG';
+            $('#paisaje-img').attr('src', nuevaImagen);
+        });
 
 
         // Ejercicio 6: Evento .submit()
+        $('#invocacion').submit(function(event) {
+            event.preventDefault(); // Prevenir el envío del formulario
+            $('#resultado-invocacion').show(); // Mostrar el mensaje de invocación
+        });
  
 
         // Ejercicio 7: Eventos .keydown() y .keyup()
+        $('#voces').keydown(function() {
+            const texto = $(this).val();
+            $('#voces-resultado').text(texto); // Mostrar texto mientras se escribe
+        }).keyup(function() {
+            $('#voces-resultado').text(''); // Limpiar el texto al soltar la tecla
+        });
 
 
         // Ejercicio 8: Evento .keypress()
+        $(document).on('keypress', function(event) {
+            if (event.which === 13) { // Verifica si se presionó Enter
+                $('#puerta-destino').text('¡Has abierto la puerta del destino!');
+            } else {
+                $('#puerta-destino').text('Presiona Enter para abrir la puerta...');
+            }
+        });
 
     </script>
     </body>
