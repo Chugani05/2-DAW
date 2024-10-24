@@ -5,21 +5,16 @@ $(document).ready(function () {
         if (nuevaTarea !== '') {
             let tareaHtml = `
                 <li>
-                    <input type="checkbox" class="completar-tarea"> 
-                    <span class="tarea-texto">${nuevaTarea}</span>
-                    <button class="editar">Editar</button>
-                    <button class="eliminar">Eliminar</button>
+                    <p class="tarea-texto">${nuevaTarea}</p>
+                    <div style="display: flex; gap: 5px;">
+                        <button class="editar">Editar</button>
+                        <button class="eliminar">Eliminar</button>
+                    </div>
                 </li>
             `;
             $('#lista-tareas').append(tareaHtml);
             $('#nueva-tarea').val(''); // Limpiar el input
         }
-    });
-
-    // Marcar tarea como completada
-    $(document).on('change', '.completar-tarea', function() {
-        const tareaText = $(this).siblings('.tarea-texto');
-        tareaText.toggleClass('.completed', this.checked);
     });
 
     // Función para eliminar una tarea
@@ -38,8 +33,6 @@ $(document).ready(function () {
 
     // Función para limpiar las tareas completadas
     $('#limpiar-tareas').click(function () {
-        $('#lista-tareas input[type="checkbox"]:checked').each(function () {
-            $(this).parent().remove(); // Remueve solo las tareas que están marcadas
-        });
+        $('#lista-tareas').empty()
     });
 });

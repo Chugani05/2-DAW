@@ -173,7 +173,7 @@
 
         // Ejercicio 8: Evento .keypress()
         $(document).on('keypress', function(event) {
-            if (event.which === 13) { // Verifica si se presionó Enter
+            if (event.which === 32) { // Verifica si se presionó Enter
                 $('#puerta-destino').text('¡Has abierto la puerta del destino!');
             } else {
                 $('#puerta-destino').text('Presiona Enter para abrir la puerta...');
