@@ -52,64 +52,53 @@
       </div>
   </nav>
 
-    <!-- elemento nav que contiene un elemento bootstrap llamado breadcrumb -->
-    <nav class="navbar navbar-light bg-light" style="--bs-breadcrumb-divider: '&gt;'" aria-label="breadcrumb">
-        <div class="container-fluid container-lg">
-            <ol class="breadcrumb">
-                <li class="navbar-brand breadcrumb-item">
-                    <a href="./index.html"> Portada </a>
-                </li>
-                <li class="navbar-brand breadcrumb-item active" aria-current="page">
-                  Deportes
-                </li>
-            </ol>
-        </div>
-      </nav>
+  <!-- elemento nav que contiene un elemento bootstrap llamado breadcrumb -->
+  <nav class="navbar navbar-light bg-light" style="--bs-breadcrumb-divider: '&gt;'" aria-label="breadcrumb">
+    <div class="container-fluid container-lg">
+        <ol class="breadcrumb">
+            <li class="navbar-brand breadcrumb-item">
+                <a href="./index.html"> Portada </a>
+            </li>
+            <li class="navbar-brand breadcrumb-item active" aria-current="page">
+              Deportes
+            </li>
+        </ol>
+    </div>
+  </nav>
 
   <!-- tarjetas -->
   <div class="container">
     <div class="tab-content" id="myTabContent">
-      <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-        <div class="container">
-          <div class="row">
-            <div class="d-flex col-md-6 col-lg-4 gx-0">
-              <div class="card">
-                <img src="deportes_files/buceo.jpg" class="card-img-top" alt="Imagen de buceo">
-                <div class="card-body">
-                  <h5 class="card-title">Buceo</h5>
-                  <p class="card-text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Expedita, maiores iste reprehender asd.
-                  </p>
-                </div>
-                <div class="card-footer text-muted">last update 3 mins ago</div>
+      <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+        <div class="row" data-masonry="{&quot;percentPosition&quot;: true }" style="position: relative; height: 489px;"> 
+          <div class="d-flex col-md-6 col-lg-4 gx-0">
+            <div class="card">
+              <img src="../assets/img/buceo.jpg" class="card-img-top" alt="Imagen de buceo">
+              <div class="card-body">
+                <h5 class="card-title">Buceo</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longe.</p>
               </div>
+              <div class="card-footer text-muted">last update 3 mins ago</div>
             </div>
-            <div class="d-flex col-md-6 col-lg-4 gx-0">
-              <div class="card">
-                <img src="deportes_files/parapente.jpg" class="card-img-top" alt="Imagen de parapente">
-                <div class="card-body">
-                  <h5 class="card-title">Parapente</h5>
-                  <p class="card-text">
-                    Lorem ipsum dolor sit amet consectetur asdasdas asdasd.
-                  </p>
-                </div>
-                <div class="card-footer text-muted text-center">last update 3 mins ago</div>
+          </div>
+          <div class="d-flex col-md-6 col-lg-4 gx-0">
+            <div class="card">
+              <img src="../assets/img/parapente.jpg" class="card-img-top" alt="Imagen de parapente">
+              <div class="card-body">
+                <h5 class="card-title">Parapente</h5>
+                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
               </div>
+              <div class="card-footer text-muted text-center">last update 3 mins ago</div>
             </div>
-            <div class="d-flex col-md-12 col-lg-4 gx-0">
-              <div class="card">
-                <img src="deportes_files/surf.jpg" class="card-img-top" alt="Imagen de surf">
-                <div class="card-body">
-                  <h5 class="card-title">Surf</h5>
-                  <p class="card-text">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Quaerat odio molestias maxime debitis officia repudiandae velit,
-                    voluptate aut, tempor.
-                  </p>
-                </div>
-                <div class="card-footer text-muted text-end">last update 3 mins ago</div>
+          </div>
+          <div class="d-flex col-md-12 col-lg-4 gx-0">
+            <div class="card">
+              <img src="../assets/img/surf.jpg" class="card-img-top" alt="Imagen de surf">
+              <div class="card-body">
+                <h5 class="card-title">Surf</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
               </div>
+              <div class="card-footer text-muted text-end">last update 3 mins ago</div>
             </div>
           </div>
         </div>

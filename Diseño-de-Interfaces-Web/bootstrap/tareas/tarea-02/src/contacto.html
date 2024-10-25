@@ -64,7 +64,62 @@
                 </li>
             </ol>
         </div>
-      </nav>
+    </nav>
+
+    <main class="container">
+        <div id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <!-- titulo principal -->
+                    <div class="modal-header">
+                        <h2 class="modal-title" id="exampleModalLabel">Contacta con nosotros</h2>
+                    </div>
+                <div class="modal-body">
+                    <!-- formulario -->
+                    <form>
+                        <!-- asunto -->
+                        <div class="mb-6">
+                            <label for="recipient-name" class="col-form-label">Asunto</label>
+                            <input type="text" class="form-control" id="recipient-name">
+                        </div>
+                        <!-- mensaje -->
+                        <div class="mb-6">
+                            <label for="message-text" class="col-form-label">Mensaje</label>
+                            <textarea class="form-control" id="message-text" rows="5"></textarea>
+                        </div>
+                        <div class="mb-6 row gx-4">
+                            <!-- nombre -->
+                            <div class="col-6">
+                                <label for="formGroupExampleInput" class="form-label">Nombre</label>
+                                <input type="text" class="form-control" id="formGroupExampleInput">
+                            </div>
+                            <!-- email -->
+                            <div class="col-6">
+                                <label for="exampleInputEmail1" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            </div>
+                        </div>
+                        <!-- checkbox -->
+                        <div class="mb-6 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Aceptar términos de uso</label>
+                        </div>
+                    </form>
+                </div>
+                <!-- botones -->
+                <div class="modal-footer gap-2 d-md-flex justify-content-md-end justify-content-lg-start row">
+                    <div class="col-md-1 col-xs-12 d-grid">
+                        <button type="button" class="btn btn-primary">Aceptar</button>
+                    </div>
+                    <div class="col-md-1 col-xs-12 d-grid">
+                        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    </div>
+                    
+                </div>
+              </div>
+            </div>
+        </div>
+    </main>
 
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>  
 </body>
