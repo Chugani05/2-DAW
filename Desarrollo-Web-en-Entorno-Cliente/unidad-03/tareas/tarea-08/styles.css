@@ -72,6 +72,7 @@ body {
   background-color: black;
   padding: 10px;
   border-radius: 5px;
+
 }
 
 .product-list .product-item {
@@ -163,4 +164,17 @@ body {
   padding: 10px;
   border-radius: 5px;
   font-size: 18px;
+}
+
+.product {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 75px;
+  padding: 10px;
+}
+
+.product_qty {
+  display: flex;
+  gap: 5px;
 }
