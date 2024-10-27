@@ -70,10 +70,10 @@
   <div class="container">
     <div class="tab-content" id="myTabContent">
       <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-        <div class="row" data-masonry="{&quot;percentPosition&quot;: true }" style="position: relative; height: 489px;">
+        <div class="row" data-masonry="{&quot;percentPosition&quot;: true }">
 
-          <!-- primera columna -->
-          <div class="d-flex col-xs-12 col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 0%; top: 0px;">
+          <!-- primera fila -->
+          <div class="col-xs-12 col-sm-6 col-lg-4 mb-4">
             <div class="card border border-success">
               <div class="card-header bg-danger text-white fw-bold">
                 <h4>Destacado</h4>
@@ -85,40 +85,7 @@
               </div>
             </div>
           </div>
-          <div class="d-flex col-xs-12 col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 0%; top: 460px;">
-            <div class="card bg-primary text-white text-center p-3">
-              <figure class="mb-0">
-                <blockquote class="blockquote">
-                  <p>El agua se espera en la tierra y la guagua en la carretera</p>
-                </blockquote>
-                <figcaption class="blockquote-footer mb-0 text-white">
-                  Refranero popular
-                </figcaption>
-              </figure>
-            </div>
-          </div>
-          <div class="d-flex col-xs-12 col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 0; top: 600px;">
-            <div class="card text-center">
-              <img src="../assets/img/rutas-volcanes.jpg" class="card-img" alt="Imagen Ruta de los Volcanes">
-              <div class="card-img-overlay">
-                <h4 class="card-title bg-white">Ruta de Los Volcanes</h4>
-              </div>
-            </div>
-          </div>
-          <div class="d-flex col-xs-12 col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 0; top: 900px;">
-            <div class="card border-info">
-              <div class="card-body">
-                <p class="card-text"><medium class="text-info">Tenerife</medium></p>
-              </div>
-              <img src="../assets/img/rutas-afur.jpg" class="card-img" alt="Imagen Ruta de Afur">
-              <div class="card-body ">
-                <p class="card-text"><medium class="text-info">Barranco de Afur</medium></p>
-              </div>
-            </div>
-          </div>
-
-          <!-- segunda columna -->
-          <div class="d-flex col-xs-12 col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 33.3333%; top: 0px;">
+          <div class="col-xs-12 col-sm-6 col-lg-4 mb-4">
             <div class="card text-white bg-success border border-success">
               <div class="card-header mb-0">
                 Frase Célebre
@@ -130,7 +97,32 @@
               </div>
             </div>
           </div>
-          <div class="d-flex col-xs-12 col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 33.3333%; top: 290px;">
+          <div class="col-xs-12 col-sm-6 col-lg-4 mb-4">
+            <div class="card border border-primary">
+              <img src="../assets/img/rutas-barranco-las-vacas.jpg" class="card-img-top" alt="Imagen del Barranco de las vacas">
+              <div class="card-body">
+                <h5 class="card-title">Barranco las Vacas</h5>
+                <p>Gran Canaria</p>
+                <p class="card-text">Estas llamativas formaciones tienen cierto parecido al famoso Antelope Canyon de Estados Unidos. ¿Por qué? Por sus peculiares formaciones rocosas llamadas Tobas de Colores.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- segunda fila-->
+          <div class="col-xs-12 col-sm-6 col-lg-4 mb-4">
+            <div class="card bg-primary text-white text-center p-3">
+              <figure class="mb-0">
+                <blockquote class="blockquote">
+                  <p>El agua se espera en la tierra y la guagua en la carretera</p>
+                </blockquote>
+                <figcaption class="blockquote-footer mb-0 text-white">
+                  Refranero popular
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-lg-4 mb-4">
             <div class="card">
               <img src="../assets/img/rutas-teide.jpg" class="card-img-top" alt="Imagen Ruta del Teide">
               <div class="card-body">
@@ -138,7 +130,28 @@
               </div>
             </div>
           </div>
-          <div class="d-flex col-xs-12 col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 33.3333%; top: 650px;">
+          <div class="col-xs-12 col-sm-6 col-lg-4 mb-4">
+            <div class="card text-center border border-info text-white">
+              <div class="card-body bg-info">
+                <h5 class="card-title">Mil Ventanas</h5>
+                <p class="card-text">Rutas situada en el municipio de Güimar no apta para aquellas personas que sufren miedo a las alturas.</p>
+                <p class="card-text"><small class="text-white">Foto cedida por un fotógrafo.</small></p>
+              </div>
+              <img src="../assets/img/rutas-mil-ventanas.jpg" class="card-img-bottom" alt="Imagen mil Ventanas">
+            </div>
+          </div>
+          
+
+          <!-- tercera fila -->
+          <div class="col-xs-12 col-sm-6 col-lg-4 mb-4">
+            <div class="card text-center">
+              <img src="../assets/img/rutas-volcanes.jpg" class="card-img" alt="Imagen Ruta de los Volcanes">
+              <div class="card-img-overlay">
+                <h4 class="card-title bg-white">Ruta de Los Volcanes</h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-lg-4 mb-4">
             <div class="card p-3 bg-warning">
               <figure class="mb-0">
                 <blockquote class="blockquote ">
@@ -150,27 +163,18 @@
               </figure>
             </div>
           </div>
+          <div></div>
 
-          <!-- tercera columna -->
-          <div class="d-flex col-xs-12 col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 66.6667%; top: 0px;">
-            <div class="card border border-primary">
-              <img src="../assets/img/rutas-barranco-las-vacas.jpg" class="card-img-top" alt="Imagen del Barranco de las vacas">
+          <!-- cuarta fila -->
+          <div class="col-xs-12 col-sm-6 col-lg-4 mb-4">
+            <div class="card border-info">
               <div class="card-body">
-                <h5 class="card-title">Barranco las Vacas</h5>
-                <p>Gran Canaria</p>
-                <p class="card-text">Estas llamativas formaciones tienen cierto parecido al famoso Antelope Canyon de Estados Unidos. ¿Por qué? Por sus peculiares formaciones rocosas llamadas Tobas de Colores.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                <p class="card-text"><medium class="text-info">Tenerife</medium></p>
               </div>
-            </div>
-          </div>
-          <div class="d-flex col-xs-12 col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 66.6667%; top: 505px;">
-            <div class="card text-center border border-info text-white">
-              <div class="card-body bg-info">
-                <h5 class="card-title">Mil Ventanas</h5>
-                <p class="card-text">Rutas situada en el municipio de Güimar no apta para aquellas personas que sufren miedo a las alturas.</p>
-                <p class="card-text"><small class="text-white">Foto cedida por un fotógrafo.</small></p>
+              <img src="../assets/img/rutas-afur.jpg" class="card-img" alt="Imagen Ruta de Afur">
+              <div class="card-body ">
+                <p class="card-text"><medium class="text-info">Barranco de Afur</medium></p>
               </div>
-              <img src="../assets/img/rutas-mil-ventanas.jpg" class="card-img-bottom" alt="Imagen mil Ventanas">
             </div>
           </div>
 
@@ -179,6 +183,7 @@
     </div>
   </div>
   
+  <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>  
 </body>
 </html>
