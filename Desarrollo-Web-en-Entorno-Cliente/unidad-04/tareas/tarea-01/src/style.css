@@ -1,0 +1,20 @@
+body {
+    background-color: #111;
+    color: #e0e0e0;
+    font-family: Arial, sans-serif;
+    text-align: left;
+}
+
+h1 {
+    color: crimson;
+}
+
+.exercise {
+    margin: 20px 0;
+}
+
+.output {
+    color: #00ff00;
+    font-weight: bold;
+    margin: 10px 0;
+}
