@@ -1,0 +1,19 @@
+.yellow {
+    background-color: yellow;
+    height: 80px;
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.green {
+    background-color: rgb(0, 255, 174);
+    height: 360px;
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.pink {
+    background-color: rgb(255, 135, 255);
+    font-size: 45px;
+    font-weight: bold;
+}

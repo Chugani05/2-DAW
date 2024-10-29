@@ -1,0 +1,54 @@
+.yellow {
+    background-color: yellow;
+    height: 80px;
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.green {
+    background-color: rgb(148, 254, 60);
+    height: 180px;
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.light-pink {
+    background-color:  rgb(255, 135, 255);
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.blue {
+    background-color: rgb(106, 186, 255);
+    height: 180px;
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.orange {
+    background-color: rgb(255, 221, 0);
+    height: 180px;
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.dark-pink {
+    background-color: rgb(228, 0, 228);
+    height: 180px;
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.red {
+    background-color: rgb(248, 72, 63);
+    height: 180px;
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.blue-green {
+    background-color:  rgb(60, 255, 229);
+    height: 180px;
+    font-size: 45px;
+    font-weight: bold;
+}
