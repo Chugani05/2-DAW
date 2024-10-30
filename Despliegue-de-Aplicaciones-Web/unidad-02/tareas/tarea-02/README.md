@@ -7,11 +7,11 @@
 - [Arquitectura Web](#arquitectura-web)
 - [Plataforma web](#plataforma-web)
 - [Instalación de sistema operativo Ubuntu](#instalación-de-sistema-operativo-ubuntu)
-    - [Instalación de Apache desde terminal](#instalación-de-apache-desde-terminal)
-    - [Comprobación desde terminal](#comprobación-desde-terminal)
-    - [Comprobación desde navegador](#comprobación-desde-navegador)
-    - [Cambio de puerto](#cambio-de-puerto)
-    - [Instalación de Tomcat](#instalación-de-tomcat)
+    - [Instalación de Apache desde terminal](#1-instalación-de-apache-desde-terminal)
+    - [Comprobación desde terminal](#2-comprobación-desde-terminal)
+    - [Comprobación desde navegador](#3-comprobación-desde-navegador)
+    - [Cambio de puerto](#4-cambio-de-puerto)
+    - [Instalación de Tomcat](#5-instalación-de-tomcat)
 
 ## Arquitectura Web
 _La arquitectura Web es un modelo compuesto de tres capas, ¿cuáles son y cuál es la función de cada una de ellas?_
