@@ -36,17 +36,73 @@ Las plataformas web proporcionan un entorno para desarrollar y ejecutar aplicaci
 ## Instalación de sistema operativo Ubuntu
 _Dispones de una máquina que cuenta con el sistema operativo Ubuntu 10.04 LTS recientemente actualizado, esta máquina tiene el entorno de red configurado y, además, dispones de conexión a Internet. Además, estás trabajando con la cuenta del usuario root. Indica cada uno de los pasos, y comandos implicados en ellos, para conseguir hacer lo siguiente:_
         
-### Instalación de Apache desde terminal
+### 1. Instalación de Apache desde terminal
 _Instalar el servidor web Apache desde terminal._
 
-### Comprobación desde terminal
+Primero, actualizamos la lista de paquetes e instalamos Apache:
+
+```bash
+# actualizar paquetes
+sudo apt-get update
+
+# instalar Apache
+sudo apt-get install apache2 -y
+```
+
+### 2. Comprobación desde terminal
 _Comprobar que está funcionando el servidor Apache desde terminal._
 
-#### Comprobación desde navegador
+Para verificar que Apache está activo, utiliza el siguiente comando:
+
+```bash
+systemctl status apache2
+```
+
+<div align=center>
+<img src="./imgs/img02.png" alt="comprobación desde terminal">
+</div>
+
+### 3. Comprobación desde navegador
 _Comprobar que está funcionando el servidor Apache desde navegador._
 
-### Cambio de puerto
+En el navegador abrimos el siguente enlace: `http://localhost`
+
+<div align=center>
+<img src="./imgs/img01.png" alt="comprobación desde navegador">
+</div>
+
+### 4. Cambio de puerto
 _Cambiar el puerto por el cual está escuchando Apache pasándolo al puerto 82._
 
-### Instalación de Tomcat
+Editamos el archivo de configuración de Apache para cambiar el puerto, buscamos la línea `Listen 80` y la cambiaremos a `Listen 82`:
+
+```bash
+sudo nano /etc/apache2/ports.conf
+```
+
+<div align=center>
+<img src="./imgs/img03.png" alt="configuración del puerto">
+</div>
+
+Después, modificamos también el archivo de configuración de sites, cambiando también el puerto 80 a 82 en la línea que comienza con `<VirtualHost *:80>`:
+
+```bash
+sudo nano /etc/apache2/sites-available/000-default.conf
+```
+
+<div align=center>
+<img src="./imgs/img04.png" alt="configuración de sites">
+</div>
+
+Finalmente, reinicia Apache para que se apliquen los cambios:
+
+```bash
+sudo systemctl restart apache2
+```
+
+<div align=center>
+<img src="./imgs/img05.png" alt="comprobación de cambio de puerto">
+</div>
+
+### 5. Instalación de Tomcat
 _Instalar el servidor de aplicaciones Tomcat._
