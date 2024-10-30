@@ -13,7 +13,7 @@
     - [Cambio de puerto](#cambio-de-puerto)
     - [Instalación de Tomcat](#instalación-de-tomcat)
 
-### Arquitectura Web
+## Arquitectura Web
 _La arquitectura Web es un modelo compuesto de tres capas, ¿cuáles son y cuál es la función de cada una de ellas?_
 
 La **arquitectura web** se basa en un modelo de tres capas, diseñadas para separar las responsabilidades y mejorar la organización del sistema. Estas capas son:
@@ -24,7 +24,7 @@ La **arquitectura web** se basa en un modelo de tres capas, diseñadas para sepa
 
 3. **Capa de datos**: Es donde se almacenan los datos de la aplicación, usualmente en una base de datos. Esta capa es responsable de guardar, recuperar y gestionar la información de manera eficiente. Las bases de datos SQL, como MySQL o PostgreSQL, son ejemplos típicos en esta capa.
 
-### Plataforma web
+## Plataforma web
 _Una plataforma web es el entorno de desarrollo de software empleado para diseñar y ejecutar un sitio web; destacan dos plataformas web, LAMP y WISA. Explica en qué consiste cada una de ellas._
 
 Las plataformas web proporcionan un entorno para desarrollar y ejecutar aplicaciones web.
@@ -33,20 +33,20 @@ Las plataformas web proporcionan un entorno para desarrollar y ejecutar aplicaci
  
 - **WISA**: Es una plataforma para el entorno Windows, que incluye **Windows (sistema operativo), IIS (Internet Information Services como servidor web), SQL Server (base de datos)** y **ASP.NET (marco de desarrollo web)**. WISA es ideal para entornos que prefieren soluciones Microsoft, ofreciendo integración con otros productos de esta compañía.
     
-### Intalación de sistema operativo Ubuntu
+## Intalación de sistema operativo Ubuntu
 _Dispones de una máquina que cuenta con el sistema operativo Ubuntu 10.04 LTS recientemente actualizado, esta máquina tiene el entorno de red configurado y, además, dispones de conexión a Internet. Además, estás trabajando con la cuenta del usuario root. Indica cada uno de los pasos, y comandos implicados en ellos, para conseguir hacer lo siguiente:_
         
-#### Intalación de Apache desde terminal
+### Intalación de Apache desde terminal
 _Instalar el servidor web Apache desde terminal._
 
-#### Comprobación desde terminal
+### Comprobación desde terminal
 _Comprobar que está funcionando el servidor Apache desde terminal._
 
 #### Comprobación desde navegador
 _Comprobar que está funcionando el servidor Apache desde navegador._
 
-#### Cambio de puerto
+### Cambio de puerto
 _Cambiar el puerto por el cual está escuchando Apache pasándolo al puerto 82._
 
-#### Instalación de Tomcat
+### Instalación de Tomcat
 _Instalar el servidor de aplicaciones Tomcat._
