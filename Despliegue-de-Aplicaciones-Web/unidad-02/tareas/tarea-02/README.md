@@ -6,8 +6,8 @@
 ## Contenido
 - [Arquitectura Web](#arquitectura-web)
 - [Plataforma web](#plataforma-web)
-- [Intalación de sistema operativo Ubuntu](#intalación-de-sistema-operativo-ubuntu)
-    - [Intalación de Apache desde terminal](#intalación-de-apache-desde-terminal)
+- [Instalación de sistema operativo Ubuntu](#instalación-de-sistema-operativo-ubuntu)
+    - [Instalación de Apache desde terminal](#instalación-de-apache-desde-terminal)
     - [Comprobación desde terminal](#comprobación-desde-terminal)
     - [Comprobación desde navegador](#comprobación-desde-navegador)
     - [Cambio de puerto](#cambio-de-puerto)
@@ -33,10 +33,10 @@ Las plataformas web proporcionan un entorno para desarrollar y ejecutar aplicaci
  
 - **WISA**: Es una plataforma para el entorno Windows, que incluye **Windows (sistema operativo), IIS (Internet Information Services como servidor web), SQL Server (base de datos)** y **ASP.NET (marco de desarrollo web)**. WISA es ideal para entornos que prefieren soluciones Microsoft, ofreciendo integración con otros productos de esta compañía.
     
-## Intalación de sistema operativo Ubuntu
+## Instalación de sistema operativo Ubuntu
 _Dispones de una máquina que cuenta con el sistema operativo Ubuntu 10.04 LTS recientemente actualizado, esta máquina tiene el entorno de red configurado y, además, dispones de conexión a Internet. Además, estás trabajando con la cuenta del usuario root. Indica cada uno de los pasos, y comandos implicados en ellos, para conseguir hacer lo siguiente:_
         
-### Intalación de Apache desde terminal
+### Instalación de Apache desde terminal
 _Instalar el servidor web Apache desde terminal._
 
 ### Comprobación desde terminal
