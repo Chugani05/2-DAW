@@ -106,3 +106,35 @@ sudo systemctl restart apache2
 
 ### 5. Instalación de Tomcat
 _Instalar el servidor de aplicaciones Tomcat._
+
+#### 1. Instalación de Java
+
+Primero, actualizamos la lista de paquetes e instalamos Java:
+
+```bash
+# actualizar paquetes
+sudo apt update
+
+# instalar Java
+sudo apt install default–jdk
+```
+
+#### 2. Crear un usuario de Tomcat
+
+```bash
+# nuevo grupo de tomcat para ejecutar el servicio
+sudo groupadd tomcat
+
+# agregamos usuarios al grupo Tomcat
+sudo useradd -s /bin/false -g tomcat -d /opt/tomcat tomcat
+```
+
+#### 3. Instalación de Tomcat en Ubuntu
+
+```bash
+# cambiamos de directorio para descargar elementos q no vana  aser necesarios despues de descargar Tomcat
+cd /tmp
+
+# descargamos desde el enlace
+curl -O https://www-us.apache.org/dist/tomcat/tomcat-9/v9.0.17/bin/apache-tomcat-9.0.17.tar.gz
+```
