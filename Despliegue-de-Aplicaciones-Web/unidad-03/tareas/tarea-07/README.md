@@ -4,14 +4,12 @@
 </div>
 
 ## Contenido
-- [Migración de Xampp a InfinityFree](#migración-de-xampp-a-infinityfree)
-  - [Contenido](#contenido)
-  - [Creación de la cuenta en InfinityFree](#creación-de-la-cuenta-en-infinityfree)
-  - [Instalación de FileZilla](#instalación-de-filezilla)
-  - [Vinculación de InfinityFree a Filezilla](#vinculación-de-infinityfree-a-filezilla)
-  - [MySQL Database en InfinityFree](#mysql-database-en-infinityfree)
-  - [Adaptación de ficheros](#adaptación-de-ficheros)
-  - [Migración de ficheros](#migración-de-ficheros)
+- [Creación de la cuenta en InfinityFree](#creación-de-la-cuenta-en-infinityfree)
+- [Instalación de FileZilla](#instalación-de-filezilla)
+- [Vinculación de InfinityFree a Filezilla](#vinculación-de-infinityfree-a-filezilla)
+- [MySQL Database en InfinityFree](#mysql-database-en-infinityfree)
+- [Adaptación de ficheros](#adaptación-de-ficheros)
+- [Migración de ficheros](#migración-de-ficheros)
 
 ## Creación de la cuenta en InfinityFree
 Al iniciar sesión se nos abre esta pestaña en la que podemos crear cuentas con hacer clic en el botón de `Create Account`.
