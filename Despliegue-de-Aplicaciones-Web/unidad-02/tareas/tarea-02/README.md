@@ -7,11 +7,14 @@
 - [Arquitectura Web](#arquitectura-web)
 - [Plataforma web](#plataforma-web)
 - [Instalación de sistema operativo Ubuntu](#instalación-de-sistema-operativo-ubuntu)
-    - [Instalación de Apache desde terminal](#1-instalación-de-apache-desde-terminal)
-    - [Comprobación desde terminal](#2-comprobación-desde-terminal)
-    - [Comprobación desde navegador](#3-comprobación-desde-navegador)
-    - [Cambio de puerto](#4-cambio-de-puerto)
-    - [Instalación de Tomcat](#5-instalación-de-tomcat)
+  - [1. Instalación de Apache desde terminal](#1-instalación-de-apache-desde-terminal)
+  - [2. Comprobación desde terminal](#2-comprobación-desde-terminal)
+  - [3. Comprobación desde navegador](#3-comprobación-desde-navegador)
+  - [4. Cambio de puerto](#4-cambio-de-puerto)
+  - [5. Instalación de Tomcat](#5-instalación-de-tomcat)
+    - [1. Instalación de Java](#1-instalación-de-java)
+    - [2. Crear un usuario de Tomcat](#2-crear-un-usuario-de-tomcat)
+    - [3. Instalación de Tomcat en Ubuntu](#3-instalación-de-tomcat-en-ubuntu)
 
 ## Arquitectura Web
 _La arquitectura Web es un modelo compuesto de tres capas, ¿cuáles son y cuál es la función de cada una de ellas?_
@@ -52,14 +55,14 @@ sudo apt-get install apache2 -y
 ### 2. Comprobación desde terminal
 _Comprobar que está funcionando el servidor Apache desde terminal._
 
-Para verificar que Apache está activo, utiliza el siguiente comando:
+Para verificar que Apache está activo, utilizamos el siguiente comando:
 
 ```bash
 systemctl status apache2
 ```
 
 <div align=center>
-<img src="./imgs/img02.png" alt="comprobación desde terminal">
+  <img src="./imgs/img02.png" alt="comprobación desde terminal">
 </div>
 
 ### 3. Comprobación desde navegador
@@ -68,7 +71,7 @@ _Comprobar que está funcionando el servidor Apache desde navegador._
 En el navegador abrimos el siguente enlace: `http://localhost`
 
 <div align=center>
-<img src="./imgs/img01.png" alt="comprobación desde navegador">
+  <img src="./imgs/img01.png" alt="comprobación desde navegador">
 </div>
 
 ### 4. Cambio de puerto
@@ -81,7 +84,7 @@ sudo nano /etc/apache2/ports.conf
 ```
 
 <div align=center>
-<img src="./imgs/img03.png" alt="configuración del puerto">
+  <img src="./imgs/img03.png" alt="configuración del puerto">
 </div>
 
 Después, modificamos también el archivo de configuración de sites, cambiando también el puerto 80 a 82 en la línea que comienza con `<VirtualHost *:80>`:
@@ -91,7 +94,7 @@ sudo nano /etc/apache2/sites-available/000-default.conf
 ```
 
 <div align=center>
-<img src="./imgs/img04.png" alt="configuración de sites">
+  <img src="./imgs/img04.png" alt="configuración de sites">
 </div>
 
 Finalmente, reinicia Apache para que se apliquen los cambios:
@@ -101,7 +104,7 @@ sudo systemctl restart apache2
 ```
 
 <div align=center>
-<img src="./imgs/img05.png" alt="comprobación de cambio de puerto">
+  <img src="./imgs/img05.png" alt="comprobación de cambio de puerto">
 </div>
 
 ### 5. Instalación de Tomcat
@@ -119,11 +122,20 @@ sudo apt update
 sudo apt install default–jdk
 ```
 
+Posteriormente comprobamos si se ha instalado:
+
+```bash
+java --version
+```
+
 #### 2. Crear un usuario de Tomcat
 
 ```bash
 # nuevo grupo de tomcat para ejecutar el servicio
 sudo groupadd tomcat
+
+# nuevo directorio para la ubicación de la configuración 
+sudo mkdir /opt/tomcat
 
 # agregamos usuarios al grupo Tomcat
 sudo useradd -s /bin/false -g tomcat -d /opt/tomcat tomcat
@@ -131,10 +143,79 @@ sudo useradd -s /bin/false -g tomcat -d /opt/tomcat tomcat
 
 #### 3. Instalación de Tomcat en Ubuntu
 
+Descargamos la última versión:
 ```bash
-# cambiamos de directorio para descargar elementos q no vana  aser necesarios despues de descargar Tomcat
-cd /tmp
-
-# descargamos desde el enlace
 curl -O https://www-us.apache.org/dist/tomcat/tomcat-9/v9.0.17/bin/apache-tomcat-9.0.17.tar.gz
 ```
+
+Extraemos y movemos a nuestro directorio `/opt/tomcat`:
+```bash
+# extraemos del archivo comprimido
+sudo tar -zxvf apache-tomcat-*.tar.gz
+
+# movemos al directorio
+sudo mv apache-tomcat-*/* /opt/tomcat/
+```
+
+Cambiamos la propiedad al usuario Tomcat para que pueda escribir en los ficheros
+```bash
+sudo chown -R tomcat:tomcat /opt/tomcat/
+```
+
+#### 4. Configuración del Tomcat
+
+Encuentramos la ruta en la q está instalado Java en nuestro sistema:
+```bash
+sudo update-java-alternatives -l
+
+# OUTPUT: 
+```
+
+Crearemos un fichero `systemd` para Tomcat con el siguiente comando:
+```bash
+sudo nano /etc/systemd/system/tomcat.service
+```
+
+Y agregamos la siguiente información:
+```txt
+[Unit]
+Description=Apache Tomcat Web Application Container
+Wants=network.target
+After=network.target
+[Service]
+Type=forking
+Environment=JAVA_HOME=/usr/lib/jvm/java-1.11.0-openjdk-amd64
+Environment=CATALINA_PID=/opt/tomcat/temp/tomcat.pid
+Environment=CATALINA_HOME=/opt/tomcat
+Environment='CATALINA_OPTS=-Xms512M -Xmx1G -Djava.net.preferIPv4Stack=true'
+Environment='JAVA_OPTS=-Djava.awt.headless=true'
+ExecStart=/opt/tomcat/bin/startup.sh
+ExecStop=/opt/tomcat/bin/shutdown.sh
+SuccessExitStatus=143
+User=tomcat
+Group=tomcat
+UMask=0007
+RestartSec=10
+Restart=always
+[Install]
+WantedBy=multi-user.target
+```
+
+Y recargamos `systemd daemon`:
+```sh
+sudo systemctl daemon-reload
+```
+
+#### 5. Comprobación de Tomcat
+
+```bash
+#  inicia el servicio
+sudo systemctl start tomcat
+
+# muestra el estado actual del servicio
+systemctl status tomcat
+```
+
+<div align=center>
+  <img src="./imgs/img06.png" alt="comprobación de tomcat">
+</div>
