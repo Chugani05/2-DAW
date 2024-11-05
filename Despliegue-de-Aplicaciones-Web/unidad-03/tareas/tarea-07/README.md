@@ -49,44 +49,40 @@ Esto nos muestra nuestros datos del `FTP Details`.
     <img src="./imgs/img06.png" alt="5"/>
 </div>
 
-Accedemos a FileZilla y rellenamos con la información obtenidda para hacer la conexión.
-<div align=center>
-    <img src="./imgs/img.png" alt="6"/>
-</div>
-
 Seguimos los siguientes pasos para realizar la conexión:
 <div align=center>
-    <img src="./imgs/img.png" alt="7"/>
+    <img src="./imgs/img13.png" alt="6"/>
 </div>
 
-1. Creamos un `New site` con un nombre identificativo.
-2. Rellenamos con los datos obtenidos de `FTP Details`.
-3. Hacemos click en `Connect` si queremos guardar los datos y hacer la conexión, y si solo queremos guardar los datos hacemos click en `Ok`.
+1. Abrimos el `Site manager`.
+2. Creamos un `New site` con un nombre identificativo.
+3. Rellenamos con los datos obtenidos de `FTP Details`.
+4. Hacemos click en `Connect` si queremos guardar los datos y hacer la conexión, y si solo queremos guardar los datos hacemos click en `Ok`.
 
 Tras realizar la conexión, en el apartado derecho del panel de control se podran ver los ficheros y directorios de InfinityFree del `Website`.
 <div align=center>
-    <img src="./imgs/img.png" alt="8"/>
+    <img src="./imgs/img14.png" alt="7"/>
 </div>
 
 ## MySQL Database en InfinityFree
 Empezamos la creación de la base de datos accediendo a `MySQL Databases` en `Account Options`.
 <div align=center>
-    <img src="./imgs/img05.png" alt="9"/>
+    <img src="./imgs/img05.png" alt="8"/>
 </div>
 
 Esto nos muestra nuestros datos del `MySQL Databases`.
 <div align=center>
-    <img src="./imgs/img08.png" alt="10"/>
+    <img src="./imgs/img08.png" alt="9"/>
 </div>
 
 Empezamos a crear una nueva base de datos haciendo click en el botón de `Create Database`.
 <div align=center>
-    <img src="./imgs/img09.png" alt="11"/>
+    <img src="./imgs/img09.png" alt="10"/>
 </div>
 
 Que nos lleva a esta página:
 <div align=center>
-    <img src="./imgs/img10.png" alt="12"/>
+    <img src="./imgs/img10.png" alt="11"/>
 </div>
 
 1. Primero, le ponemos un nombre a la base de datos que queremos crear.
@@ -94,12 +90,12 @@ Que nos lleva a esta página:
 
 Una vez creada la base de datos accedemos a ella mediante el botón de `phpMyAdmin`.
 <div align=center>
-    <img src="./imgs/img11.png" alt="13"/>
+    <img src="./imgs/img11.png" alt="12"/>
 </div>
 
 A continuación se crea la tabla de la misma manera en la que se hizo en la [anterior tarea](../tarea-04/README.md#creación-de-la-tabla), y deberíamos obtener algo asi:
 <div align=center>
-    <img src="./imgs/img12.png" alt="14"/>
+    <img src="./imgs/img12.png" alt="13"/>
 </div>
 
 ## Adaptación de ficheros
@@ -110,9 +106,6 @@ Debemos cambiar los datos de la [actividad anterior](../tarea-04/README.md#creac
 
     $conn = mysqli_connect( 'sql113.infinityfree.com', 'nombreUsuario', 'contraseñaUsuario', 'if0_37615302_tarea_07');
 
-    echo "<pre>";
-    print_r( $conn);
-
 ?>
 ```
 
@@ -120,7 +113,7 @@ Debemos cambiar los datos de la [actividad anterior](../tarea-04/README.md#creac
 Movemos los ficheros de local a remoto con FileZilla. En la izquierda buscamos nuestros archivos en local, y los soltamos en la derecha para subir a remoto, dentro de la carpeta `htdocs`.
 
 <div align=center>
-    <img src="./imgs/img.png" alt="15"/>
+    <img src="./imgs/img15.png" alt="14"/>
 </div>
 
 Ya con todo echo, y sin que nos de error, podemos visualizar los ficheros accediendo directamente desde la URL de pa página web.
