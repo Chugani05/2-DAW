@@ -145,7 +145,7 @@ sudo useradd -s /bin/false -g tomcat -d /opt/tomcat tomcat
 
 Descargamos la última versión:
 ```bash
-curl -O https://www-us.apache.org/dist/tomcat/tomcat-9/v9.0.17/bin/apache-tomcat-9.0.17.tar.gz
+curl https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.96/bin/apache-tomcat-9.0.96.tar.gz -o apache-tomcat-9.0.96.tar.gz
 ```
 
 Extraemos y movemos a nuestro directorio `/opt/tomcat`:
@@ -168,7 +168,7 @@ Encuentramos la ruta en la q está instalado Java en nuestro sistema:
 ```bash
 sudo update-java-alternatives -l
 
-# OUTPUT: 
+# OUTPUT: java-1.21.0-openjdk-amd64      2111       /usr/lib/jvm/java-1.21.0-openjdk-amd64
 ```
 
 Crearemos un fichero `systemd` para Tomcat con el siguiente comando:
@@ -184,7 +184,7 @@ Wants=network.target
 After=network.target
 [Service]
 Type=forking
-Environment=JAVA_HOME=/usr/lib/jvm/java-1.11.0-openjdk-amd64
+Environment=JAVA_HOME=/usr/lib/jvm/java-1.21.0-openjdk-amd64
 Environment=CATALINA_PID=/opt/tomcat/temp/tomcat.pid
 Environment=CATALINA_HOME=/opt/tomcat
 Environment='CATALINA_OPTS=-Xms512M -Xmx1G -Djava.net.preferIPv4Stack=true'
