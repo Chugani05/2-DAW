@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <div class="tab-pane fade show active" id="login" role="tabpanel">
+        <form id="loginForm" onsubmit="return validateLogin()">
+            <div class="mb-3">
+                <label for="loginUsername"
+                    class="form-label">Username</label>
+                <input type="text" class="form-control"
+                    id="loginUsername" required>
+            </div>
+            <div class="mb-3">
+                <label for="loginPassword"
+                    class="form-label">Password</label>
+                <input type="password" class="form-control"
+                    id="loginPassword" required>
+            </div>
+            <button type="button" class="btn btn-outline-primary" id="loginbutton">Login</button>
+        </form>
+    </div>
+    <script type="module" src="js/script.js" type="text/javascript"></script>
+</body>
+</html>

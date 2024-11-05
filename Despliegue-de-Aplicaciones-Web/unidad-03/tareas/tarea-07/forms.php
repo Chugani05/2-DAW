@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SQL Form</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/form.css">
 </head>
 <body>
     <main>
@@ -49,6 +49,6 @@
             </table>
         </div>
     </main>
-   <script type="module" src="js/script.js" type="text/javascript"></script>
+   <script type="module" src="js/form.js" type="text/javascript"></script>
 </body>
 </html>
