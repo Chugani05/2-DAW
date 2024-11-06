@@ -15,10 +15,15 @@
 - [Configuración del Servidor FTP](#configuración-del-servidor-ftp)
     - [Limpiar el archivo de comentarios y líneas en blanco](#limpiar-el-archivo-de-comentarios-y-líneas-en-blanco)
     - [Revisar el archivo de usuarios restringidos](#revisar-el-archivo-de-usuarios-restringidos)
-- [Conexión al Servidor FTP]()
+- [Conexión al Servidor FTP](#conexión-al-servidor-ftp)
+    - [Conexión desde la Terminal](#conexión-desde-la-terminal)
+        - [Ingresar nombre de usuario y contraseña.](#ingresar-nombre-de-usuario-y-contraseña)
+        - [Listar archivos](#listar-archivos)
+        - [Consultar directorio actual](#consultar-directorio-actual)
+        - [Salir](#salir)
+- [Conexión desde el Navegador](#conexión-desde-el-navegador)
+- [Conexión desde FileZilla](#conexión-desde-filezilla)
     - []()
-- [Conexión desde el Navegador]()
-- [Conexión desde FileZilla]()
 - [Modificaciones en la Configuración]()
 - [Creación de Usuarios Virtuales]()
 - [Conexión con el Usuario Virtual]()
@@ -99,10 +104,47 @@ cat /etc/ftpusers
 </div>
 
 ## Conexión al Servidor FTP
-### Conexión desde el Terminal
+### Conexión desde la Terminal
+```bash
+ftp 127.0.0.1
+```
+
+#### Ingresar nombre de usuario y contraseña.
+```bash
+Name (127.0.0.1:chugani): chugani
+Password: ********
+```
+   
+#### Listar archivos
+```bash
+ftp> ls
+```
+
+<div align=center>
+  <img src="./imgs/img05.png" alt="listar archivos">
+</div>
+
+#### Consultar directorio actual
+```bash
+ftp> pwd
+```
+
+<div align=center>
+  <img src="./imgs/img06.png" alt="consultar directorio actual">
+</div>
+
+#### Salir
+
+```bash
+ftp> quit
+```
+
+<div align=center>
+  <img src="./imgs/img07.png" alt="salir">
+</div>
 
 ## Conexión desde el Navegador
-En el navegador abrimos el siguente enlace: `ftp://dirección_ip_servidor_FTP`.
+En el navegador abrimos el siguente enlace: `ftp://127.0.0.1`.
 
 ## Conexión desde FileZilla
 Si no tienes instalado FileZilla, puedes ver como se hace la instalación en la [anterior tarea](../../../unidad-03/tareas/tarea-07/README.md#instalación-de-filezilla). 
