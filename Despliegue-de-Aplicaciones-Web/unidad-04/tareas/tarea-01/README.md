@@ -4,9 +4,19 @@
 </div>
 
 ## Contenido
-- [Instalación del Servidor FTP]()
-- [Configuración del Servidor FTP]()
+- [Instalación del Servidor FTP](#instalación-del-servidor-ftp)
+    - [Actualizar el sistema](#actualizar-el-sistema)
+    - [Instalar ProFTPD](#instalar-proftpd)
+    - [Verificar el estado del servidor](#verificar-el-estado-del-servidor)
+    - [Consultar la versión de ProFTPD](#consultar-la-versión-de-proftpd)
+    - [Verificar los usuarios creados durante la instalación](#verificar-los-usuarios-creados-durante-la-instalación)
+    - [Listar los archivos de configuración de ProFTPD](#listar-los-archivos-de-configuración-de-proftpd)
+    - [Hacer una copia de seguridad del archivo de configuración](#hacer-una-copia-de-seguridad-del-archivo-de-configuración)
+- [Configuración del Servidor FTP](#configuración-del-servidor-ftp)
+    - [Limpiar el archivo de comentarios y líneas en blanco](#limpiar-el-archivo-de-comentarios-y-líneas-en-blanco)
+    - [Revisar el archivo de usuarios restringidos](#revisar-el-archivo-de-usuarios-restringidos)
 - [Conexión al Servidor FTP]()
+    - []()
 - [Conexión desde el Navegador]()
 - [Conexión desde FileZilla]()
 - [Modificaciones en la Configuración]()
@@ -58,34 +68,35 @@ ls /etc/proftpd
   <img src="./imgs/img03.png" alt="ficheros creados en la instalación">
 </div>
 
-----
-
 ### Hacer una copia de seguridad del archivo de configuración
 ```bash
-cp /etc/proftpd/proftpd.conf /etc/proftpd/proftpd.conf.copia
+sudo cp /etc/proftpd/proftpd.conf /etc/proftpd/proftpd.conf.copia
 ```
 
 ## Configuración del Servidor FTP
-### Editar el archivo de configuración
-```bash
-nano /etc/proftpd/proftpd.conf
-```
-
 ### Limpiar el archivo de comentarios y líneas en blanco
 ```bash
-vi /etc/proftpd/proftpd.conf
+# accedemos al fichero
+sudo vi /etc/proftpd/proftpd.conf
 
-:g/^/s*#/d
+# elimina las líneas que son comentarios
+:g/^#/d       
 
+# elimina las líneas vacías
 :g/^$/d
-```
 
-Guardar y salir con `:wq`.
+# guardar y salir
+:wq
+```
 
 ### Revisar el archivo de usuarios restringidos
 ```bash
 cat /etc/ftpusers
 ```
+
+<div align=center>
+  <img src="./imgs/img04.png" alt="archivo de usuarios restringidos">
+</div>
 
 ## Conexión al Servidor FTP
 ### Conexión desde el Terminal
