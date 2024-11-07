@@ -1,6 +1,6 @@
 # Instalación de Xampp
 <div align=center>
-<img src="../../../../extras/vinilo.gif" alt="me" width="100%">
+    <img src="../../../../extras/vinilo.gif" alt="vinilo" width="100%">
 </div>
 
 ## Contenido

@@ -1,8 +1,7 @@
 # Interfaces de operaciones con SQL.
 <div align=center>
-<img src="../../../../extras/vinilo.gif" alt="me" width="100%">
+    <img src="../../../../extras/vinilo.gif" alt="vinilo" width="100%">
 </div>
-
 ## Contenido
 - [Creación de base de datos y tabla.](#creación-de-base-de-datos-y-tabla)
 - [Estructura y funcionamiento](#estructura-y-funcionamiento)

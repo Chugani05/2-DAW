@@ -1,1 +1,4 @@
-# Instalación y administración de servidores de transferencia de archivos.
+# Unidad 04 - Instalación y administración de servidores de transferencia de archivos.
+<div align=center>
+    <img src="../../extras/data.gif" alt="data" width="100%">
+</div>
