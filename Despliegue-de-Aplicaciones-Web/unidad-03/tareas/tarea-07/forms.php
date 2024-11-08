@@ -21,6 +21,7 @@
                     <input type="hidden" name="insert">
                     <label for="name">Name: </label><input type="text" name="name" value="" required><br>
                     <label for="email">Email: </label><input type="email" name="email" value="" required><br>
+                    <label for="password">Password: </label><input type="password" name="password" value="" required><br>
                     <input type="submit" value="Enviar">
                 </form>
                 <form action="sql_post.php" method="post" id="update-form">
@@ -28,6 +29,7 @@
                     <label for="uid">Record ID:  </label><input type="number" name="uid" min="0" value="" required><br>
                     <label for="name">Updated name: </label><input type="text" name="name" value=""><br>
                     <label for="email">Updated email: </label><input type="email" name="email" value=""><br>
+                    <label for="password">Update password: </label><input type="password" name="password" value="" required><br>
                     <input type="submit" value="Enviar">
                 </form>
                 <form action="sql_post.php" method="post" id="delete-form">
@@ -49,6 +51,6 @@
             </table>
         </div>
     </main>
-   <script type="module" src="js/form.js" type="text/javascript"></script>
+   <script type="module" src="js/script.js" type="text/javascript"></script>
 </body>
 </html>
