@@ -4,9 +4,14 @@
 <img src="../extras/cyberpunk2.gif" alt="me" width="60%">
 </div>
 
-## Contenido
-- [Introducción](./introducción/README.md)
-- [Unidad 01 -](./unidad-01/README.md)
-- [Unidad 02 -](./unidad-02/README.md)
-- [Unidad 03 -](./unidad-03/README.md)
-- [Unidad 04 -](./unidad-04/README.md)
+## Content
+- [Introduction](./introduction/README.md)
+- [Unit 01 -](./unidad-01/README.md)
+- [Unit 02 -](./unidad-02/README.md)
+- [Unit 03 -](./unidad-03/README.md)
+- [Unit 04 -](./unidad-04/README.md)
+
+## Proyects
+- [Java Spotify](https://github.com/Chugani05/JavaSpotify.git)
+- [League Of Legends](https://github.com/Chugani05/LeagueOfLegends.git)
+- [Toy Travel](https://github.com/Chugani05/ToyTravel.git)

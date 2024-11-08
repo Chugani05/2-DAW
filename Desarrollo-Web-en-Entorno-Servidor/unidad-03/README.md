@@ -9,4 +9,4 @@
 
 ## Project
 
-Hemos implementado una red social llamada [**Tribu**]() con lo hasta ahora aprendido en django.
+We have implemented a social network called [**Tribu**](https://github.com/Chugani05/Tribu.git) with what we have learned so far in django.

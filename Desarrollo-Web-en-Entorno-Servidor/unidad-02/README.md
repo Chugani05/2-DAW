@@ -9,4 +9,4 @@
 
 ## Project
 
-Hemos implementado una aplicación de [**ToDo**]() con lo hasta ahora aprendido en django.
+We have implemented a [**ToDo**](https://github.com/Chugani05/SuperTodo.git) application with what we have learned so far in django.
