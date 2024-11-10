@@ -23,8 +23,12 @@
         - [Salir](#salir)
 - [Conexión desde el Navegador](#conexión-desde-el-navegador)
 - [Conexión desde FileZilla](#conexión-desde-filezilla)
-    - []()
-- [Modificaciones en la Configuración]()
+- [Modificaciones en la Configuración](#modificaciones-en-la-configuración)
+    - [Modificar proftpd.conf](#modificar-proftpdconf)
+    - [Agregar mensajes de bienvenida y error](#agregar-mensajes-de-bienvenida-y-error)
+    - [Verificar registros de acceso](#verificar-registros-de-acceso)
+    - [Modificar DefaultRoot](#modificar-defaultroot)
+    - [Reiniciar el servicio para aplicar cambios](#reiniciar-el-servicio-para-aplicar-cambios)
 
 ## Instalación del Servidor FTP
 ### Actualizar el sistema
@@ -156,23 +160,42 @@ Hacemos la configuración de la conexión tal y como hicimos en la [tarea anteri
 
 ## Modificaciones en la Configuración
 ### Modificar proftpd.conf
+Abrimos el fichero con el siguiente comando:
+
 ```bash
 nano /etc/proftpd/proftpd.conf
 ```
-Cambiar ServerName y otras configuraciones según se requiera.
 
-### Verificar registros de acceso
-```bash
-tail -n 15 /var/log/proftpd/proftpd.log
+Cambiamos lo necesario en la configuración:
 
-tail -n 15 /var/log/proftpd/xfer.log
+```txt
+ServerName "Mi servidor FTP"
+DeferWelcome off
+TimeoutIdle 1200
+Port 21
+maxInstances 30
+showsymlinks on
+User proftpd
+Group nogroup
+Umask 022 022
+TransferLog /var/log/proftpd/xferlog
+SystemLog /var/log/proftpd/proftpd.log
 ```
 
 ### Agregar mensajes de bienvenida y error
-```bash
-AccessGrantMSG "Bienvenido al servidor FTP de (mi_nombre)"
-
+```txt
+AccessGrantMSG "Bienvenido al servidor FTP de Rashi Chugani"
 AccessDenyMSG "Error de entrada a mi servidor FTP"
+```
+
+### Verificar registros de acceso
+```bash
+
+# Muestra las últimas 15 líneas del log general de ProFTPD, con eventos del servidor
+tail -n 15 /var/log/proftpd/proftpd.log
+
+# Muestra las últimas 15 líneas del log de transferencias de archivos en ProFTPD
+tail -n 15 /var/log/proftpd/xfer.log
 ```
 
 ### Modificar DefaultRoot
