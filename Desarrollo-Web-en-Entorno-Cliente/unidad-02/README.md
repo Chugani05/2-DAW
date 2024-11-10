@@ -3,7 +3,7 @@
     <img src="../../extras/data.gif" alt="data" width="100%">
 </div>
 
-## Contenido
+## Content
 - [Parte teórica](#parte-teórica)
     - [Conceptos Fundamentales de JavaScript](#conceptos-fundamentales-de-javascript)
     - [Objetos y Prototipos](#objetos-y-prototipos)
