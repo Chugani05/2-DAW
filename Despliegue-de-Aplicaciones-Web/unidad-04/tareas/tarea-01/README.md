@@ -1,4 +1,4 @@
-# Instalar de proFTP
+# Instalación de proFTP
 <div align=center>
     <img src="../../../../extras/vinilo.gif" alt="vinilo" width="100%">
 </div>
@@ -25,8 +25,6 @@
 - [Conexión desde FileZilla](#conexión-desde-filezilla)
     - []()
 - [Modificaciones en la Configuración]()
-- [Creación de Usuarios Virtuales]()
-- [Conexión con el Usuario Virtual]()
 
 ## Instalación del Servidor FTP
 ### Actualizar el sistema
@@ -149,7 +147,12 @@ En el navegador abrimos el siguente enlace: `ftp://127.0.0.1`.
 ## Conexión desde FileZilla
 Si no tienes instalado FileZilla, puedes ver como se hace la instalación en la [anterior tarea](../../../unidad-03/tareas/tarea-07/README.md#instalación-de-filezilla). 
 
-Configurar servidor, nombre de usuario, contraseña y puerto (21).
+### Configuración en FileZilla
+Hacemos la configuración de la conexión tal y como hicimos en la [tarea anterior](../../../unidad-03/tareas/tarea-07/README.md#vinculación-de-infinityfree-a-filezilla).
+
+<div align=center>
+  <img src="./imgs/img08.png" alt="conexión desde filezilla">
+</div>
 
 ## Modificaciones en la Configuración
 ### Modificar proftpd.conf
@@ -180,48 +183,4 @@ DefaultRoot ~
 ### Reiniciar el servicio para aplicar cambios
 ```bash
 service proftpd reload
-```
-
-## Creación de Usuarios Virtuales
-### Incluir módulos en proftpd.conf
-```bash
-Include /etc/proftpd/modules.conf
-
-Require ValidShell off
-
-AuthUser File /etc/proftpd/ftpd.passwd
-```
-
-### Crear directorio para el usuario:
-```bash
-mkdir /var/ftp/carpetauser1JSR
-```
-
-### Crear archivo de contraseñas
-```bash
-touch /etc/proftpd/ftpd.passwd
-```
-
-### Crear un usuario virtual
-```bash
-ftpasswd --passwd --name=user1JSR --uid=3000 --gid=3000 --home=/var/ftp/
-```
-
-### Desbloquear el usuario
-```bash
-ftpasswd --passwd --name=user1JSR --unlock
-```
-
-### Crear un archivo de prueba en el directorio del usuario
-```bash
-cd /var/ftp/carpetauser1JSR
-
-nano pn.txt
-```
-
-## Conexión con el Usuario Virtual
-```bash
-Servidor: ip_servidor
-Nombre de usuario: user1JSR
-Contraseña: la que se configuró.
 ```
