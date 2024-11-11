@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:svg="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:ns1="http://sozi.baierouge.fr" version="1.1" viewBox="0 0 20 20" inkscape:version="0.91 r13725" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <metadata>
+    <rdf:RDF>
+      <cc:Work rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+        <dc:title/>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g transform="translate(-607.63544,-694.58531)">
+    <g stroke-linejoin="bevel" fill-rule="nonzero" transform="matrix(0.81819668,0,0,0.81804445,601.86324,678.48641)" stroke="#333" stroke-linecap="square" stroke-dasharray="none" stroke-miterlimit="4" stroke-width="1.22231376" fill="#999">
+      <rect style="enable-background:accumulate;color:#000000;" height="6.4313" width="3.4134" y="23.346" x="23.993"/>
+      <path style="enable-background:accumulate;color:#000000;" d="m11.406,30.781,0,12.125,4.421,0,0-7,4.7151,0,0,7,6.8639,0,0-12.125z"/>
+      <path style="enable-background:accumulate;color:#000000;" d="m30.277,31.265-22,0l11-10.363z"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <title>jQuery</title> 
+</head>
+<body>
+
+
+    <table id="tabla_ventas">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Sexo</th>
+            <th>Email</th>
+            <th>Color</th>
+            <th>Talla</th>
+            <th>Recoger</th>
+            <th>Cantidad</th>
+            <th>Precio_unid</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>korey ivushkin</td>
+            <td>M</td>
+            <td>kivushkin0@meetup.com</td>
+            <td>#1136bf</td>
+            <td>XS</td>
+            <td>tienda</td>
+            <td>8</td>
+            <td>€73,86</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>gale martignon</td>
+            <td>M</td>
+            <td>gmartignon1@reference.com</td>
+            <td>#fd4057</td>
+            <td>S</td>
+            <td>Domicilio</td>
+            <td>8</td>
+            <td>€78,91</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>ula standley</td>
+            <td>F</td>
+            <td>ustandley2@sciencedirect.com</td>
+            <td>#e2606d</td>
+            <td>2XL</td>
+            <td>TIENDA</td>
+            <td>2</td>
+            <td>€26,26</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>berget rounsefull</td>
+            <td>F</td>
+            <td>brounsefull3@umich.edu</td>
+            <td>#a307b6</td>
+            <td>2XL</td>
+            <td>tienda</td>
+            <td>9</td>
+            <td>€20,12</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>ann butterfill</td>
+            <td>F</td>
+            <td>abutterfill4@cnbc.com</td>
+            <td>#66c16e</td>
+            <td>L</td>
+            <td>Paquete</td>
+            <td>3</td>
+            <td>€87,74</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>cristina whithorn</td>
+            <td>F</td>
+            <td>cwhithorn5@blogspot.com</td>
+            <td>#51aca6</td>
+            <td>L</td>
+            <td>PAQUETE</td>
+            <td>6</td>
+            <td>€70,07</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>chuck braisted</td>
+            <td>M</td>
+            <td>cbraisted6@cargocollective.com</td>
+            <td>#8d19c6</td>
+            <td>S</td>
+            <td>TiendA</td>
+            <td>4</td>
+            <td>€89,68</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>guillemette bransom</td>
+            <td>F</td>
+            <td>gbransom7@sohu.com</td>
+            <td>#1ce7ac</td>
+            <td>L</td>
+            <td>DOMICILIO</td>
+            <td>5</td>
+            <td>€1,22</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>karlee carlyon</td>
+            <td>F</td>
+            <td>kcarlyon8@cmu.edu</td>
+            <td>#06fb4e</td>
+            <td>S</td>
+            <td>Tienda</td>
+            <td>7</td>
+            <td>€82,57</td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>grenville pavia</td>
+            <td>M</td>
+            <td>gpavia9@bigcartel.com</td>
+            <td>#cc71ab</td>
+            <td>2XL</td>
+            <td>tienda</td>
+            <td>8</td>
+            <td>€56,27</td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td>abrahan huffy</td>
+            <td>M</td>
+            <td>ahuffya@sohu.com</td>
+            <td>#3cf25f</td>
+            <td>XS</td>
+            <td>paquete</td>
+            <td>7</td>
+            <td>€88,94</td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td>roxane poyzer</td>
+            <td>F</td>
+            <td>rpoyzerb@gov.uk</td>
+            <td>#4631a1</td>
+            <td>2XL</td>
+            <td>Tienda</td>
+            <td>9</td>
+            <td>€58,41</td>
+        </tr>
+        <tr>
+            <td>13</td>
+            <td>domeniga hampe</td>
+            <td>F</td>
+            <td>dhampec@prlog.org</td>
+            <td>#031565</td>
+            <td>M</td>
+            <td>domicilio</td>
+            <td>7</td>
+            <td>€6,09</td>
+        </tr>
+        <tr>
+            <td>14</td>
+            <td>ynes bultitude</td>
+            <td>F</td>
+            <td>ybultituded@senate.gov</td>
+            <td>#72afdb</td>
+            <td>S</td>
+            <td>tienda</td>
+            <td>7</td>
+            <td>€22,36</td>
+        </tr>
+        <tr>
+            <td>15</td>
+            <td>frasquito daymond</td>
+            <td>M</td>
+            <td>fdaymonde@tinypic.com</td>
+            <td>#87eb5a</td>
+            <td>M</td>
+            <td>Tienda</td>
+            <td>6</td>
+            <td>€82,00</td>
+        </tr>
+        <tr>
+            <td>16</td>
+            <td>isabelle tuffey</td>
+            <td>F</td>
+            <td>ituffeyf@washington.edu</td>
+            <td>#199683</td>
+            <td>XS</td>
+            <td>paquete</td>
+            <td>4</td>
+            <td>€31,05</td>
+        </tr>
+        <tr>
+            <td>17</td>
+            <td>vaclav deluce</td>
+            <td>M</td>
+            <td>vdeluceg@lulu.com</td>
+            <td>#9565d7</td>
+            <td>M</td>
+            <td>TIENDA</td>
+            <td>2</td>
+            <td>€88,74</td>
+        </tr>
+        <tr>
+            <td>18</td>
+            <td>hayden acock</td>
+            <td>M</td>
+            <td>hacockh@ox.ac.uk</td>
+            <td>#67f763</td>
+            <td>3XL</td>
+            <td>tienda</td>
+            <td>9</td>
+            <td>€6,14</td>
+        </tr>
+        <tr>
+            <td>19</td>
+            <td>jo middell</td>
+            <td>M</td>
+            <td>jmiddelli@whitehouse.gov</td>
+            <td>#bea063</td>
+            <td>2XL</td>
+            <td>tienda</td>
+            <td>4</td>
+            <td>€79,37</td>
+        </tr>
+        <tr>
+            <td>20</td>
+            <td>eddie gossington</td>
+            <td>F</td>
+            <td>egossingtonj@npr.org</td>
+            <td>#d47d91</td>
+            <td>2XL</td>
+            <td>Paquete</td>
+            <td>3</td>
+            <td>€79,42</td>
+        </tr>
+    </tbody>
+</table>
+
+    <script type="module" src="/dist/script.js"></script>
+</body>
+</html>
