@@ -163,18 +163,18 @@ Hacemos la configuración de la conexión tal y como hicimos en la [tarea anteri
 Abrimos el fichero con el siguiente comando:
 
 ```bash
-nano /etc/proftpd/proftpd.conf
+sudo nano /etc/proftpd/proftpd.conf
 ```
 
 Cambiamos lo necesario en la configuración:
 
 ```txt
-ServerName "Mi servidor FTP"
+ServerName "My server FTP"
 DeferWelcome off
 TimeoutIdle 1200
 Port 21
 maxInstances 30
-showsymlinks on
+ShowSymlinks on
 User proftpd
 Group nogroup
 Umask 022 022
@@ -192,11 +192,15 @@ AccessDenyMSG "Error de entrada a mi servidor FTP"
 ```bash
 
 # Muestra las últimas 15 líneas del log general de ProFTPD, con eventos del servidor
-tail -n 15 /var/log/proftpd/proftpd.log
+sudo tail -n 15 /var/log/proftpd/proftpd.log
 
 # Muestra las últimas 15 líneas del log de transferencias de archivos en ProFTPD
-tail -n 15 /var/log/proftpd/xfer.log
+sudo tail -n 15 /var/log/proftpd/xfer.log
 ```
+
+<div align=center>
+  <img src="./imgs/img09.png" alt="verificación de registros de acceso">
+</div>
 
 ### Modificar DefaultRoot
 ```bash
