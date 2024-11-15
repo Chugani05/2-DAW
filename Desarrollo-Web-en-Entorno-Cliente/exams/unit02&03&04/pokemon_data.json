@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "name": "bulbasaur",
+    "attack": 79,
+    "defense": 49,
+    "speed": 45,
+    "hp": 45,
+    "special_attack": 65
+  },
+  {
+    "id": 2,
+    "name": "ivysaur",
+    "attack": 62,
+    "defense": 84,
+    "speed": 66,
+    "hp": 60,
+    "special_attack": 80
+  },
+  {
+    "id": 3,
+    "name": "venusaur",
+    "attack": 82,
+    "defense": 83,
+    "speed": 80,
+    "hp": 80,
+    "special_attack": 100
+  },
+  {
+    "id": 4,
+    "name": "charmander",
+    "attack": 52,
+    "defense": 43,
+    "speed": 65,
+    "hp": 39,
+    "special_attack": 60
+  },
+  {
+    "id": 5,
+    "name": "charmeleon",
+    "attack": 64,
+    "defense": 58,
+    "speed": 80,
+    "hp": 58,
+    "special_attack": 80
+  },
+  {
+    "id": 6,
+    "name": "charizard",
+    "attack": 84,
+    "defense": 78,
+    "speed": 100,
+    "hp": 78,
+    "special_attack": 109
+  },
+  {
+    "id": 7,
+    "name": "squirtle",
+    "attack": 48,
+    "defense": 65,
+    "speed": 43,
+    "hp": 44,
+    "special_attack": 50
+  },
+  {
+    "id": 8,
+    "name": "wartortle",
+    "attack": 63,
+    "defense": 80,
+    "speed": 58,
+    "hp": 59,
+    "special_attack": 65
+  },
+  {
+    "id": 9,
+    "name": "blastoise",
+    "attack": 83,
+    "defense": 100,
+    "speed": 78,
+    "hp": 79,
+    "special_attack": 85
+  },
+  {
+    "id": 10,
+    "name": "caterpie",
+    "attack": 30,
+    "defense": 35,
+    "speed": 45,
+    "hp": 45,
+    "special_attack": 22
+  }
+]

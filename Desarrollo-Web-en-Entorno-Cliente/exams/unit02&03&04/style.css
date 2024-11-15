@@ -1,0 +1,15 @@
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+#pokemon-selector, #training-status {
+    width: 500px;
+    margin: auto;
+    margin-top: 20px;
+    text-align: center;
+}
