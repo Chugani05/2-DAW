@@ -120,7 +120,7 @@ sudo nano /etc/vsftpd.conf
     ```
 
 ### Configuración de los usuarios
-1.  Volvemos a acceder al fichero de configuración `vsftpd` como en el apartado [anterior](#accedemos-al-fichero-de-configuración-vsftpd-mediente-el-sigueinte-comando).
+1.  Volvemos a acceder al fichero de configuración `vsftpd` como en el [apartado anterior](#accedemos-al-fichero-de-configuración-vsftpd-mediente-el-sigueinte-comando).
 
 2. Descomentamos en el fichero los siguentes comandos:
 
@@ -157,6 +157,6 @@ sudo nano /etc/vsftpd.conf
 2. Tras esto comprobamos que se hayan creado con en el [anterior apartado](#añadiendo-los-usuarios).
 
 ### Configuración de los usuarios
-1.  Volvemos a acceder al fichero de configuración `vsftpd` como en el apartado [anterior](#accedemos-al-fichero-de-configuración-vsftpd-mediente-el-sigueinte-comando).
+1.  Volvemos a acceder al fichero de configuración `vsftpd` como en el [apartado anterior](#accedemos-al-fichero-de-configuración-vsftpd-mediente-el-sigueinte-comando).
 
 2. 
