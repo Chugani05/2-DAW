@@ -13,7 +13,9 @@
 - [Creación de usuarios locales engaulados en su directorio, exepto el `administrador`](#creación-de-usuarios-locales-engaulados-en-su-directorio-exepto-el-administrador)
   - [Añadiendo los usuarios](#añadiendo-los-usuarios)
   - [Configuración de los usuarios](#configuración-de-los-usuarios)
-- [Creación de usuarios locales que no pueden conectarse al servidir FTP](#creación-de-usuarios-locales-que-no-pueden-conectarse-al-servidir-ftp)
+- [Creación de usuarios locales que no pueden conectarse al servidor FTP](#creación-de-usuarios-locales-que-no-pueden-conectarse-al-servidor-ftp)
+  - [Añadiendo los usuarios](#añadiendo-los-usuarios-1)
+  - [Configuración de los usuarios](#configuración-de-los-usuarios-1)
 
 
 ## Instalación de vsFTPd
@@ -147,4 +149,14 @@ sudo nano /etc/vsftpd.conf
     ```
 
 
-## Creación de usuarios locales que no pueden conectarse al servidir FTP
+## Creación de usuarios locales que no pueden conectarse al servidor FTP
+### Añadiendo los usuarios
+
+1. Vamos a crear 2 usuarios más (uno llamdo `Ethan` y otro `Arturo`) con su directorio personal con en el [anterior apartado](#añadiendo-los-usuarios).
+
+2. Tras esto comprobamos que se hayan creado con en el [anterior apartado](#añadiendo-los-usuarios).
+
+### Configuración de los usuarios
+1.  Volvemos a acceder al fichero de configuración `vsftpd` como en el apartado [anterior](#accedemos-al-fichero-de-configuración-vsftpd-mediente-el-sigueinte-comando).
+
+2. 
