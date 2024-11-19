@@ -151,7 +151,7 @@ sudo nano /etc/vsftpd.conf
 5. Añadimos a los usuarios a esta lista:
 
     ```sh
-    admiistrador
+    administrador
     ```
 
 
