@@ -128,7 +128,7 @@ sudo nano /etc/vsftpd.conf
     # Enjaula los usuarios locales.
     chroot_local_user=YES
 
-    # Activamos la lista donde meteremos los usuarios que queramos enjaular.
+    # Activamos la lista donde meteremos los usuarios que no estarán enjaulados.
     chroot_list_enable=YES
 
     # La lista, que se encuenta en esta ubicación.
@@ -146,6 +146,12 @@ sudo nano /etc/vsftpd.conf
 
     ```sh
     sudo nano /etc/vsftpd.chroot_list
+    ```
+
+5. Añadimos a los usuarios a esta lista:
+
+    ```sh
+    admiistrador
     ```
 
 
