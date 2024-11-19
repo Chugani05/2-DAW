@@ -19,7 +19,7 @@
     cat /etc/passwd
     ```
 
-### Configuración de los usuarios
+## Configuración de los usuarios
 ### Los usuarios, usuario1 y usuario6, estarán enjaulados en su directorio de trabajo.
 
 1. Acceder al fichero de configuración `vsftpd`.
