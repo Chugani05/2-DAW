@@ -7,7 +7,17 @@
 
 
 ## Creación de usuarios
-Creamos y verificamos que los usuarios se han creado como en la [anterior tarea](../tarea02/README.md#añadiendo-los-usuarios).
+
+1. Vamos a crear 6 usuarios con su directorio personal con el siguente comando:
+    ```sh
+    sudo adduser nombre_usuario
+    ```
+
+2. Comprobamos que se hayan creado mediante:
+
+    ```sh
+    cat /etc/passwd
+    ```
 
 ### Configuración de los usuarios
 ### Los usuarios, usuario1 y usuario6, estarán enjaulados en su directorio de trabajo.
