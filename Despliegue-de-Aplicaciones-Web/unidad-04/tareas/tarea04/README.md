@@ -1,23 +1,13 @@
-# Instalación de vsFTP en Ubuntu server
+# Configuración usuarios, logs, SSL de vsFTP
 <div align=center>
     <img src="../../../../extras/vinilo.gif" alt="vinilo" width="100%">
 </div>
 
-## Contenido
-- [Contenido](#contenido)
-- [Creación de usuarios](#creación-de-usuarios)
-- [Configuración de los usuarios](#configuración-de-los-usuarios)
-  - [Los usuarios, usuario1 y usuario6, estarán enjaulados en su directorio de trabajo.](#los-usuarios-usuario1-y-usuario6-estarán-enjaulados-en-su-directorio-de-trabajo)
-  - [Los usuarios, usuario 2 y usuario5 no estarán enjaulados en su directorio de trabajo.](#los-usuarios-usuario-2-y-usuario5-no-estarán-enjaulados-en-su-directorio-de-trabajo)
-  - [A los usuarios, usuario3 y usuario4, se les denegará el acceso al servidor](#a-los-usuarios-usuario3-y-usuario4-se-les-denegará-el-acceso-al-servidor)
-- [Se activará el log de usuarios](#se-activará-el-log-de-usuarios)
-- [Se cerrará la conexión después de pasados cinco minutos inactivo.](#se-cerrará-la-conexión-después-de-pasados-cinco-minutos-inactivo)
-- [Se cifrarán las conexiones SSL en el servidor.](#se-cifrarán-las-conexiones-ssl-en-el-servidor)
-
+## 
 
 ## Creación de usuarios
 
-1. Vamos a crear 6 usuarios con su directorio personal con el siguente comando:
+1. Creamos usuarios con su directorio personal con el siguente comando:
     ```sh
     sudo adduser nombre_usuario
     ```
@@ -29,7 +19,7 @@
     ```
 
 ## Configuración de los usuarios
-### Los usuarios, usuario1 y usuario6, estarán enjaulados en su directorio de trabajo.
+### Usuarios enjaulados en su directorio de trabajo.
 
 1. Acceder al fichero de configuración `vsftpd`.
 
@@ -52,7 +42,7 @@
     ```
 
 
-### Los usuarios, usuario 2 y usuario5 no estarán enjaulados en su directorio de trabajo.
+### Usuarios que no estarán enjaulados en su directorio de trabajo.
 1. Descomentamos en el fichero `vsftpd.conf` el siguente comando:
     ```sh
     # Activamos la lista donde meteremos los usuarios que no estarán enjaulados.
@@ -68,17 +58,13 @@
     sudo nano /etc/vsftpd.chroot_list
     ```
 
-3. Añadimos a los usuarios a esta lista:
-
-    ```sh
-    usuario2
-    usuario5
-    ```
+3. Añadimos los usuarios que no queramos enjaular a esta lista.
 
 
-### A los usuarios, usuario3 y usuario4, se les denegará el acceso al servidor
 
-1.  Volvemos a acceder al fichero de configuración `vsftpd` como en el [apartado anterior](#los-usuarios-usuario1-y-usuario6-estarán-enjaulados-en-su-directorio-de-trabajo).
+### Usuarios a los que se les denegará el acceso al servidor
+
+1.  Volvemos a acceder al fichero de configuración `vsftpd` como en el [apartado anterior](#usuarios-enjaulados-en-su-directorio-de-trabajo).
 
 2.  Añadimos los siguentes commandos:
 
@@ -99,16 +85,12 @@
     sudo nano /etc/vsftpd.user_list
     ```
 
-4. Añadimos a los usuarios a esta lista:
+4. Añadimos a los usuarios que queramos denegar el acceso al servidor a esta lista.
 
-    ```sh
-    usuario3
-    usuario4
-    ```
 
 ## Se activará el log de usuarios
 
-1. Accedemos de nuevo al fichero de configuración `vsftpd` como en el [apartado anterior](#los-usuarios-usuario1-y-usuario6-estarán-enjaulados-en-su-directorio-de-trabajo).
+1. Accedemos de nuevo al fichero de configuración `vsftpd` como en el [apartado anterior](#usuarios-enjaulados-en-su-directorio-de-trabajo).
 
 2. Comprobamos que el siguente comando este descomentado:
 
@@ -126,7 +108,7 @@
 
 ## Se cerrará la conexión después de pasados cinco minutos inactivo.
 
-1.  Volvemos a acceder al fichero de configuración `vsftpd` como en el [apartado anterior](#los-usuarios-usuario1-y-usuario6-estarán-enjaulados-en-su-directorio-de-trabajo).
+1.  Volvemos a acceder al fichero de configuración `vsftpd` como en el [apartado anterior](#usuarios-enjaulados-en-su-directorio-de-trabajo).
 
 2.  Añadimos los siguentes commandos:
 
@@ -143,7 +125,7 @@
     openssl req -x509 -nodes -newkey rsa:2048 -keyout /etc/ssl/private/vsftpd.pem -out /etc/ssl/certs/vsftpd.pem -days 365
     ```
 
-2. Accedemos de nuevo al fichero de configuración `vsftpd` como en el [apartado anterior](#accedemos-al-fichero-de-configuración-vsftpd-mediente-el-sigueinte-comando).
+2. Accedemos de nuevo al fichero de configuración `vsftpd` como en el [apartado anterior](#usuarios-enjaulados-en-su-directorio-de-trabajo).
 
 3. Cambiamos los comandos en el fichero para que nos queden de la sigiente forma:
 
