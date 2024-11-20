@@ -4,12 +4,13 @@
 </div>
 
 ## Contenido
+- [Contenido](#contenido)
 - [Instalación de vsFTPd](#instalación-de-vsftpd)
 - [Comandos utiles](#comandos-utiles)
 - [Configuración del servidor](#configuración-del-servidor)
   - [Empezamos creando un fichero `netplan`, acedemos a este mediante el siguiente comando:](#empezamos-creando-un-fichero-netplan-acedemos-a-este-mediante-el-siguiente-comando)
   - [Accedemos al fichero de configuración `vsftpd` mediente el sigueinte comando:](#accedemos-al-fichero-de-configuración-vsftpd-mediente-el-sigueinte-comando)
-- [Creación de usuarios locales engaulados en su directorio, exepto el `administrador`](#creación-de-usuarios-locales-engaulados-en-su-directorio-exepto-el-administrador)
+- [Creación de usuarios locales enjaulados en su directorio, exepto el `administrador`](#creación-de-usuarios-locales-enjaulados-en-su-directorio-exepto-el-administrador)
   - [Añadiendo los usuarios](#añadiendo-los-usuarios)
   - [Configuración de los usuarios](#configuración-de-los-usuarios)
 - [Creación de usuarios locales que no pueden conectarse al servidor FTP](#creación-de-usuarios-locales-que-no-pueden-conectarse-al-servidor-ftp)
@@ -105,7 +106,7 @@ sudo nano /etc/vsftpd.conf
 > Tras hacer una modificación en cualquier archivo, hay que hacer un restart como ya indicamos [anteriormente](#comandos-utiles).
 
 
-## Creación de usuarios locales engaulados en su directorio, exepto el `administrador`
+## Creación de usuarios locales enjaulados en su directorio, exepto el `administrador`
 ### Añadiendo los usuarios
 
 1. Vamos a crear 2 usuarios con su directorio personal con el siguente comando:

@@ -27,14 +27,28 @@
     sudo nano /etc/vsftpd.conf
     ```
 
-2. Descomentamos en el fichero el siguente comando:
+2. Y cambiamos las siguientes configuraciones:
+
+    ```sh
+    # Cambiamos. El usuario anonymous puede conectarse y descargar ficheros, estará enjaulado.
+    anonymous_enable=YES
+
+    # Añadimos. Un directorio a los usuarios anonymous, al conectarse se les redirigira automaticamente a ese directorio..
+    anon_root=/srv/ftp/anonimo
+
+    # Descomentamos. Los usuarios locales pueden conectar y subir/descargar ficheros. 
+    write_enable=YES
+    local_unmask=022
+    ```
+
+3. Descomentamos en el fichero el siguente comando:
 
     ```sh
     # Enjaula los usuarios locales.
     chroot_local_user=YES
     ```
 
-3. Añadimos el siguente commando:
+4. Añadimos el siguente commando:
 
     ```sh
     # Para que los usuarios enjaulados puedan crear ficheros en su directorio personal.
@@ -43,7 +57,9 @@
 
 
 ### Usuarios que no estarán enjaulados en su directorio de trabajo.
+
 1. Descomentamos en el fichero `vsftpd.conf` el siguente comando:
+
     ```sh
     # Activamos la lista donde meteremos los usuarios que no estarán enjaulados.
     chroot_list_enable=YES
