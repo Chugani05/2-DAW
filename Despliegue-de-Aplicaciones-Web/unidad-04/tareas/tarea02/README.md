@@ -4,7 +4,6 @@
 </div>
 
 ## Contenido
-- [Contenido](#contenido)
 - [Instalación de vsFTPd](#instalación-de-vsftpd)
 - [Comandos utiles](#comandos-utiles)
 - [Configuración del servidor](#configuración-del-servidor)
@@ -16,6 +15,11 @@
 - [Creación de usuarios locales que no pueden conectarse al servidor FTP](#creación-de-usuarios-locales-que-no-pueden-conectarse-al-servidor-ftp)
   - [Añadiendo los usuarios](#añadiendo-los-usuarios-1)
   - [Configuración de los usuarios](#configuración-de-los-usuarios-1)
+- [Personalización de mensaje de bienvenida](#personalización-de-mensaje-de-bienvenida)
+- [Activavión de `Logs`](#activavión-de-logs)
+- [Desconexión automatica tras 5 minutos de inactividad](#desconexión-automatica-tras-5-minutos-de-inactividad)
+- [Cifrado de las conexiones SSL](#cifrado-de-las-conexiones-ssl)
+
 
 
 ## Instalación de vsFTPd
@@ -142,7 +146,7 @@ sudo nano /etc/vsftpd.conf
     allow_writeable_chroot=YES
     ```
 
-4. Creamos el archivo `vsftpd.chroot_list`, que engloba a los usuarios que se pueden mover libremente. el resto estarán enjaulados:
+4. Creamos el archivo `vsftpd.chroot_list`, que engloba a los usuarios que se pueden mover libremente. El resto estarán enjaulados:
 
     ```sh
     sudo nano /etc/vsftpd.chroot_list
@@ -163,6 +167,90 @@ sudo nano /etc/vsftpd.conf
 2. Tras esto comprobamos que se hayan creado con en el [anterior apartado](#añadiendo-los-usuarios).
 
 ### Configuración de los usuarios
+
 1.  Volvemos a acceder al fichero de configuración `vsftpd` como en el [apartado anterior](#accedemos-al-fichero-de-configuración-vsftpd-mediente-el-sigueinte-comando).
 
-2. 
+2.  Añadimos los siguentes commandos:
+
+    ```sh
+    # Activación de lista donde estarán los usuarios bloqueados.
+    userlist_enable=YES
+
+    # Activamos también la lista de denegación.
+    userlist_ddeny=YES
+
+    # Creamos la lista con su ubicación.
+    userlist_file=/etc/vsftpd.user_list
+    ```
+
+3. Creamos el archivo `vsftpd.user_list`, que engloba a los usuarios que se les deniega el acceso:
+
+    ```sh
+    sudo nano /etc/vsftpd.user_list
+    ```
+
+4. Añadimos a los usuarios a esta lista:
+
+    ```sh
+    ethan
+    arturo
+    ```
+
+
+## Personalización de mensaje de bienvenida
+
+1. Volvemos a acceder al fichero de configuración `vsftpd` como en el [apartado anterior](#accedemos-al-fichero-de-configuración-vsftpd-mediente-el-sigueinte-comando).
+
+2. Descomentamos en el fichero el siguente comando:
+
+    ```sh
+    ftpd_banner=Bienbenidos al servidor de rc
+    ```
+
+
+## Activavión de `Logs`
+
+1. Accedemos de nuevo al fichero de configuración `vsftpd` como en el [apartado anterior](#accedemos-al-fichero-de-configuración-vsftpd-mediente-el-sigueinte-comando).
+
+2. Comprobamos que el siguente comando este descomentado:
+
+    ```sh
+    ftpd_banner=Bienbenidos al servidor de rc
+    ```
+
+3. Descomentamos en el fichero el siguente comando:
+
+    ```sh
+    # Los logs se guardan en este archivo de forma automatica.
+    xferlog_file=/var/log/vsftpd.log
+    ```
+
+
+## Desconexión automatica tras 5 minutos de inactividad
+
+1.  Volvemos a acceder al fichero de configuración `vsftpd` como en el [apartado anterior](#accedemos-al-fichero-de-configuración-vsftpd-mediente-el-sigueinte-comando).
+
+2.  Añadimos los siguentes commandos:
+
+    ```sh
+    idle_session_timeout=300
+    ```
+
+
+## Cifrado de las conexiones SSL
+
+1. Generamos un certificado autofirmado, con el que cifraremos las conexiones, mediente el siguiente comando:
+
+    ```sh
+    openssl req -x509 -nodes -newkey rsa:2048 -keyout /etc/ssl/private/vsftpd.pem -out /etc/ssl/certs/vsftpd.pem -days 365
+    ```
+
+2. Accedemos de nuevo al fichero de configuración `vsftpd` como en el [apartado anterior](#accedemos-al-fichero-de-configuración-vsftpd-mediente-el-sigueinte-comando).
+
+3. Cambiamos los comandos en el fichero para que nos queden de la sigiente forma:
+
+    ```sh
+    rsa_cert_file=/etc/ssl/certs/vsftpd.pem
+    rsa_private_key_file=/etc/ssl/private/vsftpd.pem
+    ssl_enable=YES
+    ```
