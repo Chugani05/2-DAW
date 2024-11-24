@@ -17,6 +17,16 @@ const routes = [
     { path: "/:pathMatch(.*)*", component: Error404 },
 ]
 
+
+// Validar idioma y redirigir si no es válido
+function validateLang(to, from, next) {
+    const lang = to.params.lang;
+    const supportedLanguages = ["en", "es"];
+    if (!supportedLanguages.includes(lang)) {
+        return next("/es/about");
+    }
+    next();
+}
 const router = createRouter({
     history: createWebHistory(),
     routes,
