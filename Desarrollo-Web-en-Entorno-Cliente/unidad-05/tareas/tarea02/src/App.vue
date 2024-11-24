@@ -7,9 +7,11 @@
     <Navbar />
   </header>
 
-  <main>
-    <Router-view />
-  </main>
+  <div class="container">
+    <main>
+      <Router-view />
+    </main>
+  </div>
 </template>
   
 <style scoped>

@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 
+import Home from "./components/Home.vue"
 import About from "./components/About.vue";
 import Contact from "./components/Contact.vue";
 import Experience from "./components/Experience.vue";
@@ -8,7 +9,8 @@ import Skills from "./components/Skills.vue";
 import Error404 from "./components/Error404.vue";
 
 const routes = [
-    { path: "/", redirect: "/about" },
+    { path: "/", redirect: "/home" },
+    { path: "/home", component: Home },
     { path: "/about", component: About },
     { path: "/projects", component: Projects },
     { path: "/skills", component: Skills },
@@ -17,16 +19,6 @@ const routes = [
     { path: "/:pathMatch(.*)*", component: Error404 },
 ]
 
-
-// Validar idioma y redirigir si no es válido
-function validateLang(to, from, next) {
-    const lang = to.params.lang;
-    const supportedLanguages = ["en", "es"];
-    if (!supportedLanguages.includes(lang)) {
-        return next("/es/about");
-    }
-    next();
-}
 const router = createRouter({
     history: createWebHistory(),
     routes,
