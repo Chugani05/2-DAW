@@ -8,9 +8,15 @@
 <body>
   <h1>Formulario de Registro</h1>
   <form>
-    <input type="text" placeholder="Nombre">
-    <input type="email" placeholder="Correo electrónico">
-    <button>Enviar</button>
+    <label for="nombre">Nombre</label>
+    <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+    <span id="error-nombre" aria-live="polite"></span>
+    
+    <label for="email">Correo electrónico</label>
+    <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
+    <span id="error-email" aria-live="polite"></span>
+    
+    <button type="submit">Enviar</button>
   </form>
 </body>
 </html>
