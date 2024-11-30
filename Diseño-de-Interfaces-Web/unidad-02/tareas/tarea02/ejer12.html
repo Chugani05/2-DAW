@@ -6,20 +6,20 @@
   <title>Mi Blog</title>
 </head>
 <body>
-  <div>
-    <div>
-      <span>Inicio</span> | <span>Sobre mí</span> | <span>Contacto</span>
-    </div>
-    <div>
-      <h2>Artículo Reciente</h2>
+  <nav aria-label="Menú de navegación">
+    <a href="#inicio">Inicio</a> | <a href="#sobre-mi">Sobre mí</a> | <a href="#contacto">Contacto</a>
+  </nav>
+  <main>
+    <section aria-labelledby="articulo-reciente">
+      <h2 id="articulo-reciente">Artículo Reciente</h2>
       <p>Este es el contenido del artículo. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       <a href="#">Leer más</a>
-    </div>
-    <div>
-      <h2>Otro Artículo</h2>
+    </section>
+    <section aria-labelledby="otro-articulo">
+      <h2 id="otro-articulo">Otro Artículo</h2>
       <p>Contenido del segundo artículo. Lorem ipsum dolor sit amet.</p>
       <a href="#">Leer más</a>
-    </div>
-  </div>
+    </section>
+  </main>
 </body>
 </html>
