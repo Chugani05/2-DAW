@@ -1,5 +1,23 @@
-<!-- Ejercicio 6. Contenido dinámico sin notificación -->
+<!-- Ejercicio 6. Contenido dinámico sin notificación
 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Notificaciones</title>
+  <script>
+    function mostrarNotificacion() {
+      document.getElementById('notificacion').innerText = 'Cambio guardado';
+    }
+  </script>
+</head>
+<body>
+  <button onclick="mostrarNotificacion()">Guardar</button>
+  <div id="notificacion"></div>
+</body>
+</html> -->
+
+
+<!-- Se añadió `role="alert"` y `aria-live="assertive"` para que los lectores de pantalla notifiquen el cambio de contenido dinámico. -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -8,12 +26,12 @@
     function mostrarNotificacion() {
       const notificacion = document.getElementById('notificacion');
       notificacion.innerText = 'Cambio guardado';
-      notificacion.setAttribute('aria-live', 'assertive');
+      notificacion.setAttribute('role', 'alert');
     }
   </script>
 </head>
 <body>
   <button onclick="mostrarNotificacion()">Guardar</button>
-  <div id="notificacion" aria-live="polite"></div>
+  <div id="notificacion" aria-live="assertive"></div>
 </body>
 </html>

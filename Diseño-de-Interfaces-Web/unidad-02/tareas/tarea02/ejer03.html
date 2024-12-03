@@ -1,4 +1,4 @@
-<!-- Ejercicio 3. Botón que no es accesible para lectores de pantalla -->
+<!-- Ejercicio 3. Botón que no es accesible para lectores de pantalla
 
 <!DOCTYPE html>
 <html lang="es">
@@ -7,6 +7,21 @@
 </head>
 <body>
   <h1>Interacción</h1>
-  <button onclick="alert('¡Botón presionado!')">Presionar</button>
+  <div onclick="alert('¡Botón presionado!')" style="border: 1px solid; padding: 10px; width: 100px; text-align: center; cursor: pointer;">
+    Presionar
+  </div>
+</body>
+</html> -->
+
+
+<!-- Comentario: Se cambió el <div> por un <button>, que es un elemento interactivo semántico y accesible; además se añade el atributo `aria-label` para proporcionar una descripción clara de la acción que realiza el botón. -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Botón</title>
+</head>
+<body>
+  <h1>Interacción</h1>
+  <button onclick="alert('¡Botón presionado!')" aria-label="boton que dice precionar para mostrar la alerta">Presionar</button>
 </body>
 </html>
