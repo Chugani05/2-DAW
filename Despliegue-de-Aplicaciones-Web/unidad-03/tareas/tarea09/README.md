@@ -8,6 +8,7 @@
     - [Características principales de Nginx](#características-principales-de-nginx)
     - [Casos de uso comunes](#casos-de-uso-comunes)
 - [Instalación y configuración básica](#instalación-y-configuración-básica)
+- [Configuración de hosts virtuales](#configuración-de-hosts-virtuales)
 
 
 ## ¿Qué es Nginx?
