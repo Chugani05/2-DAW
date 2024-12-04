@@ -137,3 +137,151 @@ A continuación se detallan los pasos para instalar y configurar Nginx:
     ```
 
 Con estos pasos, Nginx debería estar instalado y funcionando correctamente en tu sistema. Puedes acceder a tu servidor web a través de `http://localhost`.
+
+
+## Configuración de hosts virtuales
+
+Este apartado describe el proceso para configurar hosts virtuales en Nignx para tres dominios: `empresa1.com`, `empresa2.com` y `empresa3.com`.
+
+1. **Comprobar el estado de Nginx:**
+    ```bash
+    sudo systemctl status nginx
+    ```
+
+2. **Crear directorios para los sitios:**
+    ```bash
+    sudo mkdir -p /var/www/empresaX.com/public
+    ```
+
+3. **Crear el archivo index.html para cada sitio:**
+
+    Crea el archivo `index.html` para el primer sitio:
+
+
+    ```bash
+    sudo nano /var/www/empresaX.com/public/index.html
+    ```
+
+    Añadimos el siguiente contenido al archivo:
+
+    ```nginx
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Empresa X | Home</title>
+    </head>
+    <body>
+        <h1>Home page of www.empresaX.com</h1>
+    </body>
+    </html>
+    ```
+
+    Luego, copia el archivo `index.html` para el segundo y el tercer sitio de la siguente forma, tras esto editamos el archivo como necesitemos:
+
+    ```bash
+    sudo cp /var/www/empresaX.com/public/index.html /var/www/empresaX.com/public/index.html
+    sudo nano /var/www/empresaX.com/public/index.html
+    ```
+
+4. **Verificar los directorios:**
+    ```bash
+    cd /var/www/html
+
+    ls -la
+    # output:
+    # total 12
+    # drwxr-xr-x 2 root root 4096 Dec  3 15:53 .
+    # drwxr-xr-x 6 root root 4096 Dec  4 15:16 ..
+    # -rw-r--r-- 1 root root   30 Dec  3 15:53 index.html
+    ```
+
+5. **Cambiar permisos de los directorios:**
+    ```bash
+    sudo chown -R www-data: /var/www/empresaX.com
+    ```
+
+6. **Crear y configurar los archivos de configuración de Apache:**
+
+    Ve a la carpeta de sitios disponibles de Apache:
+
+    ```bash
+    cd /etc/nginx/sites-available/
+
+    ls
+    # output: default
+    ```
+
+    Crea el archivo de configuración para `empresa1.com`:
+
+    ```bash
+    sudo nano empresa1.com.conf
+    ```
+
+    Contenido del archivo `empresa1.com.conf`:
+
+    ```nginx
+    ```
+
+    Copia este archivo para `empresaX.com` y haz los cambios necesarios:
+
+    ```bash
+    sudo cp empresa1.com.conf empresaX.com.conf
+    sudo nano empresaX.com.conf
+    ```
+
+7. **Habilitar los sitios:**
+    ```bash
+    ```
+
+8. **Verificar la configuración:**
+
+    Verifica la configuración de Nginx:
+
+    ```bash
+    ```
+
+    Si hay errores, edita el archivo de configuración global de Nginx:
+
+    ```bash
+    ```
+
+    Añade o modifica la línea ServerName:
+
+    ```nginx
+    ```
+
+    Vuelve a verificar la configuración:
+
+    ```bash
+    ```
+
+9. **Reiniciar Nginx:**
+    ```bash
+    sudo systemctl restart nginx
+    sudo systemctl status nginx
+    ```
+
+10. **Configurar el archivo de hosts:**
+
+    Edita el archivo de hosts para redirigir los dominios a `localhost`:
+
+    ```bash
+    sudo nano /etc/hosts
+    ```
+
+    Añade las siguientes líneas:
+
+    ```nginx
+    127.0.0.1   empresaX.com
+    127.0.0.1   www.empresaX.com
+    ```
+
+11. **Verificar la configuración:**
+
+    ```bash
+    ping empresaX.com
+    ```
+
+Si todo está configurado correctamente, se debería ver desde `www.empresaX.com` y `empresaX.com`.

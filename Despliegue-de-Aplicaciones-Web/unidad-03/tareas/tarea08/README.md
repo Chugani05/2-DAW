@@ -177,8 +177,7 @@ Este apartado describe el proceso para configurar hosts virtuales en Apache para
 
 2. **Crear directorios para los sitios:**
     ```bash
-    sudo mkdir -p /var/www/html/prueba1.com/public
-    sudo mkdir -p /var/www/html/prueba1.com/public
+    sudo mkdir -p /var/www/html/prueba2.com/public
     ```
 
 3. **Crear el archivo index.html para cada sitio:**
@@ -207,15 +206,14 @@ Este apartado describe el proceso para configurar hosts virtuales en Apache para
 
 5. **Cambiar permisos de los directorios:**
     ```bash
-    sudo chow -R www-data: /var/www/html/prueba1.com
-    sudo chow -R www-data: /var/www/html/prueba2.com
+    sudo chown -R www-data: /var/www/html/pruebaX.com
     ```
 
 6. **Crear y configurar los archivos de configuración de Apache:**
 
     Ve a la carpeta de sitios disponibles de Apache:
 
-   ```bash
+    ```bash
     cd /etc/apache2/sites-available/
 
     ls
@@ -256,8 +254,7 @@ Este apartado describe el proceso para configurar hosts virtuales en Apache para
 
 7. **Habilitar los sitios:**
     ```bash
-    sudo a2ensite prueba1.com
-    sudo a2ensite prueba1.com
+    sudo a2ensite pruebaX.com
     ```
 
 8. **Verificar la configuración:**
@@ -303,20 +300,17 @@ Este apartado describe el proceso para configurar hosts virtuales en Apache para
     Añade las siguientes líneas:
 
     ```apache
-    127.0.0.1   prueba1.com
-    127.0.0.1   www.prueba1.com
-
-    127.0.0.1   prueba2.com
-    127.0.0.1   www.prueba2.com
+    127.0.0.1   pruebaX.com
+    127.0.0.1   www.pruebaX.com
     ```
 
 11. **Verificar la configuración:**
 
     ```bash
-    ping prueba1.com
+    ping pruebaX.com
     ```
 
-Si todo está configurado correctamente, deberías ver respuestas desde `127.0.0.1`, `prueba1.com` y `prueba2.com`
+Si todo está configurado correctamente, deberías ver respuestas desde `pruebaX.com` y `www.pruebaX.com`
 
 
 ## Certificados autofirmados SSL
