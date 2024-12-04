@@ -16,7 +16,7 @@
 - [Ejercicio 10: Página dinámica sin accesibilidad.](./ejers/ejer10.html)
 - [Ejercicio 11: Página web de un producto.](./ejers/ejer11.html)
 - [Ejercicio 12: Blog con múltiples secciones.](./ejers/ejer12.html)
-- [Ejercicio 13: Formulario de inscripción .](./ejers/ejer13.html)
+- [Ejercicio 13: Formulario de inscripción.](./ejers/ejer13.html)
 - [Ejercicio 14: Tabla de datos compleja.](./ejers/ejer14.html)
 - [Ejercicio 15: Menú interactivo.](./ejers/ejer15.html)
   
