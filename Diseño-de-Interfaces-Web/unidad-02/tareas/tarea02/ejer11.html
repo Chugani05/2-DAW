@@ -1,4 +1,4 @@
-<!-- Ejercicio 11. Página web de un producto -->
+<!-- Ejercicio 11. Página web de un producto
 
 <!DOCTYPE html>
 <html lang="es">
@@ -24,9 +24,48 @@
   <div>
     <h1>Zapatos Deportivos</h1>
     <div>
-      <img src="zapatos.jpg" alt="Zapatos deportivos modernos para correr">
+      <img src="zapatos.jpg">
       <p>Los mejores zapatos para correr.</p>
       <p class="precio">Precio: $50</p>
+    </div>
+    <div class="boton" onclick="alert('Producto añadido al carrito')">Añadir al carrito</div>
+  </div>
+</body>
+</html> -->
+
+
+
+<!-- Comentario: Se agregó texto alternativo `alt` descriptivo a la imagen
+para que los usuarios que no pueden verla entiendan su contenido,
+y se reemplazó la acción del botón por un elemento <button> con roles semánticos correctos. -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Zapatos Deportivos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .precio {
+      font-size: 20px;
+      color: red;
+    }
+    .boton {
+      background-color: blue;
+      color: white;
+      padding: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <h1>Zapatos Deportivos</h1>
+    <div>
+      <img src="zapatos.jpg" alt="Zapatos deportivos ideales para correr">
+      <p>Los mejores zapatos para correr.</p>
+      <p class="precio" aria-label="Precio: 50 dólares">Precio: $50</p>
     </div>
     <button class="boton" aria-label="Añadir Zapatos Deportivos al carrito" onclick="alert('Producto añadido al carrito')">Añadir al carrito</button>
   </div>

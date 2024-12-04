@@ -1,4 +1,4 @@
-<!-- Ejercicio 12. Blog con múltiples secciones -->
+<!-- Ejercicio 12. Blog con múltiples secciones
 
 <!DOCTYPE html>
 <html lang="es">
@@ -6,20 +6,53 @@
   <title>Mi Blog</title>
 </head>
 <body>
-  <nav aria-label="Menú de navegación">
-    <a href="#inicio">Inicio</a> | <a href="#sobre-mi">Sobre mí</a> | <a href="#contacto">Contacto</a>
-  </nav>
-  <main>
-    <section aria-labelledby="articulo-reciente">
-      <h2 id="articulo-reciente">Artículo Reciente</h2>
+  <div>
+    <div>
+      <span>Inicio</span> | <span>Sobre mí</span> | <span>Contacto</span>
+    </div>
+    <div>
+      <h2>Artículo Reciente</h2>
       <p>Este es el contenido del artículo. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       <a href="#">Leer más</a>
-    </section>
-    <section aria-labelledby="otro-articulo">
-      <h2 id="otro-articulo">Otro Artículo</h2>
+    </div>
+    <div>
+      <h2>Otro Artículo</h2>
       <p>Contenido del segundo artículo. Lorem ipsum dolor sit amet.</p>
       <a href="#">Leer más</a>
-    </section>
+    </div>
+  </div>
+</body>
+</html> -->
+
+
+
+<!-- Comentario: Se utilizó un elemento <nav> con `aria-label` para describir la barra de navegación
+y se añadieron `aria-label` a los enlaces para proporcionar contexto adicional a cada sección. -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Mi Blog</title>
+</head>
+<body>
+  <nav aria-label="Secciones del blog">
+    <ul>
+      <li><a href="#" aria-label="Ir a Inicio">Inicio</a></li>
+      <li><a href="#" aria-label="Ir a Sobre mí">Sobre mí</a></li>
+      <li><a href="#" aria-label="Ir a Contacto">Contacto</a></li>
+    </ul>
+  </nav>
+  <main>
+    <article>
+      <h2>Artículo Reciente</h2>
+      <p>Este es el contenido del artículo. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <a href="#" aria-label="Leer más sobre el artículo reciente">Leer más</a>
+    </article>
+    <article>
+      <h2>Otro Artículo</h2>
+      <p>Contenido del segundo artículo. Lorem ipsum dolor sit amet.</p>
+      <a href="#" aria-label="Leer más sobre el otro artículo">Leer más</a>
+    </article>
   </main>
 </body>
 </html>

@@ -1,4 +1,26 @@
-<!-- Ejercicio 10. Página dinámica sin accesibilidad -->
+<!-- Ejercicio 10. Página dinámica sin accesibilidad
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Notificaciones</title>
+  <script>
+    function mostrarMensaje() {
+      document.getElementById('mensaje').innerText = '¡Nueva notificación!';
+    }
+  </script>
+</head>
+<body>
+  <h1>Página de Notificaciones</h1>
+  <button onclick="mostrarMensaje()">Mostrar Notificación</button>
+  <div id="mensaje"></div>
+</body>
+</html> -->
+
+
+
+<!-- Comentario: Se añadió `role="alert"` al contenedor del mensaje para que los lectores de pantalla
+anuncien la notificación automáticamente al usuario cuando cambie su contenido. -->
 
 <!DOCTYPE html>
 <html lang="es">
@@ -15,6 +37,6 @@
 <body>
   <h1>Página de Notificaciones</h1>
   <button onclick="mostrarMensaje()">Mostrar Notificación</button>
-  <div id="mensaje" aria-live="polite"></div>
+  <div id="mensaje" role="alert"></div>
 </body>
 </html>

@@ -1,4 +1,4 @@
-<!-- Ejercicio 13. Formulario de inscripción  -->
+<!-- Ejercicio 13. Formulario de inscripción 
 
 <!DOCTYPE html>
 <html lang="es">
@@ -9,17 +9,52 @@
   <h1>Formulario de Inscripción</h1>
   <form>
     <div>
-      <label for="nombre">Nombre completo</label>
-      <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required>
+      <input type="text" placeholder="Nombre completo">
     </div>
     <div>
-      <label for="email">Correo electrónico</label>
-      <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
+      <input type="email" placeholder="Correo electrónico">
+    </div>
+    <div>
+      <select>
+        <option>Seleccionar país</option>
+        <option>México</option>
+        <option>España</option>
+        <option>Colombia</option>
+      </select>
+    </div>
+    <div>
+      <button>Enviar</button>
+    </div>
+  </form>
+</body>
+</html> -->
+
+
+
+<!-- Comentario: Se vincularon los <label> con los campos de entrada usando `for` e `id`,
+se agregó `required` para informar que los campos son obligatorios,
+y se incluyó un texto descriptivo para los `placeholder` -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Formulario de Inscripción</title>
+</head>
+<body>
+  <h1>Formulario de Inscripción</h1>
+  <form aria-labelledby="form-title">
+    <div>
+      <label for="nombre">Nombre completo</label>
+      <input id="nombre" type="text" placeholder="Escribe tu nombre completo" required>
+    </div>
+    <div>
+      <label for="correo">Correo electrónico</label>
+      <input id="correo" type="email" placeholder="Escribe tu correo electrónico" required>
     </div>
     <div>
       <label for="pais">Seleccionar país</label>
-      <select id="pais" name="pais" required>
-        <option value="">Seleccionar país</option>
+      <select id="pais" required>
+        <option value="">Selecciona tu país</option>
         <option value="mx">México</option>
         <option value="es">España</option>
         <option value="co">Colombia</option>

@@ -1,4 +1,4 @@
-<!-- Ejercicio 14. Tabla de datos compleja -->
+<!-- Ejercicio 14. Tabla de datos compleja
 
 <!DOCTYPE html>
 <html lang="es">
@@ -7,24 +7,61 @@
 </head>
 <body>
   <h1>Reporte Mensual de Ventas</h1>
-  <table border="1" aria-label="Tabla de ventas mensuales por producto">
+  <table border="1">
+    <tr>
+      <td>Producto</td>
+      <td>Enero</td>
+      <td>Febrero</td>
+      <td>Marzo</td>
+    </tr>
+    <tr>
+      <td>Zapatos</td>
+      <td>100</td>
+      <td>150</td>
+      <td>200</td>
+    </tr>
+    <tr>
+      <td>Camisas</td>
+      <td>200</td>
+      <td>250</td>
+      <td>300</td>
+    </tr>
+  </table>
+</body>
+</html> -->
+
+
+
+<!-- Comentario: Se añadió un elemento <caption> para describir la tabla,
+y los encabezados se vincularon con las celdas correspondientes mediante `scope="col"`
+y `scope="row"` para mejorar la relación semántica. -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Reporte de Ventas</title>
+</head>
+<body>
+  <h1>Reporte Mensual de Ventas</h1>
+  <table border="1" aria-labelledby="table-title">
+    <caption id="table-title">Reporte detallado de ventas por producto y mes</caption>
     <thead>
       <tr>
-        <th>Producto</th>
-        <th>Enero</th>
-        <th>Febrero</th>
-        <th>Marzo</th>
+        <th scope="col">Producto</th>
+        <th scope="col">Enero</th>
+        <th scope="col">Febrero</th>
+        <th scope="col">Marzo</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>Zapatos</td>
+        <th scope="row">Zapatos</th>
         <td>100</td>
         <td>150</td>
         <td>200</td>
       </tr>
       <tr>
-        <td>Camisas</td>
+        <th scope="row">Camisas</th>
         <td>200</td>
         <td>250</td>
         <td>300</td>
