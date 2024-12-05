@@ -38,30 +38,30 @@ En resumen, Apache es un servidor web versátil y ampliamente utilizado que ofre
 Descripción de los pasos para instalar y configurar Apache2 en un sistema Linux.
 
 1. **Actualizar los repositorios:**
-    ```bash
+    ```sh
     sudo apt update
     ```
 
 2. **Instalar Apache2:**
-    ```bash
+    ```sh
     sudo apt install apache2 -y
     ```
 
 3. **Verificar la instalación:**
-   ```bash
+   ```sh
     apache2 -v
     ```
 
 4. **Iniciar Apache2:**
     Para iniciar el servicio de Apache2, utiliza el siguiente comando:
 
-    ```bash
+    ```sh
     sudo systemctl start apache2
     ```
 
     Puedes verificar que Apache2 esté en funcionamiento con:
 
-    ```bash
+    ```sh
     sudo systemctl status apache2
     ```
 
@@ -69,7 +69,7 @@ Descripción de los pasos para instalar y configurar Apache2 en un sistema Linux
 
     Para asegurarte de que Apache2 se inicie automáticamente cuando el sistema se reinicie, ejecuta el siguiente comando:
 
-    ```bash
+    ```sh
     sudo systemctl enable apache2
     ```
 
@@ -91,13 +91,13 @@ Descripción de los pasos para instalar y configurar Apache2 en un sistema Linux
 
     Para habilitar la reescritura de URLs, usa el siguiente comando:
 
-    ```bash
+    ```sh
     sudo a2enmod rewrite
     ```
 
     Luego, reinicia Apache para aplicar los cambios:
 
-    ```bash
+    ```sh
     sudo systemctl restart apache2
     ```
 
@@ -107,13 +107,13 @@ Descripción de los pasos para instalar y configurar Apache2 en un sistema Linux
 
     Puedes editarlo para cambiar la raíz del documento o agregar configuraciones adicionales. Para editarlo, utiliza el siguiente comando:
 
-    ```bash
+    ```sh
     sudo nano /etc/apache2/sites-available/000-default.conf
     ```
 
     Ejemplo de configuración básica:
 
-    ```bash
+    ```sh
     <VirtualHost *:80>
         DocumentRoot /var/www/html
         ServerName localhost
@@ -126,12 +126,12 @@ Descripción de los pasos para instalar y configurar Apache2 en un sistema Linux
 
     Después de realizar cambios en los archivos de configuración, debes reiniciar Apache para aplicar los cambios:
 
-    ```bash
+    ```sh
     sudo systemctl restart apache2
     ```
 
 9. **Verificar la configuración:**
-    ```bash
+    ```sh
     sudo apachectl configtest
     ```
 
@@ -141,13 +141,13 @@ Descripción de los pasos para instalar y configurar Apache2 en un sistema Linux
 
     Si tienes un firewall activo, asegúrate de permitir el tráfico HTTP (puerto 80) y HTTPS (puerto 443). Para permitir estos puertos en `ufw`, ejecuta los siguientes comandos:
 
-    ```bash
+    ```sh
     sudo ufw allow in "Apache Full"
     ```
 
     Verifica el estado del firewall con:
 
-    ```bash
+    ```sh
     sudo ufw status
     ```
 
@@ -160,7 +160,7 @@ Descripción de los pasos para instalar y configurar Apache2 en un sistema Linux
   
     Puedes revisar estos logs para solucionar problemas o verificar el estado del servidor:
 
-    ```bash
+    ```sh
     sudo tail -f /var/log/apache2/error.log
     sudo tail -f /var/log/apache2/access.log
     ```
@@ -171,12 +171,12 @@ Descripción de los pasos para instalar y configurar Apache2 en un sistema Linux
 Este apartado describe el proceso para configurar hosts virtuales en Apache para dos dominios: `prueba1.com` y `prueba2.com`.
 
 1. **Comprobar el estado de Apache:**
-    ```bash
+    ```sh
     sudo systemctl status apache2
     ```
 
 2. **Crear directorios para los sitios:**
-    ```bash
+    ```sh
     sudo mkdir -p /var/www/html/prueba2.com/public
     ```
 
@@ -185,19 +185,19 @@ Este apartado describe el proceso para configurar hosts virtuales en Apache para
     Crea el archivo `index.html` para el primer sitio:
 
 
-    ```bash
+    ```sh
     sudo nano /var/www/html/prueba1.com/public/index.html
     ```
 
     Luego, copia el archivo `index.html` para el segundo sitio:
 
-    ```bash
+    ```sh
     sudo cp /var/www/html/prueba1.com/public/index.html /var/www/html/prueba2.com/public/index.html
     sudo nano /var/www/html/prueba2.com/public/index.html
     ```
 
 4. **Verificar los directorios:**
-    ```bash
+    ```sh
     cd /var/www/html
 
     ls -la
@@ -205,7 +205,7 @@ Este apartado describe el proceso para configurar hosts virtuales en Apache para
     ```
 
 5. **Cambiar permisos de los directorios:**
-    ```bash
+    ```sh
     sudo chown -R www-data: /var/www/html/pruebaX.com
     ```
 
@@ -213,7 +213,7 @@ Este apartado describe el proceso para configurar hosts virtuales en Apache para
 
     Ve a la carpeta de sitios disponibles de Apache:
 
-    ```bash
+    ```sh
     cd /etc/apache2/sites-available/
 
     ls
@@ -222,7 +222,7 @@ Este apartado describe el proceso para configurar hosts virtuales en Apache para
 
     Crea el archivo de configuración para `prueba1.com`:
 
-    ```bash
+    ```sh
     sudo nano prueba1.com.conf
     ```
 
@@ -247,13 +247,13 @@ Este apartado describe el proceso para configurar hosts virtuales en Apache para
 
     Copia este archivo para `prueba2.com` y haz los cambios necesarios:
 
-    ```bash
+    ```sh
     sudo cp prueba1.com.conf prueba2.com.conf
     sudo nano prueba2.com.conf
     ```
 
 7. **Habilitar los sitios:**
-    ```bash
+    ```sh
     sudo a2ensite pruebaX.com
     ```
 
@@ -261,13 +261,13 @@ Este apartado describe el proceso para configurar hosts virtuales en Apache para
 
     Verifica la configuración de Apache:
 
-    ```bash
+    ```sh
     sudo apachectl configtest
     ```
 
     Si hay errores, edita el archivo de configuración global de Apache:
 
-    ```bash
+    ```sh
     sudo nano /etc/apache2/apache2.conf
     ```
 
@@ -279,12 +279,12 @@ Este apartado describe el proceso para configurar hosts virtuales en Apache para
 
     Vuelve a verificar la configuración:
 
-    ```bash
+    ```sh
     sudo apachectl configtest
     ```
 
 9. **Reiniciar Apache:**
-    ```bash
+    ```sh
     sudo systemctl restart apache2
     sudo systemctl status apache2
     ```
@@ -293,7 +293,7 @@ Este apartado describe el proceso para configurar hosts virtuales en Apache para
 
     Edita el archivo de hosts para redirigir los dominios a `localhost`:
 
-    ```bash
+    ```sh
     sudo nano /etc/hosts
     ```
 
@@ -306,7 +306,7 @@ Este apartado describe el proceso para configurar hosts virtuales en Apache para
 
 11. **Verificar la configuración:**
 
-    ```bash
+    ```sh
     ping pruebaX.com
     ```
 

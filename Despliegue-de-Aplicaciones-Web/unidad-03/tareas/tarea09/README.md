@@ -35,27 +35,27 @@ En resumen, Nginx es una herramienta poderosa y versátil que se utiliza ampliam
 A continuación se detallan los pasos para instalar y configurar Nginx:
 
 1. **Actualizar el sistema:**
-   ```bash
+   ```sh
    sudo apt update
    ```
 
 2. **Instalar Nginx:**
-    ```bash
+    ```sh
     sudo apt install nginx
     ```
 
 3. **Verificar el estado del servicio Nginx:**
-    ```bash
+    ```sh
     sudo systemctl status nginx
     ```
 
 4. **Probar la configuración de Nginx:**
-    ```bash
+    ```sh
     sudo nginx -t
     ```
 
 5. **Navegar al directorio de configuración de Nginx:**
-    ```bash
+    ```sh
     cd /etc/nginx
 
     ls -l
@@ -80,7 +80,7 @@ A continuación se detallan los pasos para instalar y configurar Nginx:
     ```
 
 6. **Acceder al directorio `sites-available`:**
-    ```bash
+    ```sh
     cd sites-available
 
     ls
@@ -88,7 +88,7 @@ A continuación se detallan los pasos para instalar y configurar Nginx:
     ```
 
 7. **Acceder al directorio `sites-enabled`:**
-    ```bash
+    ```sh
     cd sites-enabled
 
     ls -l
@@ -98,12 +98,12 @@ A continuación se detallan los pasos para instalar y configurar Nginx:
     ```
 
 8. **Ver el contenido del archivo `default`:**
-    ```bash
+    ```sh
     cat default
     ```
 
 9. **Navegar al directorio donde se encuentran los archivos web:**
-    ```bash
+    ```sh
     cd sites-enabled
 
     ls -l
@@ -113,27 +113,27 @@ A continuación se detallan los pasos para instalar y configurar Nginx:
     ```
 
 10. **Reiniciar el servicio Nginx:**
-    ```bash
+    ```sh
     sudo systemctl restart nginx
     ```
 
 11. **Eliminar el archivo de índice predeterminado:**
-    ```bash
+    ```sh
     sudo rm index.nginx-debian.html
     ```
 
 12. **Crear un nuevo archivo de índice HTML:**
-    ```bash
+    ```sh
     nano index.html
     ```
 
 13. **Reiniciar nuevamente el servicio Nginx:**
-    ```bash
+    ```sh
     sudo systemctl restart nginx
     ```
 
 14. **Verificar el estado del servicio Nginx:**
-    ```bash
+    ```sh
     sudo systemctl status nginx
     ```
 
@@ -145,27 +145,26 @@ Con estos pasos, Nginx debería estar instalado y funcionando correctamente en t
 Este apartado describe el proceso para configurar hosts virtuales en Nignx para tres dominios: `empresa1.com`, `empresa2.com` y `empresa3.com`.
 
 1. **Comprobar el estado de Nginx:**
-    ```bash
+    ```sh
     sudo systemctl status nginx
     ```
 
 2. **Crear directorios para los sitios:**
-    ```bash
+    ```sh
     sudo mkdir -p /var/www/empresaX.com/public
     ```
 
 3. **Crear el archivo index.html para cada sitio:**
 
-    Crea el archivo `index.html` para el primer sitio:
+    Crea el archivo `index.html` para el primer sitio:s
 
-
-    ```bash
+    ```sh
     sudo nano /var/www/empresaX.com/public/index.html
     ```
 
     Añadimos el siguiente contenido al archivo:
 
-    ```nginx
+    ```html
     <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -181,13 +180,13 @@ Este apartado describe el proceso para configurar hosts virtuales en Nignx para 
 
     Luego, copia el archivo `index.html` para el segundo y el tercer sitio de la siguente forma, tras esto editamos el archivo como necesitemos:
 
-    ```bash
+    ```sh
     sudo cp /var/www/empresaX.com/public/index.html /var/www/empresaX.com/public/index.html
     sudo nano /var/www/empresaX.com/public/index.html
     ```
 
 4. **Verificar los directorios:**
-    ```bash
+    ```sh
     cd /var/www/html
 
     ls -la
@@ -199,7 +198,7 @@ Este apartado describe el proceso para configurar hosts virtuales en Nignx para 
     ```
 
 5. **Cambiar permisos de los directorios:**
-    ```bash
+    ```sh
     sudo chown -R www-data: /var/www/empresaX.com
     ```
 
@@ -207,7 +206,7 @@ Este apartado describe el proceso para configurar hosts virtuales en Nignx para 
 
     Ve a la carpeta de sitios disponibles de Apache:
 
-    ```bash
+    ```sh
     cd /etc/nginx/sites-available/
 
     ls
@@ -216,7 +215,7 @@ Este apartado describe el proceso para configurar hosts virtuales en Nignx para 
 
     Crea el archivo de configuración para `empresa1.com`:
 
-    ```bash
+    ```sh
     sudo nano empresa1.com.conf
     ```
 
@@ -227,25 +226,25 @@ Este apartado describe el proceso para configurar hosts virtuales en Nignx para 
 
     Copia este archivo para `empresaX.com` y haz los cambios necesarios:
 
-    ```bash
+    ```sh
     sudo cp empresa1.com.conf empresaX.com.conf
     sudo nano empresaX.com.conf
     ```
 
 7. **Habilitar los sitios:**
-    ```bash
+    ```sh
     ```
 
 8. **Verificar la configuración:**
 
     Verifica la configuración de Nginx:
 
-    ```bash
+    ```sh
     ```
 
     Si hay errores, edita el archivo de configuración global de Nginx:
 
-    ```bash
+    ```sh
     ```
 
     Añade o modifica la línea ServerName:
@@ -255,11 +254,11 @@ Este apartado describe el proceso para configurar hosts virtuales en Nignx para 
 
     Vuelve a verificar la configuración:
 
-    ```bash
+    ```sh
     ```
 
 9. **Reiniciar Nginx:**
-    ```bash
+    ```sh
     sudo systemctl restart nginx
     sudo systemctl status nginx
     ```
@@ -268,7 +267,7 @@ Este apartado describe el proceso para configurar hosts virtuales en Nignx para 
 
     Edita el archivo de hosts para redirigir los dominios a `localhost`:
 
-    ```bash
+    ```sh
     sudo nano /etc/hosts
     ```
 
@@ -281,7 +280,7 @@ Este apartado describe el proceso para configurar hosts virtuales en Nignx para 
 
 11. **Verificar la configuración:**
 
-    ```bash
+    ```sh
     ping empresaX.com
     ```
 
