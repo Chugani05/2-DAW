@@ -314,3 +314,139 @@ Si todo está configurado correctamente, deberías ver respuestas desde `pruebaX
 
 
 ## Certificados autofirmados SSL
+
+Este apartado proporciona los pasos para configurar certificados SSL autofirmados en un servidor Apache en un entorno Linux. El proceso incluye la generación de las claves y certificados necesarios, así como la configuración del servidor para utilizarlos.
+
+1. **Habilitar el módulo SSL en Apache:**
+    ```sh
+    ## Habilitar el módulo SSL 
+    sudo a2enmod ssl
+
+    ## Reiniciar Apache
+    sudo systemctl restart apache2
+    ```
+
+2. **Crear un Directorio para los Certificados:**
+    ```sh
+    sudo mkdir /etc/apache2/ssl
+    ```
+
+3. **Instalar OpenSSL y Crear Claves:**
+
+    Instala las herramientas necesarias y genera la clave privada:
+
+    ```sh
+    sudo apt install openssl ca-certificates
+    cd /etc/apache2/ssl
+    sudo openssl genrsa -out server.key 2048
+    ```
+
+    Verifica la clave generada:
+
+    ```sh
+    cat server.key
+    ls -l
+    ```
+
+    Asegura los permisos de la clave:
+
+    ```sh
+    sudo chmod 600 server.key
+    ls -l
+    sudo cat server.key
+    ```
+
+4. **Crear una Solicitud de Firma de Certificado (CSR):**
+
+    Genera el archivo `.csr` proporcionando los datos necesarios:
+
+    ```sh
+    sudo openssl req -new -key server.key -out server.csr
+    ```
+
+    Ejemplo de información solicitada:
+
+    ```apache
+    Country Name (2 letter code): ES
+    State or Province Name (full name): Tenerife
+    Locality Name (eg, city): Santa Cruz de Tenerife
+    Organization Name (eg, company): IES Puerto de la Cruz
+    Organizational Unit Name (eg, section): 2 DAW
+    Common Name (e.g., server FQDN or YOUR name): rashi
+    ```
+
+    Verifica el archivo CSR generado:
+
+    ```sh
+    ls
+    cat server.csr
+    ```
+
+5. **Generar el Certificado Autofirmado:**
+
+    Crea el certificado autofirmado con una validez de 365 días:
+
+    ```sh
+    sudo openssl x509 -req -days 365 -in server.csr -signkey server.key -out server.crt
+    ```
+
+    Verifica el certificado:
+
+    ```sh
+    ls -l
+    cat server.crt
+    ```
+
+6. **Configurar el VirtualHost para SSL:**
+
+    Navega al directorio de configuración de sitios disponibles:
+
+    ```sh
+    cd /etc/apache2/sites-available/
+    ls
+    ```
+
+    Copia y edita el archivo de configuración SSL:
+
+    ```sh
+    sudo cp default-ssl.conf rashi_ssl.conf
+    sudo nano rashi_ssl.conf
+    ```
+
+    Contenido del archivo `rashi_ssl.conf`:
+
+    ```apache
+    <VirtualHost rashi.daw:443>
+        ServerName "rashi.daw"
+        ServerAdmin webmaster@localhost
+
+        DocumentRoot /var/www/html
+
+        ErrorLog ${APACHE_LOG_DIR}/error.log
+        CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+        SSLEngine on
+
+        SSLCertificateFile  /etc/apache2/ssl/server.crt
+        SSLCertificateKeyFile   /etcapache2/ssl/server.key
+    </VirtualHost>
+    ```
+
+7. **Activar el Sitio y Reiniciar Apache:**
+
+    Activa el nuevo sitio SSL y verifica la configuración:
+
+    ```sh
+    sudo a2ensite rashi_ssl.conf
+    sudo apache2ctl configtest
+    ```
+
+    Reinicia Apache:
+
+    ```sh
+    sudo apache2ctl restart
+    ```
+
+8. **Acceder al Sitio:**
+
+Llegados a este punto, si hemos hecho correctamente, podremos acceder al sitio en `https://rashi.daw`
