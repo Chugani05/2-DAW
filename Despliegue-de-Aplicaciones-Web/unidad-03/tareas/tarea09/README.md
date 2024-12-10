@@ -198,67 +198,79 @@ Este apartado describe el proceso para configurar hosts virtuales en Nignx para 
     ```
 
 5. **Cambiar permisos de los directorios:**
-    ```sh
+    ```bash
     sudo chown -R www-data: /var/www/empresaX.com
+    sudo chmod -R 755 /var/www/empresaX.com
     ```
 
-6. **Crear y configurar los archivos de configuración de Apache:**
+6. **Crear y configurar los archivos de configuración de Nginx:**
 
-    Ve a la carpeta de sitios disponibles de Apache:
+    Ve a la carpeta de sitios disponibles de Nginx:
 
-    ```sh
+    ```bash
     cd /etc/nginx/sites-available/
 
     ls
     # output: default
     ```
 
+    Copia el archivo `default` a `empresaX.com.conf`:
+
+    ```bash
+    sudo cp default empresaX.com.conf
+    ```
+
     Crea el archivo de configuración para `empresa1.com`:
 
-    ```sh
+    ```bash
     sudo nano empresa1.com.conf
     ```
 
     Contenido del archivo `empresa1.com.conf`:
 
     ```nginx
+    listen 80;
+    listen [::]:80;
+    root /var/www/empresa1
+    server_name empresa1.com wwww.empresa1.com
     ```
 
     Copia este archivo para `empresaX.com` y haz los cambios necesarios:
 
-    ```sh
+    ```bash
     sudo cp empresa1.com.conf empresaX.com.conf
     sudo nano empresaX.com.conf
     ```
 
 7. **Habilitar los sitios:**
-    ```sh
+    ```bash
+    sudo ln -s /etc/nginx/sites-available/empresaX.com.conf /etc/nginx/sites-enabled/
+
+    ls -l 
+    # output:
+    # total 0
+    # lrwxrwxrwx 1 root root 34 Dec  3 15:28 default -> /etc/nginx/sites-available/default
+    # lrwxrwxrwx 1 root root 44 Dec 10 15:02 empresa1.com.conf -> /etc/nginx/sites-available/empresa1.com.conf
+    # lrwxrwxrwx 1 root root 44 Dec 10 15:03 empresa2.com.conf -> /etc/nginx/sites-available/empresa2.com.conf
+    # lrwxrwxrwx 1 root root 44 Dec 10 15:03 empresa3.com.conf -> /etc/nginx/sites-available/empresa3.com.conf
+    ```
+
+    Borra el archivo `default` para que no haga conflicto:
+
+    ```bash
+    sudo rm default
     ```
 
 8. **Verificar la configuración:**
 
     Verifica la configuración de Nginx:
 
-    ```sh
-    ```
-
-    Si hay errores, edita el archivo de configuración global de Nginx:
-
-    ```sh
-    ```
-
-    Añade o modifica la línea ServerName:
-
-    ```nginx
-    ```
-
-    Vuelve a verificar la configuración:
-
-    ```sh
+    ```bash
+    sudo nginx -t
     ```
 
 9. **Reiniciar Nginx:**
-    ```sh
+    ```bash
     sudo systemctl restart nginx
     sudo systemctl status nginx
     ```
@@ -267,7 +279,7 @@ Este apartado describe el proceso para configurar hosts virtuales en Nignx para 
 
     Edita el archivo de hosts para redirigir los dominios a `localhost`:
 
-    ```sh
+    ```bash
     sudo nano /etc/hosts
     ```
 
@@ -280,7 +292,7 @@ Este apartado describe el proceso para configurar hosts virtuales en Nignx para 
 
 11. **Verificar la configuración:**
 
-    ```sh
+    ```bash
     ping empresaX.com
     ```
 
