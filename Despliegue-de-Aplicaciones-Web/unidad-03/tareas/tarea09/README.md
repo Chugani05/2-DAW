@@ -9,6 +9,7 @@
     - [Casos de uso comunes](#casos-de-uso-comunes)
 - [Instalación y configuración básica](#instalación-y-configuración-básica)
 - [Configuración de hosts virtuales](#configuración-de-hosts-virtuales)
+- [Certificados autofirmados SSL](#certificados-autofirmados-ssl)
 
 
 ## ¿Qué es Nginx?
@@ -297,3 +298,6 @@ Este apartado describe el proceso para configurar hosts virtuales en Nignx para 
     ```
 
 Si todo está configurado correctamente, se debería ver desde `www.empresaX.com` y `empresaX.com`.
+
+
+## Certificados autofirmados SSL
