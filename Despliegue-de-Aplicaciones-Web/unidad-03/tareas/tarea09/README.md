@@ -301,3 +301,94 @@ Si todo está configurado correctamente, se debería ver desde `www.empresaX.com
 
 
 ## Certificados autofirmados SSL
+
+Este apartado proporciona los pasos para configurar certificados SSL autofirmados en un servidor Nginx en un entorno Linux. El proceso incluye la generación de las claves y certificados necesarios, así como la configuración del servidor para utilizarlos.
+
+1. **Crear el Certificado SSL y la Clave Privada:**
+
+    Genera un certificado auto-firmado para tu dominio:
+
+    ```sh
+    sudo mkdir -p /etc/nginx/ssl
+    sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/nginx/ssl/server.key -out /etc/nginx/ssl/server.crt
+    ```
+
+    Ejemplo de información solicitada:
+
+    ```nginx
+    Country Name (2 letter code): ES
+    State or Province Name (full name): Tenerife
+    Locality Name (eg, city): Santa Cruz de Tenerife
+    Organization Name (eg, company): IES Puerto de la Cruz
+    Organizational Unit Name (eg, section): 2 DAW
+    Common Name (e.g., server FQDN or YOUR name): rashi
+    ```
+
+2. **Editar el Archivo de Configuración del Sitio:**
+
+    Navega al directorio de configuración de sitios disponibles:
+
+    ```sh
+    cd /etc/nginx/sites-available/
+    
+    ls
+    # output: 
+    ```
+
+    Crea el archivo de configuración para el dominio:
+
+    ```sh
+    sudo nano rashi_ssl.conf
+    ```
+
+    Contenido del archivo `rashi_ssl.conf`:
+
+    ```nginx
+    server {
+        listen 443 ssl;
+        server_name rashi.daw;
+
+        root /var/www/html;
+        index index.html index.htm;
+
+        ssl_certificate /etc/nginx/ssl/server.crt;
+        ssl_certificate_key /etc/nginx/ssl/server.key;
+
+        error_log /var/log/nginx/error.log;
+        access_log /var/log/nginx/access.log;
+
+        location / {
+            try_files $uri $uri/ =404;
+        }
+    }
+
+    server {
+        listen 80;
+        server_name rashi.daw;
+        return 301 https://$server_name$request_uri;
+    }
+    ```
+
+3. **Habilitar el Archivo de Configuración y Verificar Nginx:**
+
+    Crea un enlace simbólico del archivo en el directorio `sites-enabled`:
+
+    ```sh
+    sudo ln -s /etc/nginx/sites-available/rashi_ssl.conf /etc/nginx/sites-enabled/
+    ```
+
+    Verifica la configuración de Nginx:
+
+    ```sh
+    sudo nginx -t
+    ```
+
+4. **Reiniciar Nginx:**
+
+    ```sh
+    sudo systemctl restart nginx
+    ```
+
+5. **Acceder al Sitio:**
+
+Llegados a este punto, si hemos hecho correctamente, podremos acceder al sitio en `https://rashi.daw`
