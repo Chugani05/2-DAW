@@ -10,6 +10,7 @@
 - [Instalación y configuración básica](#instalación-y-configuración-básica)
 - [Configuración de hosts virtuales](#configuración-de-hosts-virtuales)
 - [Certificados autofirmados SSL](#certificados-autofirmados-ssl)
+- [Certificado Let's Encrypt con certbot](#certificado-lets-encrypt-con-certbot)
 
 
 ## ¿Qué es Nginx?
@@ -392,3 +393,73 @@ Este apartado proporciona los pasos para configurar certificados SSL autofirmado
 5. **Acceder al Sitio:**
 
 Llegados a este punto, si hemos hecho correctamente, podremos acceder al sitio en `https://rashi.daw`
+
+
+## Certificado Let's Encrypt con certbot
+
+1. **Intalar Certbot:**
+
+    Para instalar Certbot y habilitar el soporte para Nginx, ejecuta los siguientes comandos en tu servidor:
+
+    ```sh
+    sudo add-apt-repository ppa:certbot/certbot
+    sudo apt update
+    sudo apt install python-certbot-nginx
+    ```
+
+2. **Configurar el dominio:**
+
+    Navega al directorio de configuración de Nginx:
+
+    ```sh
+    cd /etc/nginx/sites-available/
+    ```
+
+    Edita o crea el archivo de configuración del dominio:
+
+    ```sh
+    sudo nano rashi_ssl.conf
+    ```
+
+    Define la configuración del servidor en el archivo, como se muestra a continuación:
+
+    ```nginx
+    server {
+        listen  80;
+        listen  [::]:80;
+        root    /usr/share/nginx/;
+        index   index.php index.html index.htm;
+        server_name rashi_ssl.staging.keetup.com;
+
+            client_max_body_size 100M;
+
+        location / {
+            try_files $uri $uri/ /index.php?$args;
+        }
+
+        location ~ \.php$ {
+        include snippets/fastcgi-php.conf;
+        fastcgi_pass        unix:/var/run/php/php7.2-fmp.sock;
+        fastcgi_param       SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        }
+    }
+    ```
+    Crea un enlace simbólico del archivo de configuración en el directorio sites-enabled:
+
+    ```sh
+    ln -s /etc/nginx/sites-available/rashi_ssl.conf /etc/nginx/sites-enabled/
+    ```
+
+    Verifica que no haya errores en la configuración de Nginx:
+
+    ```sh
+    sudo nginx -t
+    ```
+
+    Recarga el servicio de Nginx para aplicar los cambios:
+
+    ```sh
+    sudo systemctlreload nginx
+    ```
+
+3. **Habilitar el firewall para HTTPS en el servidor:**
