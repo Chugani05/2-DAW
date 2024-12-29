@@ -28,22 +28,18 @@ export default {
   },
   computed: {
     filteredEvents() {
-      // Filtrar eventos basados en el tipo seleccionado
       if (!this.eventType) return this.events;
       return this.events.filter((event) => event.type === this.eventType);
     },
   },
   methods: {
     viewDetails(event) {
-      // Mostrar los detalles de un evento
       this.selectedEvent = event;
     },
     clearSelectedEvent() {
-      // Limpiar el evento seleccionado cuando se cambia el filtro
       this.selectedEvent = null;
     },
     resetFilters() {
-      // Restablecer los filtros y la selección de evento
       this.eventType = "";
       this.selectedEvent = null;
     },
@@ -66,7 +62,6 @@ export default {
     </div>
 
     <div class="mb-3">
-      <!-- Mostrar tarjetas filtradas -->
       <div
         v-for="(event, index) in filteredEvents"
         :key="index"
@@ -84,7 +79,6 @@ export default {
       Reiniciar Filtros
     </button>
 
-    <!-- Detalles del evento seleccionado -->
     <div v-if="selectedEvent" class="mt-4">
       <h3>Detalles del Evento</h3>
       <p><strong>Tipo:</strong> {{ selectedEvent.type }}</p>
