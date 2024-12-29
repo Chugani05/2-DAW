@@ -1,3 +1,14 @@
+<script>
+export default {
+  data() {
+    return {
+      balloonCount: 1,
+      showMessage: false
+    };
+  }
+};
+</script>
+
 <template>
   <div class="container text-center">
     <h2 class="mb-4">La casa flotante de los globos rojos</h2>
@@ -35,17 +46,6 @@
     </div>
   </div>
 </template>
-
-<script>
-export default {
-  data() {
-    return {
-      balloonCount: 1,
-      showMessage: false
-    };
-  }
-};
-</script>
 
 <style scoped>
 .balloon-container {
