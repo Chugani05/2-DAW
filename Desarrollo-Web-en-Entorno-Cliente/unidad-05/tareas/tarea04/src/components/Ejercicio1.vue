@@ -3,10 +3,10 @@ export default {
     data() {
         return {
             pennywiseList: [
-                { name: "Cartoon Pennywise", image: "/images/cartoon.jpg" },
-                { name: "1986 Pennywise", image: "/images/1986.webp" },
-                { name: "Real Life Pennywise", image: "/images/real.avif" },
-                { name: "2017 Pennywise", image: "/images/2017.jpg" }
+                { name: "Cartoon Pennywise", image: "/imgs/cartoon.jpg" },
+                { name: "1986 Pennywise", image: "/imgs/1986.webp" },
+                { name: "Real Life Pennywise", image: "/imgs/real.avif" },
+                { name: "2017 Pennywise", image: "/imgs/2017.jpg" }
             ],
             selected: null,
             alias: "",
