@@ -444,6 +444,7 @@ Llegados a este punto, si hemos hecho correctamente, podremos acceder al sitio e
         }
     }
     ```
+
     Crea un enlace simbólico del archivo de configuración en el directorio sites-enabled:
 
     ```sh
@@ -459,7 +460,34 @@ Llegados a este punto, si hemos hecho correctamente, podremos acceder al sitio e
     Recarga el servicio de Nginx para aplicar los cambios:
 
     ```sh
-    sudo systemctlreload nginx
+    sudo systemctl reload nginx
     ```
 
 3. **Habilitar el firewall para HTTPS en el servidor:**
+
+    Verificar el estado del firewall para confirmar que está activo:
+
+    ```sh
+    sudo ufw status
+    ```
+
+    Permitir el tráfico HTTPS mediante el perfil preconfigurado de `Nginx Full`:
+
+    ```sh
+    sudo ufw allow 'Nginx Full'
+    ```
+
+4. **Obtener el certificado SSL:**
+
+    4.1. **Ejecución del comando de configuración:**
+
+    ```sh
+    sudo certbot --nginx
+    ```
+
+    4.2. **Selección de dominios:** Durante el proceso, Certbot muestra una lista de dominios disponibles en el servidor. Se seleccionó el dominio deseado introduciendo el número correspondiente.
+
+    4.3. **Configuración del redireccionamiento HTTP a HTTPS:** Certbot solicita confirmación para habilitar redireccionamiento automático de HTTP a HTTPS. Se eligió la opción indicada para garantizar que todo el tráfico sea seguro.
+
+    4.4. **Resultado exitoso:** Una vez completado, Certbot mostró un mensaje indicando que el certificado se creó y configuró correctamente en el servidor.
+
