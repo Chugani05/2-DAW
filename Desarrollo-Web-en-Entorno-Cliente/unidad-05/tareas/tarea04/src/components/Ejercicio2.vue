@@ -1,11 +1,27 @@
-<script>
+<script lang="ts">
+import { ref, computed } from "vue";
+
 export default {
-  data() {
+  name: "FloatingHouse",
+  setup() {
+    const balloonCount = ref(1);
+    const showMessage = ref(false);
+
+    const message = computed(() => {
+      if (balloonCount.value >= 10 && balloonCount.value <= 15) {
+        return "¿Estás listo para un terror moderado?";
+      } else if (balloonCount.value > 15) {
+        return "¡Cuidado! Esto puede ser demasiado espeluznante.";
+      }
+      return "";
+    });
+
     return {
-      balloonCount: 1,
-      showMessage: false
+      balloonCount,
+      showMessage,
+      message,
     };
-  }
+  },
 };
 </script>
 
@@ -37,12 +53,7 @@ export default {
 
     <div v-if="showMessage && balloonCount >= 10" class="mt-4">
       <h4>¡Todos flotan aquí!</h4>
-      <p v-if="balloonCount >= 10 && balloonCount <= 15">
-        ¿Estás listo para un terror moderado?
-      </p>
-      <p v-else-if="balloonCount > 15">
-        ¡Cuidado! Esto puede ser demasiado espeluznante.
-      </p>
+      <p v-if="message">{{ message }}</p>
     </div>
   </div>
 </template>

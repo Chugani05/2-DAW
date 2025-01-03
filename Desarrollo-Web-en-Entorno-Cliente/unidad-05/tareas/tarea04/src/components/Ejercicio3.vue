@@ -1,48 +1,78 @@
-<script>
+<script lang="ts">
+import { ref, computed } from "vue";
+
 export default {
-  data() {
-    return {
-      eventType: "",
-      selectedEvent: null,
-      events: [
-        {
-          type: "Muertes",
-          description: "Un misterioso asesinato en la ciudad.",
-          date: "12/03/1991",
-          victims: "5 personas",
-        },
-        {
-          type: "Desapariciones",
-          description: "Desaparecen niños sin dejar rastro.",
-          date: "15/08/1995",
-          victims: "7 niños",
-        },
-        {
-          type: "Fenómenos Paranormales",
-          description: "Extrañas luces en el cielo.",
-          date: "22/06/1993",
-          victims: "Ninguna",
-        },
-      ],
+  name: "DerryCurse",
+  setup() {
+    const eventType = ref("");
+    const selectedEvent = ref(null);
+
+    const events = ref([
+      {
+        type: "Desapariciones",
+        description: "Una joven desapareció mientras caminaba a casa al anochecer.",
+        date: "18/10/1994",
+        victims: "1 persona",
+      },
+      {
+        type: "Muertes",
+        description: "Un misterioso asesinato en la ciudad.",
+        date: "12/03/1991",
+        victims: "5 personas",
+      },
+      {
+        type: "Desapariciones",
+        description: "Desaparecen niños sin dejar rastro.",
+        date: "15/08/1995",
+        victims: "7 niños",
+      },
+      {
+        type: "Fenómenos Paranormales",
+        description: "Extrañas luces en el cielo.",
+        date: "22/06/1993",
+        victims: "Ninguna",
+      },
+      {
+        type: "Muertes",
+        description: "Una familia entera encontrada sin vida en su hogar.",
+        date: "14/02/1990",
+        victims: "4 personas",
+      },
+      {
+        type: "Desapariciones",
+        description: "Un grupo de excursionistas desapareció en el bosque.",
+        date: "09/07/1992",
+        victims: "6 excursionistas",
+      },
+    ]);
+
+    const filteredEvents = computed(() => {
+      if (!eventType.value) return events.value;
+      return events.value.filter((event) => event.type === eventType.value);
+    });
+
+    const viewDetails = (event: any) => {
+      selectedEvent.value = event;
     };
-  },
-  computed: {
-    filteredEvents() {
-      if (!this.eventType) return this.events;
-      return this.events.filter((event) => event.type === this.eventType);
-    },
-  },
-  methods: {
-    viewDetails(event) {
-      this.selectedEvent = event;
-    },
-    clearSelectedEvent() {
-      this.selectedEvent = null;
-    },
-    resetFilters() {
-      this.eventType = "";
-      this.selectedEvent = null;
-    },
+
+    const clearSelectedEvent = () => {
+      selectedEvent.value = null;
+    };
+
+    const resetFilters = () => {
+      eventType.value = "";
+      selectedEvent.value = null;
+    };
+
+    return {
+      eventType,
+      selectedEvent,
+      events,
+      filteredEvents,
+      viewDetails,
+      clearSelectedEvent,
+      resetFilters,
+    };
   },
 };
 </script>

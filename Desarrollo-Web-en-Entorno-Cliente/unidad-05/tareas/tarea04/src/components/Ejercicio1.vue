@@ -1,37 +1,50 @@
-<script>
+<script lang="ts">
+import { ref } from "vue";
+
 export default {
-    data() {
-        return {
-            pennywiseList: [
-                { name: "Cartoon Pennywise", image: "/imgs/cartoon.jpg" },
-                { name: "1986 Pennywise", image: "/imgs/1986.webp" },
-                { name: "Real Life Pennywise", image: "/imgs/real.avif" },
-                { name: "2017 Pennywise", image: "/imgs/2017.jpg" }
-            ],
-            selected: null,
-            alias: "",
-            showForm: false
-        };
-    },
-    methods: {
-        selectPennywise(pennywise) {
-            this.selected = pennywise.name;
-            this.showForm = true;
-        },
-        saveAlias() {
-            if (this.alias.trim() === "") {
-                alert("Debes ingresar un alias.");
-                return;
-            }
-            alert(`Alias para ${this.selected}: ${this.alias}`);
-            this.resetSelection();
-        },
-        resetSelection() {
-            this.selected = null;
-            this.alias = "";
-            this.showForm = false;
-        }
-    }
+  name: "PennywiseSelector",
+  setup() {
+    const pennywiseList = ref([
+      { name: "Cartoon Pennywise", image: "/imgs/cartoon.jpg" },
+      { name: "1986 Pennywise", image: "/imgs/1986.webp" },
+      { name: "Real Life Pennywise", image: "/imgs/real.avif" },
+      { name: "2017 Pennywise", image: "/imgs/2017.jpg" },
+    ]);
+
+    const selected = ref<string | null>(null);
+    const alias = ref("");
+    const showForm = ref(false);
+
+    const selectPennywise = (pennywise: { name: string; image: string }) => {
+      selected.value = pennywise.name;
+      showForm.value = true;
+    };
+
+    const saveAlias = () => {
+      if (alias.value.trim() === "") {
+        alert("Debes ingresar un alias.");
+        return;
+      }
+      alert(`Alias para ${selected.value}: ${alias.value}`);
+      resetSelection();
+    };
+
+    const resetSelection = () => {
+      selected.value = null;
+      alias.value = "";
+      showForm.value = false;
+    };
+
+    return {
+      pennywiseList,
+      selected,
+      alias,
+      showForm,
+      selectPennywise,
+      saveAlias,
+      resetSelection,
+    };
+  },
 };
 </script>
 
