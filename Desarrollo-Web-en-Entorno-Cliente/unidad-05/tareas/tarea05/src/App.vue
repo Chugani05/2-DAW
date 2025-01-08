@@ -2,6 +2,9 @@
   <div id="app">
     <CrimeScene>
       <template v-slot:default>
+        <p>Marcos abrió la puerta de la habitación 402 tras tocar dos veces sin respuesta. Al entrar, un olor metálico lo golpeó. Al rodear la cama, lo vio: el huésped estaba en el suelo, inmóvil, con los ojos abiertos y un charco oscuro bajo su cabeza.</p>
+        <p>El carrito de limpieza tembló al soltarlo. Marcos retrocedió, tragando en seco.</p>
+        <p>—Seguridad... —murmuró con la voz rota, buscando su radio mientras el silencio de la habitación lo envolvía.</p>
         <ClueList :clues="clues" @toggle-clue="toggleClue" />
         <DialogueBox>
           <template v-slot:header>
@@ -37,7 +40,7 @@ export default defineComponent({
   data() {
     return {
       clues: [
-        { text: 'huellas', importance: 80 },
+        { text: 'unas huellas', importance: 80 },
         { text: 'un vaso roto', importance: 70 },
         { text: 'un sobre sospechoso', importance: 90 },
         { text: 'un testigo', importance: 50 },
