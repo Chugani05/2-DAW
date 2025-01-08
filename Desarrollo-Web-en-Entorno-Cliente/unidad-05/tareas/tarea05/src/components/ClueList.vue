@@ -5,7 +5,7 @@
       <li v-for="(clue, index) in sortedClues" :key="index">
         <input type="checkbox" :value="clue" @change="toggleClue(clue)" />
         <slot name="clue" :clue="clue">
-          {{ clue.text }} (Importancia: {{ clue.importance }})
+          {{ clue.text }}
         </slot>
       </li>
     </ul>

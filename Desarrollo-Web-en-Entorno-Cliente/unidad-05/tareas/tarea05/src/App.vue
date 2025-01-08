@@ -11,13 +11,13 @@
             <h2>Interrogatorio</h2>
           </template>
           <template v-slot:content>
-            <p>Detective: ¿Qué viste en la escena del crimen?</p>
-            <p>Testigo: No pude ver nada, pero escuche un vaso romperse.</p>
-            <p>Detective: ¿Te percataste de algo más?</p>
-            <p>Testigo: La verdad es que no me percate de nada más, siento no ser de mucha ayuda.</p>
+            <p><strong>Detective:</strong> ¿Qué viste en la escena del crimen?</p>
+            <p><strong>Testigo:</strong> No pude ver nada, pero escuché un vaso romperse.</p>
+            <p><strong>Detective:</strong> ¿Te percataste de algo más?</p>
+            <p><strong>Testigo:</strong> La verdad es que no me percaté de nada más, siento no ser de mucha ayuda.</p>
           </template>
           <template v-slot:footer>
-            <button @click="resolveCase">Resolver el caso</button>
+            <button class="btn btn-primary" @click="resolveCase">Resolver el caso</button>
           </template>
         </DialogueBox>
       </template>
@@ -40,10 +40,10 @@ export default defineComponent({
   data() {
     return {
       clues: [
-        { text: 'unas huellas', importance: 80 },
-        { text: 'un vaso roto', importance: 70 },
-        { text: 'un sobre sospechoso', importance: 90 },
-        { text: 'un testigo', importance: 50 },
+        { text: 'Unas huellas', importance: 80 },
+        { text: 'Un vaso roto', importance: 70 },
+        { text: 'Un sobre sospechoso', importance: 90 },
+        { text: 'Un testigo', importance: 50 },
       ],
       selectedClues: [] 
     };
@@ -60,23 +60,27 @@ export default defineComponent({
       }
     },
     resolveCase() {
-
+      // Filtrar pistas importantes
       const importantClues = this.clues.filter(clue => clue.importance > 60);
       const selectedImportantClues = this.selectedClues.filter(clue => clue.importance > 60);
-
-
+        
+      // Calcular el porcentaje de pistas importantes seleccionadas
       const percentage = (selectedImportantClues.length / importantClues.length) * 100;
-
+        
       if (percentage > 60) {
-        alert('¡Enhorabuena! Has resuelto el caso');
+        // Crear mensaje con las pistas principales seleccionadas y su importancia
+        const cluesText = selectedImportantClues
+          .map(clue => `- ${clue.text} (Importancia: ${clue.importance}%)`)
+          .join('\n');
+        alert(`¡Enhorabuena! Has resuelto el caso.\n\nHaz resuelto el caso con las siguientes pistas:\n${cluesText}`);
+        this.resetGame();
       } else {
         alert('No has acertado, inténtalo de nuevo');
         this.resetGame();
       }
     },
     resetGame() {
-      this.selectedClues = [];
-
+      location.reload()
     },
   },
 });
