@@ -12,7 +12,7 @@
   - [Servidor Web: Instalación de Apache](#servidor-web-instalación-de-apache)
   - [Sistema de Gestión de Bases de Datos: Instalación de MaríaDB](#sistema-de-gestión-de-bases-de-datos-instalación-de-maríadb)
   - [Lenguajes de Programación: Instalación de PHP](#lenguajes-de-programación-instalación-de-php)
-  - [Ejecutando código PHP en Apache:](#ejecutando-código-php-en-apache)
+  - [Ejecutando código PHP en Apache](#ejecutando-código-php-en-apache)
 
 
 ## ¿Qué es LAMP?
@@ -182,7 +182,7 @@ Dentro del archivo, insertamos el siguiente código PHP:
     <img src="./imgs/08.png" alt="resultado de info.php" width="80%">
 </div>
 
-### Ejecutando código PHP en Apache:
+### Ejecutando código PHP en Apache
 
 Existen dos formas de ejecutar código PHP con el servidor web Apache: utilizando el módulo PHP de Apache o PHP-FPM. En los pasos anteriores, se utilizó el módulo PHP para manejar el código PHP. Sin embargo, en algunos casos, es preferible utilizar PHP-FPM.
 
