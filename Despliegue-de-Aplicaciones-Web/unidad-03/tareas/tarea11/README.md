@@ -72,7 +72,7 @@ sudo systemctl status mariadb
 ```
 
 <div align=center>
-    <img src="./imgs/01.png" alt="comprobación del estado del servidor" width="100%">
+    <img src="./imgs/01.png" alt="comprobación del estado del servidor" width="80%">
 </div>
 
 3. **Para asegurarnos de que MariaDB se inicie automáticamente al arrancar el sistema, ejecutamos:**
@@ -88,7 +88,7 @@ mysql -V
 ```
 
 <div align=center>
-    <img src="./imgs/02.png" alt="comprobación de la versión del servidor" width="100%">
+    <img src="./imgs/02.png" alt="comprobación de la versión del servidor" width="80%">
 </div>
 
 5. **Ejecutamos el script de seguridad de MariaDB con el siguiente comando:**
@@ -100,8 +100,8 @@ sudo mysql_secure_installation
 Durante este proceso, se nos pedirá que configuremos la contraseña de root. Inicialmente, pulsamos Intro para dejarla vacía y luego ingresamos la nueva contraseña. A continuación, respondemos a las preguntas para eliminar el usuario anónimo, deshabilitar el inicio de sesión remoto de root y eliminar la base de datos de prueba.
 
 <div align=center>
-    <img src="./imgs/03.png" alt="proceso de seguridad" width="100%">
-    <img src="./imgs/04.png" alt="proceso de seguridad parte 2" width="100%">
+    <img src="./imgs/03.png" alt="proceso de seguridad" width="80%">
+    <img src="./imgs/04.png" alt="proceso de seguridad parte 2" width="80%">
 </div>
 
 ---
@@ -119,7 +119,7 @@ mysql -u root -p
 ```
 
 <div align=center>
-    <img src="./imgs/05.png" alt="acceso a la base de datos" width="100%">
+    <img src="./imgs/05.png" alt="acceso a la base de datos" width="80%">
 </div>
 
 7. **Para crear un nuevo usuario llamado `developer` con la contraseña `5t6y7u8i`, se utilizan los siguientes comandos:**
@@ -131,7 +131,7 @@ FLUSH PRIVILEGES;
 ```
 
 <div align=center>
-    <img src="./imgs/06.png" alt="proceso de creación del usuario" width="100%">
+    <img src="./imgs/06.png" alt="proceso de creación del usuario" width="80%">
 </div>
 
 8. **Para iniciar sesión en la base de datos con el nuevo usuario creado, utilizamos el siguiente comando:**
@@ -141,7 +141,7 @@ mysql -u developer -p
 ```
 
 <div align=center>
-    <img src="./imgs/07.png" alt="login con el nuevo usuario" width="100%">
+    <img src="./imgs/07.png" alt="login con el nuevo usuario" width="80%">
 </div>
 
 ### Lenguajes de Programación: Instalación de PHP
@@ -180,7 +180,7 @@ Dentro del archivo, insertamos el siguiente código PHP:
 5. **Una vez guardado el archivo, podemos acceder a él a través del navegador escribiendo la dirección: `http://dirección-ip/info.php`**
 
 <div align=center>
-    <img src="./imgs/08.png" alt="resultado de info.php" width="100%">
+    <img src="./imgs/08.png" alt="resultado de info.php" width="80%">
 </div>
 
 ### Ejecutando código PHP en Apache:
@@ -220,5 +220,5 @@ sudo systemctl restart apache2
 Ahora, si actualizamos la página `info.php` en el navegador, deberíamos ver que la API del servidor ha cambiado de "Apache 2.0 Handler" a "FPM/FastCGI". Esto indica que el servidor web Apache ahora está pasando las solicitudes de PHP a PHP-FPM.
 
 <div align=center>
-    <img src="./imgs/09.png" alt="resultado de info.php con PHP-FPM" width="100%">
+    <img src="./imgs/09.png" alt="resultado de info.php con PHP-FPM" width="80%">
 </div>
