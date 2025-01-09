@@ -3,7 +3,7 @@
     <img src="../../../../extras/vinilo.gif" alt="vinilo" width="100%">
 </div>
 
-# Contenido
+## Contenido
 - [¿Qué es Nginx?](#qué-es-nginx)
   - [Características principales de Nginx:](#características-principales-de-nginx)
   - [Casos de uso comunes:](#casos-de-uso-comunes)
