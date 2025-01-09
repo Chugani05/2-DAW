@@ -3,14 +3,16 @@
     <img src="../../../../extras/vinilo.gif" alt="vinilo" width="100%">
 </div>
 
-## Contenido
+# Contenido
 - [¿Qué es Nginx?](#qué-es-nginx)
-    - [Características principales de Nginx](#características-principales-de-nginx)
-    - [Casos de uso comunes](#casos-de-uso-comunes)
+  - [Características principales de Nginx:](#características-principales-de-nginx)
+  - [Casos de uso comunes:](#casos-de-uso-comunes)
 - [Instalación y configuración básica](#instalación-y-configuración-básica)
 - [Configuración de hosts virtuales](#configuración-de-hosts-virtuales)
 - [Certificados autofirmados SSL](#certificados-autofirmados-ssl)
 - [Certificado Let's Encrypt con certbot](#certificado-lets-encrypt-con-certbot)
+  - [¿Qué es Let's Encrypt?](#qué-es-lets-encrypt)
+  - [Instalación del certificado](#instalación-del-certificado)
 
 
 ## ¿Qué es Nginx?
@@ -396,6 +398,14 @@ Llegados a este punto, si hemos hecho correctamente, podremos acceder al sitio e
 
 
 ## Certificado Let's Encrypt con certbot
+
+### ¿Qué es Let's Encrypt?
+
+Let's Encrypt es una autoridad de certificación gratuita que proporciona certificados SSL/TLS para habilitar HTTPS en sitios web. Su objetivo es facilitar el acceso a la seguridad en línea, permitiendo a los administradores obtener y renovar certificados de manera sencilla y automatizada.
+
+### Instalación del certificado
+
+Este informe describe el proceso de instalación y configuración de un certificado SSL utilizando Let's Encrypt y Certbot en un servidor Nginx, asegurando así una conexión segura para los visitantes.
 
 1. **Intalar Certbot:**
 
