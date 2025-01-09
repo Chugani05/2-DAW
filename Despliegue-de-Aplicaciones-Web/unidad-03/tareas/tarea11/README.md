@@ -4,7 +4,6 @@
 </div>
 
 ## Contenido
-- [Contenido](#contenido)
 - [¿Qué es LAMP?](#qué-es-lamp)
   - [Características de LAMP](#características-de-lamp)
   - [Aplicaciones Comunes de LAMP](#aplicaciones-comunes-de-lamp)
