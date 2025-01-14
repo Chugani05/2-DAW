@@ -5,23 +5,43 @@
 
 ## Contenido
 
-## Crear virtual host 
+## Crear virtual host
+
+Para comenzar, es necesario configurar un Virtual Host en el archivo de hosts:
+
 ```sh
-cd etc
+cd /etc
 sudo nano hosts
+```
+
+Agrega la siguiente línea:
+
+```sh
 127.0.0.1   lamp.com
+127.0.0.1   www.lamp.com
 ```
 
-## Crear carpeta de nueva pagina y copiar todos los ficheros
+## Copiar los ficheros a una nueva carpeta
+
+A continuación, crea una carpeta para la nueva página y copia todos los archivos necesarios:
+
 ```sh
-sudo mkdir var/www/html/lamp.com
-sudo cp * var/www/html/lamp.com
+sudo mkdir /var/www/html/lamp.com
+sudo cp -r ~/Desktop/2-DAW/Despliegue-de-Aplicaciones-Web/unidad-03/tareas/tarea-07/ /var/www/html/lamp.com/
 ```
-## Editar configuracion de apache 
+
+## Editar configuracion de Apache 
+
+Ahora, edita la configuración de Apache para el nuevo Virtual Host:
+
 ```sh
-cd etc/apache2/sites-available
+cd /etc/apache2/sites-available
 sudo nano lamp.com.conf
+```
 
+Agrega la siguiente configuración:
+
+```apache
 <VirtualHost *:80>
         ServerName lamp.com
         ServerAlias www.lamp.com
@@ -35,21 +55,36 @@ sudo nano lamp.com.conf
         CUSTOMLOG ${APACHE_LOG_DIR}/lamp.com-access.log combined
 </VirtualHost>
 ```
-## Habilitar el sitio
+
+Para habilitar el nuevo sitio, ejecuta el siguiente comando:
+
 ```sh
 sudo a2ensite lamp.com
+sudo systemctl reload apache2
 ```
 
-# Instalar phpmyadmin
-## Instalar
+<div align=center>
+    <img src="./imgs/01.png" alt="proceso de creación del usuario" width="80%">
+</div>
+
+## Instalar phpMyAdmin
+
+Instala phpMyAdmin utilizando el siguiente comando:
+
 ```sh
 sudo apt install phpmyadmin
 ```
-## Crear fichero de configuracion para apache
-```sh
-sudo cd etc/apache2/conf-enabled
-sudo nano phpmyadmin.conf
 
+Crea un archivo de configuración para phpMyAdmin:
+
+```sh
+cd /etc/apache2/conf-available
+sudo nano phpmyadmin.conf
+```
+
+Agrega la siguiente configuración:
+
+```apache
 Alias /phpmyadmin /usr/share/phpmyadmin
 
 <Directory /usr/share/phpmyadmin>
@@ -68,28 +103,25 @@ Alias /phpmyadmin /usr/share/phpmyadmin
     Require all denied
 </Directory>
 ```
-## Habilitar configuracion
+
+Habilita la configuración de phpMyAdmin:
+
 ```sh
 sudo a2enconf phpmyadmin.conf
+sudo systemctl reload apache2
 ```
 
-# Base de datos
-## Crear base de datos en MariaDB
+## Crear la base de datos en MariaDB
+
+Accede a MariaDB y crea una nueva base de datos:
+
 ```sql
 sudo mariadb -u root
 CREATE DATABASE phpmyadmin;
 ```
-## Configurar accesso de usuario
 
-```sql
-GRANT ALL PRIVILEGES   ON *.*   TO 'developer';
-```
-## Acceder al panel de control, crear tabla de usuarios
+Accede al panel de control de phpMyAdmin en la siguiente URL: `http://lamp.com/phpmyadmin`
 
-http://lamp.com/phpmyadmin
-
-![1.png](1.png)
-
-## Comprobar que todo funciona bien
-![2.png](2.png)
-![3.png](3.png)
+<div align=center>
+    <img src="./imgs/02.png" alt="panel de control de phpMyAdmin" width="80%">
+</div>
