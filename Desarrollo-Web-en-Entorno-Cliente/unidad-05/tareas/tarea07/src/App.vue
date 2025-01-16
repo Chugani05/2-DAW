@@ -30,6 +30,9 @@
           <button class="btn btn-success w-100 mt-3" @click="gainExperience">
             Ganar experiencia
           </button>
+          <div class="alert alert-info mt-3" role="alert" v-if="powerLevelMessage">
+            <strong>{{ powerLevelMessage }}</strong>
+          </div>
           <div class="alert alert-info mt-3" role="alert">
             <strong>Nivel de poder:</strong> {{ powerLevel }}
           </div>
@@ -40,21 +43,42 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, watch } from 'vue';
+import { defineComponent, watch, ref } from 'vue';
 import { useChampionStore } from './stores/useChampionStore';
 
 export default defineComponent({
   setup() {
     const store = useChampionStore();
+    const powerLevelMessage = ref<string>('');
+    const experienceClicks = ref(0);
 
     watch(
       () => store.powerLevel,
       (newPowerLevel, oldPowerLevel) => {
         if (newPowerLevel > oldPowerLevel) {
-          alert('¡Nivel de poder incrementado!');
+          powerLevelMessage.value = '¡Nivel de poder incrementado!';
+        } else {
+          powerLevelMessage.value = '';
         }
       }
     );
+
+    watch(
+      () => store.selectedChampion.id,
+      () => {
+        powerLevelMessage.value = '';
+        experienceClicks.value = 0;
+      }
+    );
+
+    const gainExperience = () => {
+      experienceClicks.value++;
+      store.gainExperience();
+
+      if (experienceClicks.value === 2) {
+        experienceClicks.value = 0;
+      }
+    };
 
     return {
       champions: store.champions,
@@ -63,6 +87,7 @@ export default defineComponent({
       selectChampion: store.selectChampion,
       gainExperience: store.gainExperience,
       powerLevel: store.powerLevel,
+      powerLevelMessage,
     };
   },
 });
