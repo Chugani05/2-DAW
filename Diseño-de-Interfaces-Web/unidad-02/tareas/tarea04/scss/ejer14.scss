@@ -1,0 +1,28 @@
+// Ejercicio 14
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    a {
+        display: flex;
+        justify-content:
+        space-between; 
+    }
+
+    .row {
+
+        .col {
+            width: 30%;
+            background-color: #f2f2f2;
+            padding: 20px;
+            margin-bottom: 20px;
+
+            &:first-child {
+                background-color: #333;
+                color: #fff;
+            }
+        }
+    }
+}

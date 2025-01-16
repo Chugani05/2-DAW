@@ -1,0 +1,16 @@
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.container .btn {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+.container .btn:hover {
+  background-color: #fff;
+  color: #333;
+}/*# sourceMappingURL=ejer13.css.map */

@@ -1,0 +1,21 @@
+// Ejercicio 3
+
+$color-1: #333;
+
+nav {
+    ul {
+        li {
+            display: inline-block;
+            margin-right: 20px;
+
+            a {
+                color: $color-1;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+// Ejercicio 7 - Ejercicio 11
+
+$color-1: #333;
+
+nav {
+    ul {
+        li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+ul {
+    li {
+        a {
+            color: $color-1;
+            text-decoration: none;
+        }
+    }
+}
+

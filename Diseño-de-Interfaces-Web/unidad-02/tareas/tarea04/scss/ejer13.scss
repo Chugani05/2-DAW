@@ -1,0 +1,23 @@
+// Ejercicio 13
+
+$color-1: #333;
+$color-2: #fff;
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .btn {
+        background-color: $color-1;
+        color: $color-2;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+
+        &:hover {
+            background-color: $color-2;
+            color: $color-1;
+        }
+    }
+}
