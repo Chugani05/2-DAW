@@ -117,11 +117,54 @@ Accede a MariaDB y crea una nueva base de datos:
 
 ```sql
 sudo mariadb -u root
-CREATE DATABASE phpmyadmin;
+CREATE DATABASE lamp;
 ```
+
+Exporta la base de de InfinityFree a phpMyAdmin:
+
+1. Accedemos a nuestro sitio web de InfinityFree y hacemos clic en el botón de `MySQL Database`.
+<div align=center>
+    <img src="./imgs/03.png" alt="sitio web de InfinityFree" width="80%">
+</div>
+
+2. Esto nos llevará a otra página donde seleccionaremos `phpMyAdmin`
+<div align=center>
+    <img src="./imgs/04.png" alt="sitio web de InfinityFree 2" width="80%">
+</div>
+
+3. Se nos mostrará el panel de control de phpMyAdmin, donde debemos ingresar a la opción `Export`.
+<div align=center>
+    <img src="./imgs/05.png" alt="panel de control de phpMyAdmin en InfinityFree" width="80%">
+</div>
+
+4. En esta sección, simplemente debemos hacer clic en `Go` para exportar nuestra base de datos.
+<div align=center>
+    <img src="./imgs/06.png" alt="panel de control de phpMyAdmin en InfinityFree 2" width="80%">
+</div>
 
 Accede al panel de control de phpMyAdmin en la siguiente URL: `http://lamp.com/phpmyadmin`
 
+1. Ingresamos con nuestro nombre de usuario y contraseña.
 <div align=center>
-    <img src="./imgs/02.png" alt="panel de control de phpMyAdmin" width="80%">
+    <img src="./imgs/02.png" alt="login de phpMyAdmin" width="80%">
+</div>
+
+2. Seleccionamos la base de datos que hemos creado previamente, en este caso `lamp`.
+<div align=center>
+    <img src="./imgs/07.png" alt="panel de control de phpMyAdmin" width="80%">
+</div>
+
+3. Accedemos a la sección de `Import`.
+<div align=center>
+    <img src="./imgs/08.png" alt="panel de control de phpMyAdmin 2" width="80%">
+</div>
+
+4. En esta sección, seleccionamos el archivo de la base de datos que exportamos anteriormente desde InfinityFree haciendo clic en `Browse`.
+<div align=center>
+    <img src="./imgs/09.png" alt="panel de control de phpMyAdmin 3" width="80%">
+</div>
+
+5. Una vez que hayamos seleccionado el archivo, desplazamos hacia abajo en la página y hacemos clic en `Import`.
+<div align=center>
+    <img src="./imgs/10.png" alt="panel de control de phpMyAdmin 4" width="80%">
 </div>
