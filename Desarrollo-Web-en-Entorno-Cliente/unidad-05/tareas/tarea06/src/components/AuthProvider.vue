@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { ref, provide, onMounted, onUnmounted } from 'vue'
+import ConnectToDB from '@/firebase/firebase'
 
+const database = new ConnectToDB()
 const isAuthenticated = ref(false)
 
 function login(token: string) {
