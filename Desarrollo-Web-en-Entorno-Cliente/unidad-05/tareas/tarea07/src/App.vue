@@ -19,7 +19,11 @@
           </li>
         </ul>
       </div>
-      <ChampionDetail :champion="store.selectedChampion" v-if="store.selectedChampion.id != 0" />
+      <ChampionDetail :champion="store.selectedChampion" v-if="store.selectedChampion.id != 0" :power="store.power" :experience="store.experience">
+        <button class="btn btn-success w-100 mt-3" @click="store.gainExperience">
+          Ganar experiencia
+        </button>
+      </ChampionDetail>
     </main>
   </div>
 </template>
