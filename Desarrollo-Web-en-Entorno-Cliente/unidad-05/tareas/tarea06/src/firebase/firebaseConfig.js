@@ -1,12 +1,5 @@
 import { initializeApp } from 'firebase/app'
-import {
-  getFirestore,
-  collection,
-  getDocs,
-  getDoc,
-  addDoc,
-  doc
-} from "firebase/firestore";
+import { getFirestore, collection, getDocs, getDoc, addDoc, doc, and } from 'firebase/firestore'
 
 const firebaseConfig = {
   apiKey: 'AIzaSyDaRHXt5c-GdO_uoa82MFtNmmSyRDOJ9U8',
@@ -17,56 +10,63 @@ const firebaseConfig = {
   appId: '1:545219668873:web:8d8108d5a34e9baee38f58',
 }
 
-const app = initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig)
 
-const db = getFirestore(app);
+const db = getFirestore(app)
 
 class ConnectToDB {
   constructor() {
-    this.collectionRef = collection(db, "users");
+    this.collectionRef = collection(db, 'users')
   }
 
   async create(data) {
     try {
-      const docRef = await addDoc(this.collectionRef, data);
-      console.log("Documento escrito con ID: ", docRef.id);
-      return docRef.id;
+      const docRef = await addDoc(this.collectionRef, data)
+      console.log('Documento escrito con ID: ', docRef.id)
+      return docRef.id
     } catch (e) {
-      console.error("Error añadiendo documento: ", e);
+      console.error('Error añadiendo documento: ', e)
     }
   }
 
   async readAll() {
     try {
-      const querySnapshot = await getDocs(this.collectionRef);
+      const querySnapshot = await getDocs(this.collectionRef)
       const dataList = querySnapshot.docs.map((doc) => ({
         id: doc.id,
         ...doc.data(),
-      }));
-      console.log("Documentos:", dataList);
-      return dataList;
+      }))
+      console.log('Documentos:', dataList)
+      return dataList
     } catch (e) {
-      console.error("Error obteniendo documentos: ", e);
+      console.error('Error obteniendo documentos: ', e)
     }
   }
 
   async getFile(id) {
     try {
-        const docRef = doc(this.collectionRef, id)
-        const docSnap = await getDoc(docRef)
-        return docSnap.data()
+      const docRef = doc(this.collectionRef, id)
+      const docSnap = await getDoc(docRef)
+      return docSnap.data()
     } catch (e) {
-        console.error("No se obtuvo la información: " + e)
+      console.error('No se obtuvo la información: ' + e)
     }
   }
 
-  async userExists(email) {
+  async checkUser(email, password = null) {
     const allUsers = await this.readAll()
     let userExists = false
-    if (allUsers) {
+    if (allUsers && !password) {
       allUsers.forEach((user) => {
         if (user.email == email) {
           console.log('Usuario encontrado!')
+          userExists = true
+        }
+      })
+    } else if (allUsers) {
+      allUsers.forEach((user) => {
+        if (user.email == email && user.password == password) {
+          console.log('Usuario loggeado!')
           userExists = true
         }
       })
@@ -74,19 +74,16 @@ class ConnectToDB {
     return userExists
   }
 
-  async authenticate(email, password) {
-    const allUsers = await this.readAll()
-    let isAuthenticated = false
-    if (allUsers) {
-      allUsers.forEach((user) => {
-        if (user.email == email && user.password == password) {
-          console.log('Usuario loggeado!')
-          isAuthenticated = true
-        }
-      })
-    }
-    return isAuthenticated
-  }
+  // async getUser(email, password) {
+  //   const allUsers = await this.readAll()
+  //   let id = 0
+  //   allUsers.forEach((user) => {
+  //     if (user.email == email && user.password == password) {
+  //       id = user.id
+  //     }
+  //   })
+  //   return await this.getFile(id)
+  // }
 }
 
-export default ConnectToDB;
+export default ConnectToDB

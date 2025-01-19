@@ -4,31 +4,21 @@ import { useRouter } from 'vue-router'
 
 const email = ref('')
 const password = ref('')
-const auth = inject<{ isAuthenticated: boolean; login: (token: string) => void }>('auth')
+const auth = inject<{
+  isAuthenticated: boolean
+  validate: (email: string, password: string) => boolean
+  loginWithGeneratedToken: () => void
+  // getUser: (email: string, password: string) => void
+}>('auth')
 const router = useRouter()
 
-function validateLogin() {
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-  const passwordRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[@#$%&_]).{8,}$/
-
-  if (!emailRegex.test(email.value)) {
-    alert('El correo no tiene un formato válido')
-    return false
-  }
-  if (!passwordRegex.test(password.value)) {
-    alert(
-      'La contraseña debe tener al menos 8 caracteres, un número, una letra mayúscula y un carácter especial',
-    )
-    return false
-  }
-  return true
-}
-
 async function login() {
-  if (validateLogin()) {
-    const token = 'fakeToken123'
-    auth?.login(token)
-    router.push('/shop')
+  if (auth) {
+    if (auth.validate(email.value, password.value)) {
+      auth.loginWithGeneratedToken()
+      // auth.getUser(email.value, password.value)
+      router.push('/shop')
+    }
   }
 }
 </script>

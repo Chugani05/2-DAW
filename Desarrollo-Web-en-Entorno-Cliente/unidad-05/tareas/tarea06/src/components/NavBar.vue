@@ -1,12 +1,17 @@
 <script setup lang="ts">
 import { inject } from 'vue'
-import { useRouter } from 'vue-router'
+import { useRouter, useRoute } from 'vue-router'
 
 const auth = inject<{ isAuthenticated: boolean }>('auth')
 const router = useRouter()
+const route = useRoute()
 
 function navigate(path: string) {
   router.push(path)
+}
+
+function isActiveRoute(path: string): boolean {
+  return route.path === path
 }
 </script>
 
@@ -19,11 +24,14 @@ function navigate(path: string) {
           <li class="nav-item">
             <button class="btn btn-link nav-link" @click="navigate('/shop')">Tienda</button>
           </li>
-          <li class="nav-item" v-if="auth?.isAuthenticated">
+          <li class="nav-item">
             <button class="btn btn-link nav-link" @click="navigate('/profile')">Perfil</button>
           </li>
-          <li class="nav-item" v-else>
+          <li class="nav-item" v-if="!isActiveRoute('/login')">
             <button class="btn btn-link nav-link" @click="navigate('/login')">Login</button>
+          </li>
+          <li class="nav-item" v-if="!isActiveRoute('/register')">
+            <button class="btn btn-link nav-link" @click="navigate('/register')">Register</button>
           </li>
         </ul>
       </div>
