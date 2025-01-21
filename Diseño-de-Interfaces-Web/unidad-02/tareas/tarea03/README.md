@@ -1,4 +1,4 @@
-# Mejora de Accesibilidad en Elementos de Bootstrap y WAI-ARIA
+# Actividad 3: Mejora de Accesibilidad en Elementos de Bootstrap y WAI-ARIA
 <div align=center>
     <img src="../../../../extras/vinilo.gif" alt="vinilo" width="100%">
 </div>
