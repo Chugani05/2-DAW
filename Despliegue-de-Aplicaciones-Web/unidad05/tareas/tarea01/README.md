@@ -4,7 +4,6 @@
 </div>
 
 ## Contenido 
-- [Contenido](#contenido)
 - [Introducción](#introducción)
 - [Instalación de BIND9](#instalación-de-bind9)
 - [Configuración de BIND9](#configuración-de-bind9)
