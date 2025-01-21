@@ -2,33 +2,27 @@
 import { inject, ref } from 'vue'
 import { useRouter } from 'vue-router'
 
+const username = ref('')
 const email = ref('')
 const password = ref('')
-const auth = inject<{ isAuthenticated: boolean; login: (token: string) => void }>('auth')
+const auth = inject<{
+  isAuthenticated: boolean
+  validate: (email: string, password: string) => boolean
+  createUser: (data: object) => void
+}>('auth')
 const router = useRouter()
 
-function validateLogin() {
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-  const passwordRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[@#$%&_]).{8,}$/
-
-  if (!emailRegex.test(email.value)) {
-    alert('El correo no tiene un formato válido')
-    return false
-  }
-  if (!passwordRegex.test(password.value)) {
-    alert(
-      'La contraseña debe tener al menos 8 caracteres, un número, una letra mayúscula y un carácter especial',
-    )
-    return false
-  }
-  return true
-}
-
-async function login() {
-  if (validateLogin()) {
-    const token = 'fakeToken123'
-    auth?.login(token)
-    router.push('/shop')
+async function register() {
+  if (auth) {
+    if (auth.validate(email.value, password.value)) {
+      const userData = {
+        username: username.value,
+        email: email.value,
+        password: password.value,
+      }
+      auth.createUser(userData)
+      router.push('/login')
+    }
   }
 }
 </script>
@@ -37,8 +31,19 @@ async function login() {
   <div class="container mt-5">
     <div class="row justify-content-center">
       <div class="col-md-6">
-        <h1 class="text-center">Inicia Sesión</h1>
-        <form @submit.prevent="login" class="mt-4">
+        <h1 class="text-center">Registrate</h1>
+        <form @submit.prevent="register" class="mt-4">
+          <div class="mb-3">
+            <label for="username" class="form-label">Usuario</label>
+            <input
+              type="text"
+              id="username"
+              v-model="username"
+              class="form-control"
+              placeholder="Introduce tu nombre de usuario"
+              required
+            />
+          </div>
           <div class="mb-3">
             <label for="email" class="form-label">Correo</label>
             <input
@@ -61,7 +66,7 @@ async function login() {
               required
             />
           </div>
-          <button type="submit" class="btn btn-primary w-100">Iniciar Sesión</button>
+          <button type="submit" class="btn btn-primary w-100">Crear Cuenta</button>
         </form>
       </div>
     </div>
