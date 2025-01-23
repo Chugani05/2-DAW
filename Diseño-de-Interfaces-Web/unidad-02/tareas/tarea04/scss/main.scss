@@ -1,0 +1,18 @@
+@import "colors";
+@import "header";
+@import "body";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Dancing Script', cursive;
+  background-color: $dark;
+  color: $primary;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
