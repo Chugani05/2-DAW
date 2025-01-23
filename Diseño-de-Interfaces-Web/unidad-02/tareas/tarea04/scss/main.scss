@@ -1,18 +1,5 @@
-@import "colors";
-@import "header";
-@import "body";
+@import "_colors";
+@import "_header";
+@import "_body";
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: 'Dancing Script', cursive;
-  background-color: $dark;
-  color: $primary;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Roboto:wght@400;500&display=swap');

@@ -1,0 +1,48 @@
+$font-size: 30px;
+
+nav {
+    background-color: $dark;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    padding: 0px 50px;
+    div {
+        align-items: center;
+        display: flex;
+        #logo {
+            background: {
+                image: url('/imgs/sass.png');
+                size: cover;
+            }
+            width: 60px;
+            height: 40px;
+            padding-left: 20px;
+            margin-right: 10px;
+        }
+        #options {
+            display: flex;
+            li {
+                font-weight: bold;
+                list-style-type: none;
+                padding-left: 20px;
+                a {
+                    font: {
+                        weight: bold;
+                        size: $font-size;
+                    }
+                    margin: 0;
+                    color: $secondary;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    p {
+        font: {
+            weight: bold;
+            size: $font-size;
+        }
+        margin: 0;
+        color: $secondary;
+    }
+}

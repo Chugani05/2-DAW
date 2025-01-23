@@ -3,62 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imgs/sass.png" type="image/x-icon">
     <title>Sass Example</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <div class="container">
-        <div class="volcan">
-            <img src="volcan1.jpg" alt="Volcan 1">
-            <div class="text">
-                <h3>Volcan 1</h3>
-                <p>17 de junio de 2015</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
-                    itaque, facere quod vel maxime harum omnis impedit praesentium
-                    perspiciatis, doloremque repudiandae nostrum sit. Corrupti adipisci
-                    nihil laudantium saepe minus earum odio iste tempore, unde eaque
-                    cum sint, quam est excepturi labore accusamus soluta fugiat
-                    suscipit?</p>
+    <header>
+        <nav>
+            <div>
+                <div id="logo"></div>
+                <p>SASS Example</p>
+            </div>
+            <div>
+                <ul id="options">
+                    <li class="nav-link"><a href="#">Página1</a></li>
+                    <li class="nav-link"><a href="#">Página2</a></li>
+                    <li class="nav-link"><a href="#">Página3</a></li>
+                    <li class="nav-link"><a href="#"><i class="fas fa-search"></i></a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div id="container">
+            <div class="card">
+                <div class="card-image" id="image-1"></div>
+                <div class="card-content">
+                    <h2 class="card-title">Volcán 1</h2>
+                    <h3 class="card-info">17 de junio de 2015</h3>
+                    <p class="card-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
+                        itaque, facere quod vel maxime harum omnis impedit praesentium
+                        perspiciatis, doloremque repudiandae nostrum sit. Corrupti adipisci
+                        nihil laudantium saepe minus earum odio iste tempore, unde eaque
+                        cum sint, quam est excepturi labore accusamus soluta fugiat
+                        suscipit?</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image" id="image-2"></div>
+                <div class="card-content">
+                    <h2 class="card-title">Volcán 2</h2>
+                    <h3 class="card-info">23 de marzo de 2003</h3>
+                    <p class="card-body">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est quam
+                        beatae sunt quidem unde nihil earum quia ab saepe obcaecati. Quis
+                        placeat in blanditiis? Officiis hic, iste illum laudantium esse culpa
+                        tempore fuga assumenda sapiente sit nulla tenetur corrupti nostrum
+                        molestiae recusandae exercitationem consequuntur nam animi
+                        quisquam nesciunt voluptatum laboriosam beatae. Odit reiciendis
+                        harum in commodi? Ipsa iusto tenetur facere?</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image" id="image-3"></div>
+                <div class="card-content">
+                    <h2 class="card-title">Volcán 3</h2>
+                    <h3 class="card-info">6 de noviembre de 1992</h3>
+                    <p class="card-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit
+                        maxime totam enim? Impedit ad id eos doloremque pariatur odio? Tenetur,
+                        debitis accusamus architecto cupiditate tempora eaque aliquid numquam
+                        inventore esse, doloribus laborum pariatur saepe beatae rerum ad itaque
+                        ut, repellendus a dolor totam undel Dicta, dolorum a? Magnam, possimus
+                        modi.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image" id="image-4"></div>
+                <div class="card-content">
+                    <h2 class="card-title">Volcán 4</h2>
+                    <h3 class="card-info">1 de mayo de 2020</h3>
+                    <p class="card-body">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam,
+                        nulla magnam possimus ipsum doloremque, expedita quisquam officiis
+                        provident cum vitae necessitatibus veritatis, obcaecati nobis assumenda
+                        delectus veniam corporis accusamus illum?</p>
+                </div>
             </div>
         </div>
-        <div class="volcan">
-            <img src="volcan2.jpg" alt="Volcan 2">
-            <div class="text">
-                <h3>Volcan 2</h3>
-                <p>23 de marzo de 2003</p>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est quam
-                    beatae sunt quidem unde nihil earum quia ab saepe obcaecati. Quis
-                    placeat in blanditiis? Officiis hic, iste illum laudantium esse culpa
-                    tempore fuga assumenda sapiente sit nulla tenetur corrupti nostrum
-                    molestiae recusandae exercitationem consequuntur nam animi
-                    quisquam nesciunt voluptatum laboriosam beatae. Odit reiciendis
-                    harum in commodi? Ipsa iusto tenetur facere?</p>
-            </div>
-        </div>
-        <div class="volcan">
-            <img src="volcan3.jpg" alt="Volcan 3">
-            <div class="text">
-                <h3>Volcan 3</h3>
-                <p>6 de noviembre de 1992</p>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit
-                    maxime totam enim? Impedit ad id eos doloremque pariatur odio? Tenetur,
-                    debitis accusamus architecto cupiditate tempora eaque aliquid numquam
-                    inventore esse, doloribus laborum pariatur saepe beatae rerum ad itaque
-                    ut, repellendus a dolor totam undel Dicta, dolorum a? Magnam, possimus
-                    modi.</p>
-            </div>
-        </div>
-        <div class="volcan">
-            <img src="volcan4.jpg" alt="Volcan 4">
-            <div class="text">
-                <h3>Volcan 4</h3>
-                <p>1 de mayo de 2020</p>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam,
-                    nulla magnam possimus ipsum doloremque, expedita quisquam officiis
-                    provident cum vitae necessitatibus veritatis, obcaecati nobis assumenda
-                    delectus veniam corporis accusamus illum?</p>
-            </div>
-        </div>
-    </div>
+    </main>
 </body>
 </html>

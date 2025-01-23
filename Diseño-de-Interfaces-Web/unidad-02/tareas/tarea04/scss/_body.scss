@@ -1,0 +1,68 @@
+$margin: 15px;
+
+body {
+    margin: 0;
+    background-color: $primary;
+    font-family: 'Dancing Script', serif;
+}
+
+@mixin image($url) {
+    width: 40%;
+    height: 100%;
+    background: {
+        size: cover;
+        repeat: no-repeat;
+        position: center;
+        image: url($url);
+    }
+    border-radius: 20px 0px 0px 20px;
+}
+
+@mixin card-borders {
+    border: {
+        width: 1px;
+        color: $secondary;
+        style: solid;
+        radius: 20px
+    }
+    box-shadow: 0px 0px 15px $dark;
+}
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $margin;
+    margin: $margin;
+    .card {
+        display: flex;
+        flex: 1 1 500px;
+        height: 300px;
+        @include card-borders;
+        background: $dark;
+        #image {
+            &-1 { @include image('/imgs/volcan1.jpeg'); }
+            &-2 { @include image('/imgs/volcan2.jpeg'); }
+            &-3 { @include image('/imgs/volcan3.jpeg'); }
+            &-4 { @include image('/imgs/volcan4.jpeg'); }
+        }
+        &-content {
+            width: 60%;
+            padding: 10px;
+        }
+        &-title {
+            margin-bottom: 0;
+            color: $secondary;
+            font: {
+                size: 32px;
+                weight: bold;
+            }
+        }
+        &-info {
+            margin-top: 10px;
+            color: $info;
+        }
+        &-body {
+            color: $primary;
+        }
+    }
+}

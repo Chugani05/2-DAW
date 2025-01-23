@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Roboto:wght@400;500&display=swap");
+nav {
+  background-color: #222;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding: 0px 50px;
+}
+nav div {
+  align-items: center;
+  display: flex;
+}
+nav div #logo {
+  background-image: url("/imgs/sass.png");
+  background-size: cover;
+  width: 60px;
+  height: 40px;
+  padding-left: 20px;
+  margin-right: 10px;
+}
+nav div #options {
+  display: flex;
+}
+nav div #options li {
+  font-weight: bold;
+  list-style-type: none;
+  padding-left: 20px;
+}
+nav div #options li a {
+  font-weight: bold;
+  font-size: 30px;
+  margin: 0;
+  color: #d1649b;
+  text-decoration: none;
+}
+nav p {
+  font-weight: bold;
+  font-size: 30px;
+  margin: 0;
+  color: #d1649b;
+}
+
+body {
+  margin: 0;
+  background-color: #fff;
+  font-family: "Dancing Script", serif;
+}
+
+#container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 15px;
+}
+#container .card {
+  display: flex;
+  flex: 1 1 500px;
+  height: 300px;
+  border-width: 1px;
+  border-color: #d1649b;
+  border-style: solid;
+  border-radius: 20px;
+  box-shadow: 0px 0px 15px #222;
+  background: #222;
+}
+#container .card #image-1 {
+  width: 40%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("/imgs/volcan1.jpeg");
+  border-radius: 20px 0px 0px 20px;
+}
+#container .card #image-2 {
+  width: 40%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("/imgs/volcan2.jpeg");
+  border-radius: 20px 0px 0px 20px;
+}
+#container .card #image-3 {
+  width: 40%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("/imgs/volcan3.jpeg");
+  border-radius: 20px 0px 0px 20px;
+}
+#container .card #image-4 {
+  width: 40%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("/imgs/volcan4.jpeg");
+  border-radius: 20px 0px 0px 20px;
+}
+#container .card-content {
+  width: 60%;
+  padding: 10px;
+}
+#container .card-title {
+  margin-bottom: 0;
+  color: #d1649b;
+  font-size: 32px;
+  font-weight: bold;
+}
+#container .card-info {
+  margin-top: 10px;
+  color: #ccc;
+}
+#container .card-body {
+  color: #fff;
+}/*# sourceMappingURL=main.css.map */
