@@ -1,3 +1,22 @@
+<script lang="ts" setup>
+import { championStore } from './stores/championStore'
+import ChampionDetail from '../src/components/ChampionDetail.vue'
+import { onMounted } from 'vue'
+
+const store = championStore()
+
+async function getChampionsData() {
+  const response = await fetch('champion.json')
+  const data = await response.json()
+  return data
+}
+
+onMounted(async () => {
+  store.champions = await getChampionsData()
+  console.log(store.champions)
+})
+</script>
+
 <template>
   <div>
     <header class="bg-dark text-white text-center py-3">
@@ -19,7 +38,12 @@
           </li>
         </ul>
       </div>
-      <ChampionDetail :champion="store.selectedChampion" v-if="store.selectedChampion.id != 0" :power="store.power" :experience="store.experience">
+      <ChampionDetail
+        :champion="store.selectedChampion"
+        v-if="store.selectedChampion.id != 0"
+        :power="store.power"
+        :experience="store.experience"
+      >
         <button class="btn btn-success w-100 mt-3" @click="store.gainExperience">
           Ganar experiencia
         </button>
@@ -27,10 +51,3 @@
     </main>
   </div>
 </template>
-
-<script lang="ts" setup>
-import { championStore } from './stores/championStore'
-import ChampionDetail from '../src/components/ChampionDetail.vue'
-
-const store = championStore()
-</script>

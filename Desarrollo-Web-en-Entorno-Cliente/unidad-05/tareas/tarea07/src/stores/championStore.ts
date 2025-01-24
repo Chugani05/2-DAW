@@ -1,45 +1,11 @@
 import { defineStore } from 'pinia'
 import { reactive, computed, ref, watch } from 'vue'
+import type { Champion } from '@/components/classes/Champion'
 
 export const championStore = defineStore('champion', () => {
-  const champions = reactive([
-    {
-      id: 1,
-      name: 'Aatrox',
-      role: 'Fighter',
-      stats: { health: 580, attack: 60, speed: 345 },
-      level: 1, 
-      image: 'https://ddragon.leagueoflegends.com/cdn/15.1.1/img/champion/Aatrox.png',
-    },
-    { id: 2, name: 'Ahri', role: 'Mage', stats: { health: 526, attack: 53, speed: 330 }, level: 1, image: 'https://ddragon.leagueoflegends.com/cdn/15.1.1/img/champion/Ahri.png', },
-    {
-      id: 3,
-      name: 'Yasuo',
-      role: 'Fighter',
-      stats: { health: 500, attack: 65, speed: 350 },
-      level: 1,
-      image: 'https://ddragon.leagueoflegends.com/cdn/15.1.1/img/champion/Yasuo.png',
-    },
-    {
-      id: 4,
-      name: 'Jinx',
-      role: 'Marksman',
-      stats: { health: 500, attack: 60, speed: 330 },
-      level: 1,
-      image: 'https://ddragon.leagueoflegends.com/cdn/15.1.1/img/champion/Jinx.png',
-    },
-    { id: 5, name: 'Lux', role: 'Mage', stats: { health: 510, attack: 50, speed: 335 }, level: 1, image: 'https://ddragon.leagueoflegends.com/cdn/15.1.1/img/champion/Lux.png', },
-    {
-      id: 6,
-      name: 'Lee Sin',
-      role: 'Fighter',
-      stats: { health: 570, attack: 62, speed: 340 },
-      level: 1,
-      image: 'https://ddragon.leagueoflegends.com/cdn/15.1.1/img/champion/LeeSin.png',
-    },
-  ])
+  const champions = ref<Champion[]>([])
 
-  const selectedChampion = reactive({
+  const selectedChampion = reactive<Champion>({
     id: 0,
     name: '',
     role: '',
@@ -85,4 +51,3 @@ export const championStore = defineStore('champion', () => {
     power,
   }
 })
-
