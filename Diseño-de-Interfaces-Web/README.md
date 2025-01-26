@@ -15,3 +15,4 @@
 - [Java Spotify](https://github.com/Chugani05/JavaSpotify.git)
 - [League Of Legends](https://github.com/Chugani05/LeagueOfLegends.git)
 - [Toy Travel](https://github.com/Chugani05/ToyTravel.git)
+- [Fast & Cheesy](https://github.com/Chugani05/Fast-Cheesy.git)
