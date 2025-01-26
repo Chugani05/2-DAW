@@ -16,3 +16,5 @@
 ## Proyects
 - [Pokemon Shop](https://github.com/Chugani05/PokemonShop.git)
 - [UNO Game](https://github.com/Chugani05/UNOgame.git)
+- [Portfolio](https://github.com/Chugani05/Portfolio.git)
+- [Shopping Cart](https://github.com/Chugani05/ShoppingCart.git)
