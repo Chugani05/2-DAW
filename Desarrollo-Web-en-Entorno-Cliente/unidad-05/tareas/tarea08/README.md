@@ -1,7 +1,6 @@
 # Shopping Cart
 
 ## Content
-- [Content](#content)
 - [Description](#description)
 - [Link](#link)
 
