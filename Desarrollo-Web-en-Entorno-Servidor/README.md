@@ -15,4 +15,11 @@
 ## Projects
 - [Check Mate](https://github.com/Chugani05/CheckMate.git)
 - [Super Todo](https://github.com/Chugani05/SuperTodo.git)
+- [Pokemon List](https://github.com/Chugani05/PokemonList.git)
 - [Tribu](https://github.com/Chugani05/Tribu.git)
+- [Pelican Website](https://github.com/mdiogc-JesusLugo2002-Chugani05/PelicanWebsite.git)
+- [Sched It](https://github.com/Chugani05/SchedIt.git)
+- [Lumino](https://github.com/Chugani05-JesusLugo2002/Lumino.git)
+- [Lumino Docs](https://github.com/Chugani05-JesusLugo2002/LuminoDocs.git)
+- [Yummi]()
+- [Game Side](https://github.com/Chugani05-JesusLugo2002/GameSide.git)
