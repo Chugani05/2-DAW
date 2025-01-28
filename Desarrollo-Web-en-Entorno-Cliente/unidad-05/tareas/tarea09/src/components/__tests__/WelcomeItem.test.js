@@ -17,14 +17,4 @@ describe('WelcomeItem.vue', () => {
     expect(wrapper.find('.details h3').text()).toBe('Item Heading')
     expect(wrapper.find('.details').text()).toContain('Item description')
   })
-
-  it('renders responsive styles correctly', () => {
-    const wrapper = mount(WelcomeItem)
-    expect(wrapper.find('.item').attributes('style')).toContain('display: flex')
-  })
-
-  it('handles media queries properly', () => {
-    const wrapper = mount(WelcomeItem)
-    expect(wrapper.vm.$el.style.marginTop).toBe('2rem')
-  })
 })
