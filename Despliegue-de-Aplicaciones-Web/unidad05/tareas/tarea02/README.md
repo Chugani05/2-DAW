@@ -6,9 +6,10 @@
 
 ## Contenido
 
-- [¿Qué es LDAP?](#qué-es-ldap)  
-- [Configuración de Red](#configuración-de-red)  
-- [Instalación de los Paquetes](#instalación-de-los-paquetes)  
+- [Contenido](#contenido)
+- [¿Qué es LDAP?](#qué-es-ldap)
+- [Configuración de Red](#configuración-de-red)
+- [Instalación de los Paquetes](#instalación-de-los-paquetes)
 - [Configuración Básica del Servidor](#configuración-básica-del-servidor)
 
 ## ¿Qué es LDAP?
@@ -88,7 +89,7 @@ LDAP (Lightweight Directory Access Protocol) es un protocolo estándar para acce
 6. Actualiza e instala los paquetes necesarios:  
 
     ```bash
-    sudo apt update -y && sudo apt upgrade -y && sudo apt dist-upgrade -y
+    sudo apt update -y
     sudo apt install slapd ldap-utils -y
     ```
 
@@ -111,5 +112,18 @@ LDAP (Lightweight Directory Access Protocol) es un protocolo estándar para acce
     Esto mostra la configuración básica del servidor LDAP:
 
     ```
+    dn: dc=ldapserver,dc=chugani,dc=local
+    objectClass: top
+    objectClass: dcObject
+    objectClass: organization
+    o: ldapserver.chugani
+    dc: ldapserver
+    structuralObjectClass: organization
+    entryUUID: 02855f84-7378-103f-9fc8-ad410f59492d
+    creatorsName: cn=admin,dc=ldapserver,dc=chugani,dc=local
+    createTimestamp: 20250130170428Z
+    entryCSN: 20250130170428.333519Z#000000#000#000000
+    modifiersName: cn=admin,dc=ldapserver,dc=chugani,dc=local
+    modifyTimestamp: 20250130170428Z
     ```
 
