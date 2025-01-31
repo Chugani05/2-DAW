@@ -11,6 +11,14 @@
 - [Configuración de Red](#configuración-de-red)
 - [Instalación de los Paquetes](#instalación-de-los-paquetes)
 - [Configuración Básica del Servidor](#configuración-básica-del-servidor)
+- [Crear unidad Organizativa](#crear-unidad-organizativa)
+- [Crear Grupo](#crear-grupo)
+- [Crear Usuario](#crear-usuario)
+- [Buscar en el Directorio](#buscar-en-el-directorio)
+- [Modificar Usuario](#modificar-usuario)
+- [Eliminar Usuario](#eliminar-usuario)
+- [Instalación LDAP en Cliente](#instalación-ldap-en-cliente)
+- [Configurar Cliente Sesión Gráfica](#configurar-cliente-sesión-gráfica)
 
 ## ¿Qué es LDAP?
 
@@ -127,3 +135,18 @@ LDAP (Lightweight Directory Access Protocol) es un protocolo estándar para acce
     modifyTimestamp: 20250130170428Z
     ```
 
+## Crear unidad Organizativa
+
+## Crear Grupo
+
+## Crear Usuario
+
+## Buscar en el Directorio
+
+## Modificar Usuario
+
+## Eliminar Usuario
+
+## Instalación LDAP en Cliente
+
+## Configurar Cliente Sesión Gráfica
