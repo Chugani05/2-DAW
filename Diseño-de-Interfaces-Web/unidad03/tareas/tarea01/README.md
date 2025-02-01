@@ -1,5 +1,17 @@
 # Actividad 1: Checklist de Usabilidad Web
 
+## Checklist
+
+❌  1. ¿Tu texto resulta molesto?
+
+✅  2. ¿Ofreces precios?
+
+❌  3. ¿Tu contenido requiere desplazamiento horizontal?
+
+✅  4. ¿Has añadido descripciones a las imágenes?
+
+## Respuestas
+
 1. **¿Tu texto resulta molesto?**
 
     No, el texto está diseñado para ser claro y fácil de leer. La información más relevante está destacada en negrita, lo que permite que los usuarios la identifiquen rápidamente, mientras que las descripciones están en texto normal para una lectura más detallada.
@@ -26,7 +38,7 @@
 
 4. **¿Has añadido descripciones a las imágenes?**
 
-    Sí, todas las imágenes cuentan con un atributo `ALT` que describe el contenido visual de manera adecuada. Por ejemplo, en las portadas de los libros se utiliza una descripción como `Daydream cover`, lo que mejora la accesibilidad.
+    Sí, todas las imágenes cuentan con un atributo `alt` que describe el contenido visual de manera adecuada. Por ejemplo, en las portadas de los libros se utiliza una descripción como `Daydream cover`, lo que mejora la accesibilidad.
 
 <div align=center>
     <img src="./imgs/img02.png" alt="image description" width="70%">
@@ -45,8 +57,15 @@
     <img src="./imgs/img11.png" alt="no logo in cart page" width="70%">
 </div>
 
-6. ¿Tu sitio es accesible para usuarios con discapacidades?
+6. **¿Tu sitio es accesible para usuarios con discapacidades?**
 
+    Parcialmente. Se han añadido descripciones (`alt`) en las imágenes, lo cual es un buen paso hacia la accesibilidad. Sin embargo, faltan funciones como navegación mediante teclado y compatibilidad con lectores de pantalla.
+
+    **Mejora:** Implementar etiquetas `aria`, mejorar el contraste de colores y permitir navegación sin necesidad del ratón.
+
+<div align=center>
+    <img src="./imgs/img02.png" alt="accessible" width="70%">
+</div>
 
 7. **¿Tu sitio se ve correctamente en diferentes resoluciones de pantalla?**
     
@@ -79,7 +98,6 @@
 <div align=center>
     <img src="./imgs/img13.png" alt="clear navigation" width="20%">
 </div>
-
 
 10. **¿Tienes espacio en blanco ("white space")?**
 
@@ -115,7 +133,6 @@
 
 14. **¿Has ofrecido información de contacto?**
 
-    
     No, actualmente no existe una sección en la que los usuarios puedan encontrar nuestra información de contacto.
 
     **Mejora:** Sería útil agregar una sección de "Contacto" en la barra de navegación, donde los usuarios puedan acceder a nuestra información de contacto, incluyendo el correo electrónico, número de teléfono y la dirección de nuestra tienda física, junto con un mapa para su fácil localización.
@@ -135,11 +152,13 @@
     <img src="./imgs/img14.png" alt="information not an ad" width="70%">
 </div>
 
-16. ¿Has utilizado los colores de manera adecuada?
+16. **¿Has utilizado los colores de manera adecuada?**
 
+    Sí, se ha seleccionado una paleta de colores compuesta por azul, negro, blanco y gris, que mantiene el diseño limpio y profesional. Las negritas resaltan información importante sin saturar visualmente al usuario.
 
-17. ¿Tu sitio está organizado con una estructura consistente?
+17. **¿Tu sitio está organizado con una estructura consistente?**
 
+    Sí, todas las páginas comparten una estructura coherente con una barra de navegación fija y el contenido principal bien definido. Esto facilita la navegación del usuario.
 
 18. **¿Le muestras a los usuarios dónde están?**
 
@@ -149,11 +168,19 @@
     <img src="./imgs/img16.png" alt="clear navigation" width="20%">
 </div>
 
-19. ¿Tienes enlaces dentro de una misma página?
+19. **¿Tienes enlaces dentro de una misma página?**
 
-    No, los enlaces solo llevan a otras páginas de la aplicación.
+    No, actualmente todos los enlaces redirigen a páginas distintas dentro de la aplicación.
 
-20. ¿Tu redacción es clara y directa?
+    **Mejora:** Considerar añadir anclas internas para secciones extensas de contenido si en el futuro se expande la información.
+
+20. **¿Tu redacción es clara y directa?**
+
+    Sí, el contenido se presenta de manera sencilla, enfocada en brindar la información necesaria sobre los libros y facilitar la experiencia de compra.
+
+<div align=center>
+    <img src="./imgs/img01.png" alt="clear text" width="60%">
+</div>
 
 21. **¿Respondes a las preguntas de tus usuarios?**
 
@@ -175,9 +202,19 @@
     <img src="./imgs/img01.png" alt="inverted pyramid" width="60%">
 </div>
 
-23. ¿Tu sitio requiere plugins innecesarios?
+23. **¿Tu sitio requiere plugins innecesarios?**
 
-24. ¿Has habilitado la degradación elegante?
+    No, la web no requiere ningún plugin adicional para funcionar correctamente.
+
+24. **¿Has habilitado la degradación elegante?**
+
+    No específicamente, pero el sitio está diseñado de manera simple, lo que garantiza que funcione incluso si algunos estilos o scripts no cargan.
+
+    **Mejora:** Implementar estrategias para asegurar una experiencia aceptable si TypeScript está deshabilitado.
+
+<div align=center>
+    <img src="./imgs/img14.png" alt="elegant degradation" width="70%">
+</div>
 
 25. **¿Proporcionas pistas visuales para los enlaces?**
 
@@ -195,7 +232,13 @@
     <img src="./imgs/img15.png" alt="graphics" width="70%">
 </div>
 
-27. ¿Tu sitio está lleno de animaciones?
+27. **¿Tu sitio está lleno de animaciones?**
+
+    No, el sitio mantiene un diseño sobrio sin animaciones excesivas que puedan distraer a los usuarios.
+
+<div align=center>
+    <img src="./imgs/img12.png" alt="animations" width="70%">
+</div>
 
 28. **¿Tienes un eslogan?**
 
@@ -205,6 +248,20 @@
     <img src="./imgs/img03.png" alt="tagline" width="70%">
 </div>
 
-29. ¿Tus enlaces funcionan?
+29. **¿Tus enlaces funcionan?**
 
-20. ¿Has probado en navegadores alternativos?
+    Sí, todos los enlaces han sido probados y llevan a las páginas correspondientes dentro de la web.
+
+<div align=center>
+    <img src="./imgs/img13.png" alt="functional links" width="20%">
+</div>
+
+30. **¿Has probado en navegadores alternativos?**
+
+    No, actualmente solo se ha probado en un navegador principal.
+
+    **Mejora:** Realizar pruebas en navegadores alternativos como Google, Safari y Microsoft Edge para garantizar compatibilidad.
+
+<div align=center>
+    <img src="./imgs/img17.png" alt="browser tests" width="70%">
+</div>
