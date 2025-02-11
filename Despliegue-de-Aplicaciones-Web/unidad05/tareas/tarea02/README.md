@@ -137,11 +137,40 @@ LDAP (Lightweight Directory Access Protocol) es un protocolo estándar para acce
 
 ## Crear unidad Organizativa
 
+```
+sudo nano ou.ldif
+    ```
+    dn: ou=informatica,dc=ldapserver,dc=chugani,dc=local
+    objectClass: top
+    objectClass: organizationalUnit
+    ou: informatica
+    ```
+```
+
+```
+sudo ldapadd -x -D cn=admin,dc=ldapserver,dc=chugani,dc=local -W -f ou.ldfi
+```
+
+```
+sudo slapcat
+    ```
+    ```
+```
+
 ## Crear Grupo
+
+```
+```
 
 ## Crear Usuario
 
+```
+```
+
 ## Buscar en el Directorio
+
+```
+```
 
 ## Modificar Usuario
 
