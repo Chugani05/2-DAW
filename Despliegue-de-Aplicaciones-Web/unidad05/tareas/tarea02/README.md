@@ -1,4 +1,4 @@
-# Instalar servidor LDAP en Ubuntu
+# Instalación de un Servidor LDAP en Ubuntu
 
 <div align="center">
     <img src="../../../../extras/vinilo.gif" alt="vinilo" width="100%">
@@ -8,44 +8,45 @@
 
 - [Contenido](#contenido)
 - [¿Qué es LDAP?](#qué-es-ldap)
-- [Instalación LDAP en Servidor](#instalación-ldap-en-servidor)
+- [Instalación de LDAP en el Servidor](#instalación-de-ldap-en-el-servidor)
   - [Configuración de Red](#configuración-de-red)
   - [Instalación de los Paquetes](#instalación-de-los-paquetes)
   - [Configuración Básica del Servidor](#configuración-básica-del-servidor)
-- [](#)
-  - [Crear unidad Organizativa](#crear-unidad-organizativa)
+- [Gestión de la Estructura LDAP](#gestión-de-la-estructura-ldap)
+  - [Crear Unidad Organizativa](#crear-unidad-organizativa)
   - [Crear Grupo](#crear-grupo)
   - [Crear Usuario](#crear-usuario)
 - [Herramientas](#herramientas)
   - [Buscar en el Directorio](#buscar-en-el-directorio)
   - [Modificar Usuario](#modificar-usuario)
   - [Eliminar Usuario](#eliminar-usuario)
-- [Instalación LDAP en Cliente](#instalación-ldap-en-cliente)
+- [Instalación de LDAP en el Cliente](#instalación-de-ldap-en-el-cliente)
   - [Instalación](#instalación)
-  - [Configuación](#configuación)
+  - [Configuración](#configuración)
   - [Comprobación](#comprobación)
-- [Iniciar sesión como usuario del servidor LDAP en Cliente](#iniciar-sesión-como-usuario-del-servidor-ldap-en-cliente)
+- [Iniciar sesión como usuario del servidor LDAP en el Cliente](#iniciar-sesión-como-usuario-del-servidor-ldap-en-el-cliente)
 
 ## ¿Qué es LDAP?
 
 LDAP (Lightweight Directory Access Protocol) es un protocolo estándar para acceder a servicios de directorio distribuidos. Se utiliza para organizar información sobre usuarios, equipos, permisos y otros recursos en redes informáticas, permitiendo una administración centralizada y eficiente.
 
-## Instalación LDAP en Servidor
+## Instalación de LDAP en el Servidor
+
 ### Configuración de Red
 
-1. Accede al directorio de configuración de red:  
+1. Accede al directorio de configuración de red:
 
-    ```bash
+    ```sh
     cd /etc/netplan
     ```
 
-2. Edita el archivo de configuración:  
+2. Edita el archivo de configuración:
 
-    ```bash
+    ```sh
     sudo nano 00-installer-config.yml
     ```
 
-3. Define la configuración de red:
+3. Define la configuración de red en el archivo:
 
     ```yaml
     network:
@@ -59,30 +60,29 @@ LDAP (Lightweight Directory Access Protocol) es un protocolo estándar para acce
 
 4. Guarda los cambios y aplica la configuración de red:
 
-    ```bash
+    ```sh
     sudo netplan apply
     ```
 
 ### Instalación de los Paquetes
 
-1. Verifica el nombre del host actual:  
+1. Verifica el nombre del host actual:
 
-    ```bash
+    ```sh
     hostname
 
     # OUTPUT: chugani-VirtualBox
     ```
 
-
 2. Cambia el nombre del host:
 
-    ```bash
+    ```sh
     sudo hostnamectl set-hostname ldapserver.chugani.local
     ```
 
-3. Confirma el cambio del nombre del host:  
+3. Confirma el cambio del nombre del host:
 
-    ```bash
+    ```sh
     hostname
 
     # OUTPUT: ldapserver.chugani.local
@@ -90,7 +90,7 @@ LDAP (Lightweight Directory Access Protocol) es un protocolo estándar para acce
 
 4. Edita el archivo `/etc/hosts`:
 
-    ```bash
+    ```sh
     sudo nano /etc/hosts
     ```
 
@@ -101,30 +101,30 @@ LDAP (Lightweight Directory Access Protocol) es un protocolo estándar para acce
     10.109.99.65    ldapserver.chugani.local
     ```
 
-6. Actualiza e instala los paquetes necesarios:  
+6. Actualiza e instala los paquetes necesarios:
 
-    ```bash
+    ```sh
     sudo apt update -y
     sudo apt install slapd ldap-utils -y
     ```
 
 ### Configuración Básica del Servidor
 
-1. Configura `slapd`:  
+1. Configura `slapd`:
 
-    ```bash
+    ```sh
     sudo dpkg-reconfigure slapd
     ```
 
-    Sigue las instrucciones del asistente para definir el nombre de dominio y contraseña de administrador.
+    Sigue las instrucciones del asistente para definir el nombre de dominio y la contraseña de administrador.
 
-2. Verifica la instalación:  
+2. Verifica la instalación:
 
-    ```bash
+    ```sh
     sudo slapcat
     ```
 
-    Esto mostra la configuración básica del servidor LDAP:
+    Esto mostrará la configuración básica del servidor LDAP:
 
     ```
     dn: dc=ldapserver,dc=chugani,dc=local
@@ -142,27 +142,45 @@ LDAP (Lightweight Directory Access Protocol) es un protocolo estándar para acce
     modifyTimestamp: 20250130170428Z
     ```
 
-##
-### Crear unidad Organizativa
+## Gestión de la Estructura LDAP
 
-```
-sudo nano ou.ldif
+### Crear Unidad Organizativa
+
+1. Crea un archivo `.ldif` para definir la unidad organizativa:
+
+    ```sh
+    sudo nano ou.ldif
+    ```
+
+    Contenido de `ou.ldif`:
+
     ```
     dn: ou=informatica,dc=ldapserver,dc=chugani,dc=local
     objectClass: top
     objectClass: organizationalUnit
     ou: informatica
     ```
-```
 
-```
-sudo ldapadd -x -D cn=admin,dc=ldapserver,dc=chugani,dc=local -W -f ou.ldif
+2. Añade la unidad organizativa al directorio LDAP:
 
-# OUTPUT: adding new entry "ou=informatica,dc=ldapserver,dc=chugani,dc=local"
-```
+    ```sh
+    sudo ldapadd -x -D cn=admin,dc=ldapserver,dc=chugani,dc=local -W -f ou.ldif
+    ```
 
-```
-sudo slapcat
+    Salida esperada:
+
+    ```
+    adding new entry "ou=informatica,dc=ldapserver,dc=chugani,dc=local"
+    ```
+
+3. Verifica que la unidad organizativa fue creada correctamente:
+
+    ```sh
+    sudo slapcat
+    ```
+
+    Salida esperada:
+
     ```
     dn: ou=informatica,dc=ldapserver,dc=chugani,dc=local
     objectClass: top
@@ -176,25 +194,46 @@ sudo slapcat
     modifiersName: cn=admin,dc=ldapserver,dc=chugani,dc=local
     modifyTimestamp: 20250211152247Z
     ```
-```
 
 ### Crear Grupo
 
-```
-sudo cp ou.ldif grp.ldif
-sudo nano grp.ldif
+1. Copia el archivo `.ldif` y edítalo para definir un grupo:
+
+    ```sh
+    sudo cp ou.ldif grp.ldif
+    sudo nano grp.ldif
+    ```
+
+    Contenido de `grp.ldif`:
+
     ```
     dn: cn=informatica,ou=informatica,dc=ldapserver,dc=chugani,dc=local
     objectClass: top
     objectClass: posixGroup
-    gidNumber: 10000 
+    gidNumber: 10000
     cn: informatica
     ```
 
-sudo ldapadd -x -D cn=admin,dc=ldapserver,dc=chugani,dc=local -W -f grp.ldif
-# OUTPUT: adding new entry "cn=informatica,ou=informatica,dc=ldapserver,dc=chugani,dc=local"
+2. Añade el grupo al directorio LDAP:
 
-sudo slapcat
+    ```sh
+    sudo ldapadd -x -D cn=admin,dc=ldapserver,dc=chugani,dc=local -W -f grp.ldif
+    ```
+
+    Salida esperada:
+
+    ```
+    adding new entry "cn=informatica,ou=informatica,dc=ldapserver,dc=chugani,dc=local"
+    ```
+
+3. Verifica que el grupo fue creado correctamente:
+
+    ```sh
+    sudo slapcat
+    ```
+
+    Salida esperada:
+
     ```
     dn: cn=informatica,ou=informatica,dc=ldapserver,dc=chugani,dc=local
     objectClass: top
@@ -209,36 +248,57 @@ sudo slapcat
     modifiersName: cn=admin,dc=ldapserver,dc=chugani,dc=local
     modifyTimestamp: 20250211153824Z
     ```
-```
 
 ### Crear Usuario
 
-```
-sudo cp grp.ldif usr.ldif
-sudo nano usr.ldif
+1. Copia el archivo del grupo y edítalo para definir un usuario:
+
+    ```sh
+    sudo cp grp.ldif usr.ldif
+    sudo nano usr.ldif
+    ```
+
+    Contenido de `usr.ldif`:
+
     ```
     dn: uid=dpl,ou=informatica,dc=ldapserver,dc=chugani,dc=local
     objectClass: top
     objectClass: posixAccount
     objectClass: inetOrgPerson
     objectClass: person
-    cn: dpl # Common Name
-    uid: dpl # Identificador del usuario
-    ou: informatica # Unidad organizativa a la que pertenece
-    uidNumber: 2000 # Número de identificación de usuario
-    gidNumber: 10000 # Número de identificación del grupo al que pertenece
-    homeDirectory: /home/dpl # Directorio Home
+    cn: dpl
+    uid: dpl
+    ou: informatica
+    uidNumber: 2000
+    gidNumber: 10000
+    homeDirectory: /home/dpl
     loginShell: /bin/bash
     userPassword: Cursos1
-    sn: Worker # Surname
+    sn: Worker
     mail: dpl@ldapserver.local
-    givenName: dpl # Nombre de pila
+    givenName: dpl
     ```
 
-sudo ldapadd -x -D cn=admin,dc=ldapserver,dc=chugani,dc=local -W -f usr.ldif
-# OUTPUT: adding new entry "uid=dpl,ou=informatica,dc=ldapserver,dc=chugani,dc=local"
+2. Añade el usuario al directorio LDAP:
 
-sudo slapcat
+    ```sh
+    sudo ldapadd -x -D cn=admin,dc=ldapserver,dc=chugani,dc=local -W -f usr.ldif
+    ```
+
+    Salida esperada:
+
+    ```
+    adding new entry "uid=dpl,ou=informatica,dc=ldapserver,dc=chugani,dc=local"
+    ```
+
+3. Verifica que el usuario fue creado correctamente:
+
+    ```sh
+    sudo slapcat
+    ```
+
+    Salida esperada:
+
     ```
     dn: uid=dpl,ou=informatica,dc=ldapserver,dc=chugani,dc=local
     objectClass: top
@@ -256,101 +316,118 @@ sudo slapcat
     sn: Worker
     mail: dpl@ldapserver.local
     givenName: dpl
-    structuralObjectClass: inetOrgPerson
-    entryUUID: cb854f54-7cdb-103f-8b75-7b1408ed7e16
-    creatorsName: cn=admin,dc=ldapserver,dc=chugani,dc=local
-    createTimestamp: 20250211155126Z
-    entryCSN: 20250211155126.196468Z#000000#000#000000
-    modifiersName: cn=admin,dc=ldapserver,dc=chugani,dc=local
-    modifyTimestamp: 20250211155126Z
     ```
-```
 
-## Herramientas 
+## Herramientas
+
 ### Buscar en el Directorio
 
-```
+Para buscar información de un usuario:
+
+```sh
 ldapsearch -xLLL -b "dc=ldapserver,dc=chugani,dc=local" uid=dpl sn givenName cn
-
-# OUTPUT:
-# d=dpl sn givenName cn
-# dn: uid=dpl,ou=informatica,dc=ldapserver,dc=chugani,dc=local
-# cn: dpl
-# sn: Worker
-# givenName: dpl
 ```
 
-```
-ldapsearch -xLLL -b "dc=ldapserver,dc=chugani,dc=local" uid=* sn givenName cn
+Salidas esperadas:
 
-# OUTPUT:
-# d=dpl sn givenName cn
-# dn: uid=dpl,ou=informatica,dc=ldapserver,dc=chugani,dc=local
-# cn: dpl
-# sn: Worker
-# givenName: dpl
+```
+dn: uid=dpl,ou=informatica,dc=ldapserver,dc=chugani,dc=local
+cn: dpl
+sn: Worker
+givenName: dpl
 ```
 
 ### Modificar Usuario
-```
-sudo nano changes.ldif
-    ```
-    dn: uid=dpl,ou=informatica,dc=ldapserver,dc=chugani,dc=local
-    changetype: modify
-    replace: mail
-    mail: newdpl@dplserver.local
-    ```
 
+Para modificar un usuario, edita un archivo `.ldif` con los cambios deseados:
+
+```sh
+sudo nano changes.ldif
+```
+
+Contenido de `changes.ldif`:
+
+```
+dn: uid=dpl,ou=informatica,dc=ldapserver,dc=chugani,dc=local
+changetype: modify
+replace: mail
+mail: newdpl@dplserver.local
+```
+
+Aplica los cambios:
+
+```sh
 sudo ldapmodify -x -D cn=admin,dc=ldapserver,dc=chugani,dc=local -W -f changes.ldif
-# OUTPUT: modifying entry "uid=dpl,ou=informatica,dc=ldapserver,dc=chugani,dc=local"
 ```
 
 ### Eliminar Usuario
-sudo ldapdelete -x -W -D 'cn=admin,dc=ldapserver,dc=chugani,dc=local' "uid=dpl,ou=informatica,dc=ldapserver,dc=chugani,dc=local"
 
-## Instalación LDAP en Cliente
+Para eliminar un usuario:
+
+```sh
+sudo ldapdelete -x -W -D 'cn=admin,dc=ldapserver,dc=chugani,dc=local' "uid=dpl,ou=informatica,dc=ldapserver,dc=chugani,dc=local"
+```
+
+## Instalación de LDAP en el Cliente
+
 ### Instalación
 
-```
+```sh
 sudo apt-get install libnss-ldap libpam-ldap ldap-utils -y
 ```
 
-Mientras se instalan los paquetes nos pedirá la dirección de nuestro servidor LDAP, la cual debe ser `ldap://<ip-del-server>/`.
-También debemos indicar el nombre distinguido base con `dc=ldapserver,dc=chugani,dc=local`.
-La versión a utilizar es la 3
-Make local root Database admin: Yes
-Does the LDAP database require login?: No
-Indicamos ahora el usuario root con cn=admin,dc=ldapserver,dc=chugani,dc=local
+Configura el servidor LDAP y las opciones necesarias cuando se te solicite:
 
-### Configuación
+1. Nos pedirá la dirección de nuestro servidor LDAP, la cual debe ser `ldap://<ip-del-server>/`.
+2. También debemos indicar el nombre distinguido base con `dc=ldapserver,dc=chugani,dc=local`.
+3. La versión a utilizar es la `3`
+4. Make local root Database admin: `Yes`
+5. Does the LDAP database require login?: `No`
+6. Indicamos ahora el usuario root con `cn=admin,dc=ldapserver,dc=chugani,dc=local`
+
+### Configuración
+
+Edita el archivo `/etc/nsswitch.conf`:
+
+```sh
+sudo nano /etc/nsswitch.conf
+```
+
+Cambia las líneas correspondientes:
 
 ```
-sudo nano /etc/nsswitch.conf
-cambiamos:
-    ```
-    passwd:   files ldap
-    group:    files ldap
-    shadow:   files ldap
-    ```
+passwd:   files ldap
+group:    files ldap
+shadow:   files ldap
+```
 
+```sh
 sudo getent passwd
-# OUTPUT: 
 
-sudo nano /etc/pam.d/common-session
-añadimos: 
-    ```
-    session optional    pam_mkhomedir.so skel=/etc/skel umask=077
-    ```
+# OUTPUT: dpl:*:2000:10000:dpl:/home/dpl:/bin/bash
+```
+
+Luego, para que el cliente cree el directorio de inicio de usuario, edita el archivo `/etc/pam.d/common-session` y añade:
+
+```sh
+session optional    pam_mkhomedir.so skel=/etc/skel umask=077
 ```
 
 ### Comprobación
-```
+
+Verifica la conexión con el servidor LDAP:
+
+```sh
 ldapsearch -x -H ldap://<ip-del-server> -b "dc=ldapserver,dc=chugani,dc=local"
 ```
 
-## Iniciar sesión como usuario del servidor LDAP en Cliente
+## Iniciar sesión como usuario del servidor LDAP en el Cliente
 
-Se puede hacer de dos formas:
+1. **Por terminal:** Usa `sudo su - dpl`, siendo `dpl` el `uid` del usuario en el servidor LDAP.
+2. **Versión gráfica:** Instala el paquete `nslcd` en el cliente:
 
-1. **Por terminal:** con sudo `su - dpl`, siendo `dpl` el uid de nuestro usuario del servidor
-2. **Versión gráfica:** necesitamos instalar en la máquina cliente el paquete `nslcd` con `sudo apt-get install nslcd`, el cual nos permite conectar de forma gráfica. Una vez realizada la instalación, reiniciamos el equipo y después cuando nos pida iniciar sesión, podemos usar el usuario y contraseña de un usuario de LDAP.
+    ```sh
+    sudo apt-get install nslcd
+    ```
+
+    Luego reinicia el equipo y usa las credenciales de LDAP para iniciar sesión.
