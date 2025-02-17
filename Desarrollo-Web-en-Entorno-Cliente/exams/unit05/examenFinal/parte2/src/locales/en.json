@@ -1,0 +1,14 @@
+{ 
+    "calendario": "Calendar", 
+    "gestion": "Manage",
+    "selectMonth": "Select Month",
+    "manageEvents": "Manage Events",
+    "eventType": "Event Type",
+    "holiday": "Holiday",
+    "task": "Task",
+    "eventName": "Event Name",
+    "eventDate": "Event Date",
+    "submit": "Submit",
+    "english": "English",
+    "spanish": "Spanish"
+}

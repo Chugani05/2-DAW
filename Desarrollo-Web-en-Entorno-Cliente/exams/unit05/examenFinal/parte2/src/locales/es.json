@@ -1,0 +1,14 @@
+{ 
+    "calendario": "Calendario", 
+    "gestion": "Gestion",
+    "selectMonth": "Seleccione Mes",
+    "manageEvents": "Gestionar Eventos",
+    "eventType": "Tipo de Evento",
+    "holiday": "Día Festivo",
+    "task": "Tarea",
+    "eventName": "Nombre del Evento",
+    "eventDate": "Fecha del Evento",
+    "submit": "Enviar",
+    "english": "Inglés",
+    "spanish": "Español"
+}
