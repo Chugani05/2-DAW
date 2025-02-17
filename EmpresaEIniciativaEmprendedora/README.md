@@ -5,7 +5,7 @@
 </div>
 
 ## Contenido
-- [Introduction](./introduccion/README.md)
+- [Introducción](./introduccion/README.md)
 - [Unit 01 - Iniciativa Emprendedora](./unidad01/README.md)
 - [Unit 02 - La Empresa y su Entorno](./unidad02/README.md)
 - [Unit 03 - El Estudio de Mercado__](./unidad03/README.md)
