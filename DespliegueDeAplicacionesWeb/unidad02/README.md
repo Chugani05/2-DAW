@@ -3,7 +3,7 @@
     <img src="../../extras/data.gif" alt="data" width="80%">
 </div>
 
-## Índice
+## Contenido
 1. [Introducción a las Arquitecturas Web](#1-introducción-a-las-arquitecturas-web)
 2. [Tipos de Arquitecturas Web](#2-tipos-de-arquitecturas-web)
 3. [Modelo Cliente-Servidor](#3-modelo-cliente-servidor)
