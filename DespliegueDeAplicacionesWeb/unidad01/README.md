@@ -3,7 +3,7 @@
     <img src="../../extras/data.gif" alt="data" width="80%">
 </div>
 
-## Índice
+## Contenido
 1. [Introducción a la Documentación de Aplicaciones Web](#1-introducción-a-la-documentación-de-aplicaciones-web)
 2. [Herramientas para Documentación](#2-herramientas-para-documentación)
 3. [Control de Versiones](#3-control-de-versiones)
