@@ -1,7 +1,7 @@
 # Empresa e Iniciativa Emprendedora
 
 <div align=center>
-<img src="../extras/cyberpunk2.gif" alt="me" width="100%">
+    <img src="../extras/cyberpunk2.gif" alt="cyber" width="60%">
 </div>
 
 ## Contenido

@@ -1,7 +1,7 @@
 # Unidad 05: Servivios de red implicados en el despliegue de una aplicación web.
 
 <div align=center>
-    <img src="../../extras/data.gif" alt="data" width="100%">
+    <img src="../../extras/vinilo.gif" alt="vinilo" width="80%">
 </div>
 
 ## Contenido

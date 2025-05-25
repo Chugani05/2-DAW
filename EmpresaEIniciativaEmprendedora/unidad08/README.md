@@ -1,5 +1,5 @@
 # Unidad 08 - La Gestión de la Empresa.
 
 <div align=center>
-    <img src="../../extras/data.gif" alt="data" width="100%">
+    <img src="../../extras/vinilo.gif" alt="vinilo" width="60%">
 </div>

@@ -1,7 +1,7 @@
 # Unidad 02: Implantación de arquitecturas web.
 
 <div align=center>
-  <img src="../../extras/data.gif" alt="data" width="100%">
+  <img src="../../extras/vinilo.gif" alt="vinilo" width="60%">
 </div>
 
 ## Contenido

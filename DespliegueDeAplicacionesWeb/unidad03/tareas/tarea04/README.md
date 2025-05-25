@@ -1,7 +1,7 @@
 # Conexión a MySQL.
 
 <div align=center>
-    <img src="../../../../extras/vinilo.gif" alt="vinilo" width="100%">
+    <img src="../../../../extras/vinilo.gif" alt="vinilo" width="80%">
 </div>
 
 ## Contenido

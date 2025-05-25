@@ -1,7 +1,7 @@
 # Cuestionario - UT03 Estudio de mercado
 
 <div align=center>
-    <img src="../../../extras/vinilo.gif" alt="vinilo" width="100%">
+    <img src="../../../extras/vinilo.gif" alt="vinilo" width="60%">
 </div>
 
 1. Todos los productos tienen un ciclo de vida de igual duración.

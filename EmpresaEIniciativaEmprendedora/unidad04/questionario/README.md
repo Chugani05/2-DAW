@@ -1,7 +1,7 @@
 # Cuestionario - UT04 Puesta en marcha de una empresa
 
 <div align=center>
-    <img src="../../../extras/vinilo.gif" alt="vinilo" width="100%">
+    <img src="../../../extras/vinilo.gif" alt="vinilo" width="60%">
 </div>
 
 1. Busca la empresa de servicios personales.

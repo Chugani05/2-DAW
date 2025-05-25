@@ -1,6 +1,6 @@
 # Actividad 2: WCAG y WAI-ARIA
 <div align=center>
-    <img src="../../../../extras/vinilo.gif" alt="vinilo" width="100%">
+    <img src="../../../../extras/vinilo.gif" alt="vinilo" width="60%">
 </div>
 
 ## Contenido

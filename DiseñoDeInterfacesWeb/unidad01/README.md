@@ -1,7 +1,7 @@
 # Unidad 01 - Planificación, diseño e implementación de Interfaces.
 
 <div align=center>
-    <img src="../../extras/data.gif" alt="data" width="100%">
+    <img src="../../extras/vinilo.gif" alt="vinilo" width="60%">
 </div>
 
 ## Contenido

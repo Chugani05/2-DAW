@@ -1,7 +1,7 @@
 # Introducción
 
 <div align=center>
-    <img src="../../extras/vinilo.gif" alt="vinilo" width="100%">
+    <img src="../../extras/vinilo.gif" alt="vinilo" width="60%">
 </div>
 
 El "Despliegue de Aplicaciones Web" es una etapa crucial en el ciclo de desarrollo de software que implica trasladar una aplicación desde un entorno de desarrollo local a un entorno en el que los usuarios finales puedan acceder y utilizarla. Esta asignatura proporciona a los estudiantes los conocimientos y habilidades necesarios para desplegar, configurar, y mantener aplicaciones web en servidores de producción, asegurando que funcionen de manera eficiente, segura y escalable. A continuación, se describe un resumen de los temas clave que suelen abordarse en un curso de introducción al despliegue de aplicaciones web:

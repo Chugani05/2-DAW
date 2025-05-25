@@ -1,7 +1,7 @@
 # Introducción
 
 <div align=center>
-    <img src="../../extras/vinilo.gif" alt="vinilo" width="100%">
+    <img src="../../extras/vinilo.gif" alt="vinilo" width="60%">
 </div>
 
 La asignatura de " Diseño de Interfaces Web" se centra en los principios y prácticas necesarios para diseñar y desarrollar interfaces de usuario (UI) efectivas y atractivas para aplicaciones web. Este curso es fundamental para aquellos interesados en la creación de experiencias de usuario (UX) intuitivas, centrándose en cómo los usuarios interactúan con un sitio web o una aplicación. A continuación, se describen los principales temas que suelen abordarse en esta materia:

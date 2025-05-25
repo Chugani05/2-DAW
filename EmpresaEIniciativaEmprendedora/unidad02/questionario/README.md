@@ -1,7 +1,7 @@
 # Cuestionario - UT01 (Iniciativa emprendedora) y UT02 (La empresa y su entorno)
 
 <div align=center>
-    <img src="../../../extras/vinilo.gif" alt="vinilo" width="100%">
+    <img src="../../../extras/vinilo.gif" alt="vinilo" width="60%">
 </div>
 
 1. ¿Dónde se estudian los factores legales?
