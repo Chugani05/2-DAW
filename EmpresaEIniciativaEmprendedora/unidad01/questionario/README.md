@@ -1,6 +1,7 @@
-# Cuestionario - UT 1 Iniciativa emprendedora
+# Cuestionario - UT01 Iniciativa emprendedora
+
 <div align=center>
-    <img src="../../../../extras/vinilo.gif" alt="vinilo" width="100%">
+    <img src="../../../extras/vinilo.gif" alt="vinilo" width="100%">
 </div>
 
 1. Un librera decide cerrar su libreria y dedicarse a la venta libros a través de Internet. ¿Crees que de este modo se incrementarán sus beneficios?

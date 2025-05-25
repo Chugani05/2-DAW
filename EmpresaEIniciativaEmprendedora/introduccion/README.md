@@ -1,7 +1,7 @@
 # Introducción
 
 <div align=center>
-<img src="../extras/data.gif" alt="me" width="60%">
+    <img src="../../extras/vinilo.gif" alt="vinilo" width="100%">
 </div>
 
 La asignatura de "Empresa e Iniciativa Emprendedora" es una asignatura común en muchos programas educativos, especialmente en áreas relacionadas con la administración de empresas, economía y negocios. Esta materia tiene como objetivo principal proporcionar a los estudiantes una comprensión básica del mundo empresarial y desarrollar habilidades para identificar y aprovechar oportunidades de emprendimiento. A continuación, te presento un resumen de los temas principales que suelen abordarse en este tipo de asignaturas:

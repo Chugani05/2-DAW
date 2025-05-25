@@ -1,6 +1,7 @@
 # Quizizz - Forma jurídica
+
 <div align=center>
-    <img src="../../../../extras/vinilo.gif" alt="vinilo" width="100%">
+    <img src="../../../extras/vinilo.gif" alt="vinilo" width="100%">
 </div>
 
 1. ¿Qué es una Sociedad Anónima?
