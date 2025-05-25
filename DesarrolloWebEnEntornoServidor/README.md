@@ -1,10 +1,10 @@
 # Desarrollo Web en Entorno Servidor
 
 <div align=center>
-<img src="../extras/cyberpunk2.gif" alt="me" width="60%">
+<img src="../extras/cyberpunk2.gif" alt="cyber" width="60%">
 </div>
 
-## Content
+## Contenido
 - [Introduccion](./introduccion/README.md)
 - [Unit 01 - Introducción a la Programación Web](./unidad01/README.md)
 - [Unit 02 - Django Básico](./unidad02/README.md)
@@ -12,7 +12,7 @@
 - [Unit 04 - Django Avanzado](./unidad04/README.md)
 - [Unit 05 - Django Especializado](./unidad05/README.md)
 
-## Projects
+## Proyectos
 - [Check Mate](https://github.com/Chugani05/CheckMate.git)
 - [Super Todo](https://github.com/Chugani05/SuperTodo.git)
 - [Pokemon List](https://github.com/Chugani05/PokemonList.git)
