@@ -1,7 +1,7 @@
 # Diseño de Interfaces Web
 
 <div align=center>
-<img src="../extras/cyberpunk2.gif" alt="me" width="60%">
+<img src="../extras/cyberpunk2.gif" alt="me" width="100%">
 </div>
 
 ## Contenido
