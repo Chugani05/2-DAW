@@ -3,9 +3,8 @@
 <div align=center>
   <table>
     <tr>
-      <td><img src="./extras/cyberpunk2.gif" alt="me" width="90%"></td>
-      <td>Repositorio dedicado a todo lo hecho en el segundo curso de Desarrollo de Aplicaciones Web.
-</td>
+      <td><img src="./extras/cyberpunk2.gif" alt="me" width="100%"></td>
+      <td>Repositorio dedicado a todo lo hecho en el segundo curso de Desarrollo de Aplicaciones Web.</td>
     </tr>
   </table>
 </div>
