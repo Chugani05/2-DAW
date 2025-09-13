@@ -5,13 +5,13 @@
 </div>
 
 ## Content
-- [Introduction](./introduction/README.md)
-- [Unidad 01 - Arquitectura y Lenguaje de Programación](./unidad-01/README.md)
-- [Unidad 02 - Javascript](./unidad-02/README.md)
-- [Unidad 03 - jQuery](./unidad-03/README.md)
-- [Unidad 04 - Typescript](./unidad-04/README.md)
-- [Unidad 05 - Vue](./unidad-05/README.md)
-- [Unidad 06 - Angular](./unidad-06/README.md)
+- [Introduction](./introduccion/README.md)
+- [Unidad 01 - Arquitectura y Lenguaje de Programación](./unidad01/README.md)
+- [Unidad 02 - Javascript](./unidad02/README.md)
+- [Unidad 03 - jQuery](./unidad03/README.md)
+- [Unidad 04 - Typescript](./unidad04/README.md)
+- [Unidad 05 - Vue](./unidad05/README.md)
+- [Unidad 06 - Angular](./unidad06/README.md)
 
 ## Proyects
 - [Pokemon Shop](https://github.com/Chugani05/PokemonShop.git)
